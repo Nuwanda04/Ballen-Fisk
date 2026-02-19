@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronDown, Coffee, Cookie, Fish, Flame, Package, Salad, Snowflake, Star, UtensilsCrossed } from 'lucide-react';
+import { ChevronDown, Coffee, Fish, Flame, Package, Salad, Snowflake, Star, UtensilsCrossed } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { dataService } from '../services/dataService';
@@ -18,12 +18,13 @@ for (const [path, mod] of Object.entries(imageModules)) {
 const categoryIcons = {
   'fresh-fish': Fish,
   'smoked-fish': Flame,
-  'fish-cakes': Cookie,
   'ready-meals': UtensilsCrossed,
+  'shellfish': Star,
   'salads': Salad,
   'frozen': Snowflake,
+  'friture': Star,
   'beverages': Coffee,
-  'friture-rejer': Star
+  'misc': Package
 };
 
 // Vibrant Pastel Colors Palette (Distinct from White, One Blue Rule)
@@ -54,12 +55,8 @@ export const Products = () => {
       try {
         const catData = await dataService.getCategories();
 
-        // Sort categories alphabetically
-        catData.sort((a, b) => {
-          const nameA = a[`name_${language}`] || a.name_da;
-          const nameB = b[`name_${language}`] || b.name_da;
-          return nameA.localeCompare(nameB);
-        });
+        // Sort categories by sort_order
+        catData.sort((a, b) => a.sort_order - b.sort_order);
 
         setCategories(catData);
 

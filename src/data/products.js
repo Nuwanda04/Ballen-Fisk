@@ -1,82 +1,19 @@
 export const categories = [
-  {
-    "id": 1,
-    "slug": "fresh-fish",
-    "name_da": "Fersk Fisk",
-    "name_en": "Fresh Fish",
-    "name_de": "Frischer Fisch",
-    "sort_order": 1
-  },
-  {
-    "id": 2,
-    "slug": "smoked-fish",
-    "name_da": "Røget Fisk",
-    "name_en": "Smoked Fish",
-    "name_de": "Geräucherter Fisch",
-    "sort_order": 2
-  },
-  {
-    "id": 3,
-    "slug": "fish-cakes",
-    "name_da": "Fiskefrikadeller & Fileter",
-    "name_en": "Fish Cakes & Fillets",
-    "name_de": "Fischfrikadellen & Filets",
-    "sort_order": 3
-  },
-  {
-    "id": 4,
-    "slug": "friture-rejer",
-    "name_da": "Friture rejer",
-    "name_en": "Fried Shrimp",
-    "name_de": "Fritierte Garnelen",
-    "sort_order": 4
-  },
-  {
-    "id": 5,
-    "slug": "salads",
-    "name_da": "Salater & Delikatesser",
-    "name_en": "Salads & Delis",
-    "name_de": "Salate & Delikatessen",
-    "sort_order": 5
-  },
-  {
-    "id": 6,
-    "slug": "ready-meals",
-    "name_da": "Færdigretter",
-    "name_en": "Ready Meals",
-    "name_de": "Fertiggerichte",
-    "sort_order": 6
-  },
-  {
-    "id": 7,
-    "slug": "frozen",
-    "name_da": "Frostvarer",
-    "name_en": "Frozen Goods",
-    "name_de": "Tiefkühlprodukte",
-    "sort_order": 7
-  },
-  {
-    "id": 8,
-    "slug": "beverages",
-    "name_da": "Drikkevarer",
-    "name_en": "Beverages",
-    "name_de": "Getränke",
-    "sort_order": 8
-  },
-  {
-    "id": 9,
-    "slug": "misc",
-    "name_da": "Diverse",
-    "name_en": "Miscellaneous",
-    "name_de": "Verschiedenes",
-    "sort_order": 9
-  }
+  { id: 1, slug: 'fresh-fish', name_da: 'Fersk Fisk', name_en: 'Fresh Fish', name_de: 'Frischer Fisch', sort_order: 1 },
+  { id: 2, slug: 'ready-meals', name_da: 'Færdigretter', name_en: 'Ready Meals', name_de: 'Fertiggerichte', sort_order: 2 },
+  { id: 3, slug: 'smoked-fish', name_da: 'Røget Fisk', name_en: 'Smoked Fish', name_de: 'Geräucherter Fisch', sort_order: 3 },
+  { id: 4, slug: 'shellfish', name_da: 'Skaldyr', name_en: 'Shellfish', name_de: 'Schalentiere', sort_order: 4 },
+  { id: 5, slug: 'frozen', name_da: 'Frostvarer', name_en: 'Frozen Goods', name_de: 'Tiefkühlwaren', sort_order: 5 },
+  { id: 6, slug: 'salads', name_da: 'Salater & Delikatesser', name_en: 'Salads & Delis', name_de: 'Salate & Delikatessen', sort_order: 6 },
+  { id: 7, slug: 'friture', name_da: 'Friture', name_en: 'Friture', name_de: 'Friture', sort_order: 7 },
+  { id: 8, slug: 'beverages', name_da: 'Drikkevarer', name_en: 'Beverages', name_de: 'Getränke', sort_order: 8 },
+  { id: 9, slug: 'misc', name_da: 'Diverse', name_en: 'Miscellaneous', name_de: 'Verschiedenes', sort_order: 9 }
 ];
 
 export const products = [
   {
     "id": 2,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Tangsalat",
     "price": 30,
     "unit": null,
@@ -84,7 +21,7 @@ export const products = [
   },
   {
     "id": 3,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Aioli",
     "price": 20,
     "unit": null,
@@ -92,7 +29,7 @@ export const products = [
   },
   {
     "id": 4,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Sild",
     "price": 50,
     "unit": null,
@@ -100,7 +37,7 @@ export const products = [
   },
   {
     "id": 5,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Kartoffelsalat",
     "price": 0.1,
     "unit": "g",
@@ -164,7 +101,7 @@ export const products = [
   },
   {
     "id": 13,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Stjerneskud",
     "price": 155,
     "unit": null,
@@ -172,7 +109,7 @@ export const products = [
   },
   {
     "id": 14,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Fish n' chips",
     "price": 145,
     "unit": null,
@@ -180,7 +117,7 @@ export const products = [
   },
   {
     "id": 15,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Tempura rejer & krabbekugler",
     "price": 85,
     "unit": null,
@@ -188,7 +125,7 @@ export const products = [
   },
   {
     "id": 16,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Torskenuggets",
     "price": 85,
     "unit": null,
@@ -196,7 +133,7 @@ export const products = [
   },
   {
     "id": 17,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "1 fiskefilet med lille pommes",
     "price": 60,
     "unit": null,
@@ -204,7 +141,7 @@ export const products = [
   },
   {
     "id": 18,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "2 Fiskefilet med stor pommes",
     "price": 100,
     "unit": null,
@@ -212,7 +149,7 @@ export const products = [
   },
   {
     "id": 19,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "1 Fiskefilet med lille kartoffelsalat",
     "price": 60,
     "unit": null,
@@ -220,7 +157,7 @@ export const products = [
   },
   {
     "id": 20,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "2 Fiskefilet med stor kartoffelsalat",
     "price": 100,
     "unit": null,
@@ -228,7 +165,7 @@ export const products = [
   },
   {
     "id": 21,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "1 Fiskefilet med rugbrød",
     "price": 50,
     "unit": null,
@@ -236,7 +173,7 @@ export const products = [
   },
   {
     "id": 22,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "2 Fiskefilet med rugbrød",
     "price": 90,
     "unit": null,
@@ -244,7 +181,7 @@ export const products = [
   },
   {
     "id": 23,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "1 Fiskefrikadelle med lille pommes",
     "price": 60,
     "unit": null,
@@ -252,7 +189,7 @@ export const products = [
   },
   {
     "id": 24,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "2 Fiskefrikadeller med stor pommes",
     "price": 100,
     "unit": null,
@@ -260,7 +197,7 @@ export const products = [
   },
   {
     "id": 25,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "1 Fiskefrikadelle med lille kartoffelsalat",
     "price": 60,
     "unit": null,
@@ -268,7 +205,7 @@ export const products = [
   },
   {
     "id": 26,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "2 Fiskefrikadeller med lille kartoffelsalat",
     "price": 100,
     "unit": null,
@@ -276,7 +213,7 @@ export const products = [
   },
   {
     "id": 27,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "1 Fiskefrikadelle med rugbrød",
     "price": 50,
     "unit": null,
@@ -284,7 +221,7 @@ export const products = [
   },
   {
     "id": 28,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "2 Fiskefrikadeller med rugbrød",
     "price": 90,
     "unit": null,
@@ -292,7 +229,7 @@ export const products = [
   },
   {
     "id": 29,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Pommes frites",
     "price": 50,
     "unit": null,
@@ -300,7 +237,7 @@ export const products = [
   },
   {
     "id": 30,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Quinoa eller Pelle",
     "price": 60,
     "unit": null,
@@ -308,7 +245,7 @@ export const products = [
   },
   {
     "id": 31,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Kylling burger med pommes",
     "price": 95,
     "unit": null,
@@ -316,7 +253,7 @@ export const products = [
   },
   {
     "id": 32,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Calamares med pommes",
     "price": 100,
     "unit": null,
@@ -324,7 +261,7 @@ export const products = [
   },
   {
     "id": 33,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Rejer, salat, brød & aioli",
     "price": 125,
     "unit": null,
@@ -332,7 +269,7 @@ export const products = [
   },
   {
     "id": 34,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Rejecocktail",
     "price": 125,
     "unit": null,
@@ -340,7 +277,7 @@ export const products = [
   },
   {
     "id": 35,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Sandwich med frikadelle",
     "price": 85,
     "unit": null,
@@ -348,7 +285,7 @@ export const products = [
   },
   {
     "id": 36,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Sandwich ribbenstech",
     "price": 85,
     "unit": null,
@@ -356,7 +293,7 @@ export const products = [
   },
   {
     "id": 37,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Sandwich med rejer",
     "price": 95,
     "unit": null,
@@ -364,7 +301,7 @@ export const products = [
   },
   {
     "id": 38,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Sandwich med laks",
     "price": 95,
     "unit": null,
@@ -373,7 +310,7 @@ export const products = [
 
   {
     "id": 40,
-    "category_id": 3,
+    "category_id": 2,
     "name_da": "Fiskefrikadelle",
     "price": 18,
     "unit": null,
@@ -381,7 +318,7 @@ export const products = [
   },
   {
     "id": 42,
-    "category_id": 3,
+    "category_id": 2,
     "name_da": "Fiskefilet",
     "price": 18,
     "unit": null,
@@ -390,7 +327,7 @@ export const products = [
 
   {
     "id": 44,
-    "category_id": 4,
+    "category_id": 7,
     "name_da": "Indbagte rejer med Aioli",
     "price": 60,
     "unit": null,
@@ -398,7 +335,7 @@ export const products = [
   },
   {
     "id": 45,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Sildefilet",
     "price": 15,
     "unit": null,
@@ -407,7 +344,7 @@ export const products = [
 
   {
     "id": 47,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Varmrøget Færøsk Laks",
     "price": 0.3,
     "unit": "g",
@@ -415,7 +352,7 @@ export const products = [
   },
   {
     "id": 48,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Makrel",
     "price": 55,
     "unit": null,
@@ -423,7 +360,7 @@ export const products = [
   },
   {
     "id": 49,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Sild",
     "price": 20,
     "unit": null,
@@ -431,7 +368,7 @@ export const products = [
   },
   {
     "id": 50,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Dorade",
     "price": 25,
     "unit": null,
@@ -439,7 +376,7 @@ export const products = [
   },
   {
     "id": 51,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Ål",
     "price": 0.3,
     "unit": "g",
@@ -447,7 +384,7 @@ export const products = [
   },
   {
     "id": 52,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Torskerogn",
     "price": 0.25,
     "unit": "g",
@@ -455,7 +392,7 @@ export const products = [
   },
   {
     "id": 53,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Musling",
     "price": 7,
     "unit": null,
@@ -510,7 +447,7 @@ export const products = [
   },
   {
     "id": 61,
-    "category_id": 1,
+    "category_id": 4,
     "name_da": "Hummer",
     "price": 0.35,
     "unit": "g",
@@ -518,14 +455,14 @@ export const products = [
   },
   {
     "id": 62,
-    "category_id": 7,
+    "category_id": 5,
     "name_da": "Pillede jomfruhummerhaler",
     "price": 350,
     "unit": null
   },
   {
     "id": 63,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Skalrejer",
     "price": 0.12,
     "unit": "g",
@@ -533,7 +470,7 @@ export const products = [
   },
   {
     "id": 64,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Jomfruhummerhaler",
     "price": 150,
     "unit": null,
@@ -541,7 +478,7 @@ export const products = [
   },
   {
     "id": 65,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Hummer",
     "price": 0.35,
     "unit": "g",
@@ -549,7 +486,7 @@ export const products = [
   },
   {
     "id": 66,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Kryddermakrel",
     "price": 30,
     "unit": null,
@@ -558,7 +495,7 @@ export const products = [
 
   {
     "id": 69,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Kold Røget Laks",
     "price": 0.45,
     "unit": "g",
@@ -566,7 +503,7 @@ export const products = [
   },
   {
     "id": 70,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Kold Røget Hellefisk",
     "price": 0.4,
     "unit": "g",
@@ -574,7 +511,7 @@ export const products = [
   },
   {
     "id": 71,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Skalrejer",
     "price": 0.22,
     "unit": "g",
@@ -582,7 +519,7 @@ export const products = [
   },
   {
     "id": 72,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Hajbug",
     "price": 0,
     "unit": null,
@@ -590,7 +527,7 @@ export const products = [
   },
   {
     "id": 73,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Smørfisk",
     "price": 0.35,
     "unit": "g",
@@ -598,14 +535,14 @@ export const products = [
   },
   {
     "id": 74,
-    "category_id": 2,
+    "category_id": 3,
     "name_da": "Røget Hornfisk",
     "price": 25,
     "unit": null
   },
   {
     "id": 75,
-    "category_id": 9,
+    "category_id": 4,
     "name_da": "Rosé Rejer",
     "price": 0.25,
     "unit": "g",
@@ -613,7 +550,7 @@ export const products = [
   },
   {
     "id": 76,
-    "category_id": 9,
+    "category_id": 4,
     "name_da": "Østers Åben",
     "price": 20,
     "unit": null,
@@ -621,7 +558,7 @@ export const products = [
   },
   {
     "id": 77,
-    "category_id": 9,
+    "category_id": 4,
     "name_da": "Østers",
     "price": 15,
     "unit": null,
@@ -630,7 +567,7 @@ export const products = [
 
   {
     "id": 79,
-    "category_id": 3,
+    "category_id": 2,
     "name_da": "Laksefrikadelle",
     "price": 18,
     "unit": null,
@@ -639,7 +576,7 @@ export const products = [
 
   {
     "id": 81,
-    "category_id": 4,
+    "category_id": 7,
     "name_da": "Kartoffelrejer",
     "price": 7,
     "unit": null,
@@ -648,7 +585,7 @@ export const products = [
 
   {
     "id": 83,
-    "category_id": 4,
+    "category_id": 7,
     "name_da": "Krabbekugler",
     "price": 7,
     "unit": null,
@@ -657,7 +594,7 @@ export const products = [
 
   {
     "id": 85,
-    "category_id": 4,
+    "category_id": 7,
     "name_da": "Tempura Rejer",
     "price": 7,
     "unit": null,
@@ -682,14 +619,14 @@ export const products = [
   },
   {
     "id": 91,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Kylling med pommes",
     "price": 110,
     "unit": null
   },
   {
     "id": 92,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Kylling med kartoffel",
     "price": 110,
     "unit": null
@@ -698,7 +635,7 @@ export const products = [
 
   {
     "id": 96,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Fiskefars 500g",
     "price": 50,
     "unit": null,
@@ -706,14 +643,14 @@ export const products = [
   },
   {
     "id": 97,
-    "category_id": 7,
+    "category_id": 5,
     "name_da": "Gluten og laktose fri fiskefrikadeller",
     "price": 60,
     "unit": null
   },
   {
     "id": 98,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Krabbekløer",
     "price": 0.1,
     "unit": "g",
@@ -911,7 +848,7 @@ export const products = [
   },
   {
     "id": 125,
-    "category_id": 1,
+    "category_id": 4,
     "name_da": "Blåmuslinger 1 kg",
     "price": 50,
     "unit": null,
@@ -1036,7 +973,7 @@ export const products = [
   },
   {
     "id": 142,
-    "category_id": 1,
+    "category_id": 4,
     "name_da": "Krabbekløer",
     "price": 0.15,
     "unit": "g",
@@ -1103,7 +1040,7 @@ export const products = [
   },
   {
     "id": 153,
-    "category_id": 5,
+    "category_id": 4,
     "name_da": "Håndpillede rejer Lille",
     "price": 35,
     "unit": null,
@@ -1148,7 +1085,7 @@ export const products = [
 
   {
     "id": 175,
-    "category_id": 6,
+    "category_id": 2,
     "name_da": "Lille pommes",
     "price": 35,
     "unit": null,
@@ -1156,7 +1093,7 @@ export const products = [
   },
   {
     "id": 176,
-    "category_id": 5,
+    "category_id": 4,
     "name_da": "Hvidløgsrejer",
     "price": 50,
     "unit": null,
@@ -1165,7 +1102,7 @@ export const products = [
 
   {
     "id": 178,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Blæksprutte salat",
     "price": 50,
     "unit": null,
@@ -1173,7 +1110,7 @@ export const products = [
   },
   {
     "id": 179,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Sort Tiger rejer",
     "price": 250,
     "unit": null,
@@ -1219,7 +1156,7 @@ export const products = [
   },
   {
     "id": 185,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Languster",
     "price": 0.25,
     "unit": "g",
@@ -1227,7 +1164,7 @@ export const products = [
   },
   {
     "id": 186,
-    "category_id": 4,
+    "category_id": 7,
     "name_da": "Twister rejer",
     "price": 8,
     "unit": null,
@@ -1246,7 +1183,7 @@ export const products = [
   },
   {
     "id": 191,
-    "category_id": 7,
+    "category_id": 5,
     "name_da": "Stenbiderogn 200gr",
     "price": 50,
     "unit": "none"
@@ -1278,7 +1215,7 @@ export const products = [
 
   {
     "id": 197,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Laksemousse",
     "price": 25,
     "unit": null,
@@ -1307,7 +1244,7 @@ export const products = [
   },
   {
     "id": 201,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Sardin",
     "price": 40,
     "unit": null
@@ -1322,7 +1259,7 @@ export const products = [
   },
   {
     "id": 203,
-    "category_id": 7,
+    "category_id": 5,
     "name_da": "Ål",
     "price": 0.5,
     "unit": "g"
@@ -1330,14 +1267,14 @@ export const products = [
 
   {
     "id": 205,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Kammuslinger",
     "price": 400,
     "unit": null
   },
   {
     "id": 206,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Fiskesennep",
     "price": 20,
     "unit": null,
@@ -1345,7 +1282,7 @@ export const products = [
   },
   {
     "id": 207,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Rapuja",
     "price": 200,
     "unit": null,
@@ -1353,7 +1290,7 @@ export const products = [
   },
   {
     "id": 208,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Remoulade lille 100 gr",
     "price": 20,
     "unit": null,
@@ -1361,7 +1298,7 @@ export const products = [
   },
   {
     "id": 209,
-    "category_id": 5,
+    "category_id": 6,
     "name_da": "Remoulade stor 200 gr",
     "price": 30,
     "unit": null,
@@ -1385,7 +1322,7 @@ export const products = [
   },
   {
     "id": 212,
-    "category_id": 7,
+    "category_id": 4,
     "name_da": "Seafood cocktail",
     "price": 150,
     "unit": null,
@@ -1400,7 +1337,7 @@ export const products = [
   },
   {
     "id": 214,
-    "category_id": 5,
+    "category_id": 4,
     "name_da": "Stor 200 gr Reje/Skaldyr salat",
     "price": 50,
     "unit": null,
@@ -1408,7 +1345,7 @@ export const products = [
   },
   {
     "id": 215,
-    "category_id": 5,
+    "category_id": 4,
     "name_da": "Lille Skaldyr /reje salat 100gr",
     "price": 30,
     "unit": null,
