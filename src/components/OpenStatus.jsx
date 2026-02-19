@@ -1,33 +1,47 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
-import { getHoursString, getOpeningStatus } from '../utils/openingHours';
+import { getDetailedStatus } from '../utils/openingHours';
+
+const seasonLabel = {
+  da: 'Sæson: April – Okt',
+  en: 'Season: April – Oct',
+  de: 'Saison: April – Okt'
+};
 
 export const OpenStatus = () => {
-  const { t, language } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
+  const [status, setStatus] = useState(() => getDetailedStatus(language));
 
   useEffect(() => {
-    const checkStatus = () => {
-      setIsOpen(getOpeningStatus());
-    };
-
-    checkStatus();
-    const interval = setInterval(checkStatus, 60000);
-
+    const check = () => setStatus(getDetailedStatus(language));
+    check();
+    const interval = setInterval(check, 60000);
     return () => clearInterval(interval);
-  }, []);
+  }, [language]);
+
+  // Determine what hint to show
+  const hint = status.isOpen
+    ? status.hint
+    : status.todayHours
+      ? status.hint               // In-season but closed right now
+      : seasonLabel[language];    // Off-season — show when the season is
 
   return (
-    <div className="flex flex-col items-center md:items-start gap-2">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md">
-        <div className={`w-3 h-3 rounded-full ${isOpen ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />
+    <div className="flex items-center gap-3">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+        <div className={`w-2.5 h-2.5 rounded-full ${status.isOpen ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />
         <span className="text-sm font-medium text-white">
-          {isOpen ? t('status.open') : t('status.closed')}
+          {status.isOpen
+            ? (language === 'de' ? 'Geöffnet' : language === 'en' ? 'Open' : 'Åben')
+            : (language === 'de' ? 'Geschlossen' : language === 'en' ? 'Closed' : 'Lukket')}
         </span>
-      </div>
-      <div className="text-xs text-white/60 px-4">
-        {getHoursString(language)}
+        {hint && (
+          <span className="text-xs text-white/50 hidden sm:inline">
+            · {hint}
+          </span>
+        )}
       </div>
     </div>
   );
 };
+

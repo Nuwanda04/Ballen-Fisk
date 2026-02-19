@@ -1,0 +1,43 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details
+[1A[2K[2m[WebServer] [22mBrowserslist: caniuse-lite is outdated. Please run:
+[2m[WebServer] [22m  npx update-browserslist-db@latest
+[2m[WebServer] [22m  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+[1A[2Ktests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details
+Verifying category: Fersk Fisk
+
+[1A[2K  1) tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#products').locator('.grid > div').first().locator('img')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('#products').locator('.grid > div').first().locator('img')[22m
+
+
+      76 |                              // But simplified: just check img is visible.
+      77 |                              const img = card.locator('img');
+    > 78 |                              await expect(img).toBeVisible();
+         |                                                ^
+      79 |                          }
+      80 |                      }
+      81 |                  }
+        at C:\Users\sivhv\Downloads\Ballen Fisk\tests\verify-products.spec.js:78:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\verify-products-Product-Ve-55c5e-oducts-with-correct-details\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\verify-products-Product-Ve-55c5e-oducts-with-correct-details\error-context.md
+
+
+[1A[2K  1 failed
+    tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details 

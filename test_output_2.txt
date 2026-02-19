@@ -1,0 +1,36 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details
+[1A[2K  1) tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#products')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('#products')[22m
+
+
+       9 |         // Wait for the products section to be visible
+      10 |         const productsSection = page.locator('#products');
+    > 11 |         await expect(productsSection).toBeVisible({ timeout: 10000 });
+         |                                       ^
+      12 |
+      13 |         // Iterate through each category
+      14 |         for (const category of categories) {
+        at C:\Users\sivhv\Downloads\Ballen Fisk\tests\verify-products.spec.js:11:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\verify-products-Product-Ve-55c5e-oducts-with-correct-details\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\verify-products-Product-Ve-55c5e-oducts-with-correct-details\error-context.md
+
+
+[1A[2K  1 failed
+    tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details 

@@ -1,0 +1,36 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] tests\verify-products.spec.js:5:5 › Product Verification › should report all product issues
+[1A[2K[2m[WebServer] [22mBrowserslist: caniuse-lite is outdated. Please run:
+[2m[WebServer] [22m  npx update-browserslist-db@latest
+[2m[WebServer] [22m  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+[1A[2Ktests\verify-products.spec.js:5:5 › Product Verification › should report all product issues
+Verifying category: Fersk Fisk
+
+[1A[2KVerifying category: Røget Fisk
+
+[1A[2KVerifying category: Fiskefrikadeller & Fileter
+
+[1A[2KVerifying category: Friture rejer
+
+[1A[2KVerifying category: Salater & Delikatesser
+
+[1A[2KVerifying category: Færdigretter
+
+[1A[2KVerifying category: Frostvarer
+
+[1A[2KVerifying category: Drikkevarer
+
+[1A[2KVerifying category: Diverse
+
+[1A[2KVerification Complete.
+
+[1A[2KMissing Products: []
+
+[1A[2KMissing Images: []
+
+[1A[2KOther Errors: []
+
+[1A[2K  1 passed (37.3s)

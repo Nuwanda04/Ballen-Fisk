@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Fish } from 'lucide-react';
+import { ArrowDown, Fish, Flame } from 'lucide-react';
+import heroImage from '../assets/butik-billede.jpg';
 import { useLanguage } from '../i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { OpenStatus } from './OpenStatus';
@@ -8,13 +9,13 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
+    <div className="relative overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-[#3E92CC] rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5FA8D3] rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <nav className="relative z-10 p-6 flex justify-between items-center">
+      <nav className="relative z-10 container py-6 flex justify-between items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -34,7 +35,7 @@ export const Hero = () => {
         </motion.div>
       </nav>
 
-      <div className="relative z-10 container mx-auto px-6 pt-20 pb-32">
+      <div className="relative z-10 container pt-4 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -45,37 +46,42 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative z-10 text-center text-white max-w-4xl mx-auto px-6"
+              className="relative z-10 text-center lg:text-left text-white max-w-2xl"
             >
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md mb-8 border border-white/30 text-sm font-medium tracking-wider uppercase"
+                className="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/30 text-sm font-medium tracking-wider uppercase"
               >
-                {t('hero.since')} • Ballen Havn • Samsø
+                {t('hero.since')}
               </motion.div>
 
-              <h1 className="text-7xl md:text-9xl font-black mb-8 tracking-tighter drop-shadow-2xl">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-6 tracking-tighter drop-shadow-2xl">
                 {t('hero.title')}
               </h1>
 
-              <p className="text-xl md:text-3xl font-medium mb-12 opacity-90 text-balance leading-relaxed">
+              <p className="text-xl md:text-2xl font-medium mb-8 opacity-90 text-balance leading-relaxed">
                 {t('hero.subtitle')}
               </p>
             </motion.div>
 
-            <p className="text-lg text-white/60 mb-10 leading-relaxed">
-              {t('history.story3')}
+            <p className="text-lg text-white/60 mb-8 leading-relaxed">
+              {t('hero.description')}
             </p>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-[#3E92CC] text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-[#3E92CC]/50 transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="group relative px-8 py-4 bg-white text-[#0B132B] border-2 border-[#0B132B] rounded-full font-bold text-lg shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all flex items-center justify-center gap-3 mx-auto lg:mx-0"
               onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t('hero.cta')}
+              <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+              <div className="absolute inset-0 rounded-full ring-2 ring-white/50 animate-ping opacity-20" />
             </motion.button>
           </motion.div>
 
@@ -83,11 +89,11 @@ export const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4 }}
-            className="relative"
+            className="relative block order-first lg:order-last mb-12 lg:mb-0"
           >
-            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="relative aspect-square max-w-[280px] lg:max-w-xl mx-auto lg:ml-auto rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <img
-                src="src\assets\butik-billede.jpg"
+                src={heroImage}
                 alt="Fresh fish on ice"
                 className="w-full h-full object-cover"
               />
@@ -98,15 +104,18 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl"
+              className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 bg-white/90 backdrop-blur-xl p-4 lg:p-6 rounded-2xl lg:rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/50"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#3E92CC] rounded-full flex items-center justify-center">
-                  <Fish className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-3 lg:gap-5">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-orange-400 rounded-full blur-md opacity-40 animate-pulse" />
+                  <div className="relative w-10 h-10 lg:w-14 lg:h-14 bg-gradient-to-br from-orange-400 to-red-600 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-inner">
+                    <Flame className="w-5 h-5 lg:w-7 lg:h-7 text-white" />
+                  </div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-[#0B132B]">40</div>
-                  <div className="text-sm text-gray-600">{t('footer.since')}</div>
+                  <div className="text-sm lg:text-xl font-bold text-[#0B132B] mb-0.5">{t('hero.smokehouseTitle')}</div>
+                  <div className="text-xs lg:text-sm font-medium text-gray-500">{t('hero.smokehouseSubtitle')}</div>
                 </div>
               </div>
             </motion.div>

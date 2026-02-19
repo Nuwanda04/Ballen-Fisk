@@ -3,10 +3,11 @@ import { useLanguage } from '../i18n/LanguageContext';
 export const LanguageSwitcher = () => {
   const { language, changeLanguage } = useLanguage();
 
+  // Using country-flags CDN for reliable flag rendering
   const flags = {
-    da: '🇩🇰',
-    en: '🇬🇧',
-    de: '🇩🇪'
+    da: 'https://flagcdn.com/w40/dk.png',
+    en: 'https://flagcdn.com/w40/gb.png',
+    de: 'https://flagcdn.com/w40/de.png'
   };
 
   const languages = [
@@ -21,15 +22,18 @@ export const LanguageSwitcher = () => {
         <button
           key={code}
           onClick={() => changeLanguage(code)}
-          className={`px-3 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 ${
+          className={`px-2 py-1.5 rounded-lg transition-all duration-300 ${
             language === code
-              ? 'bg-[#3E92CC] text-white shadow-lg scale-110'
-              : 'bg-white/10 text-white/70 hover:bg-white/20'
+              ? 'bg-[#3E92CC] shadow-lg scale-110 ring-2 ring-white/30'
+              : 'bg-white/10 hover:bg-white/20'
           }`}
           title={label}
         >
-          <span className="text-xl">{flags[code]}</span>
-          <span className="text-sm font-medium hidden sm:inline">{code.toUpperCase()}</span>
+          <img
+            src={flags[code]}
+            alt={label}
+            className="w-7 h-5 object-cover rounded-sm"
+          />
         </button>
       ))}
     </div>

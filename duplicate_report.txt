@@ -1,0 +1,208 @@
+=== DUPLICATE PRODUCTS (same name) ===
+
+"Fiskefilet" appears 2 times:
+  ID 42 | Cat: Fiskefrikadeller & Fileter | Price: 18  | Image: Frikadelle og Fiskfilet/Fiskefilet.jpeg
+  ID 220 | Cat: Fiskefrikadeller & Fileter | Price: 120  | Image: Frikadelle og Fiskfilet/Fiskefilet.jpeg
+
+"Jomfruhummerhaler" appears 2 times:
+  ID 59 | Cat: Fersk Fisk | Price: 0.22 g | Image: Hel fisk/Hummer.jpeg
+  ID 64 | Cat: Frostvarer | Price: 150  | Image: Frost/Jomfruhummerhaler.jpeg
+
+"S├©tunge" appears 2 times:
+  ID 60 | Cat: Fersk Fisk | Price: 0.25 kg | Image: Hel fisk/S├©tunge.jpeg
+  ID 204 | Cat: Fersk Fisk | Price: 0.25 g | Image: Hel fisk/S├©tunge.jpeg
+
+"Hummer" appears 2 times:
+  ID 61 | Cat: Fersk Fisk | Price: 0.35 g | Image: Hel fisk/Hummer.jpeg
+  ID 65 | Cat: Frostvarer | Price: 0.35 g | Image: Frost/Jomfruhummerhaler.jpeg
+
+"Torskefilet" appears 2 times:
+  ID 100 | Cat: Fersk Fisk | Price: 0.25 g | Image: Fiskefilet/Torskefilet.jpeg
+  ID 165 | Cat: Fersk Fisk | Price: 125 kg | Image: none
+
+"Torskeloins" appears 3 times:
+  ID 101 | Cat: Fersk Fisk | Price: 0.25 g | Image: Hel fisk/Torsk.jpeg
+  ID 160 | Cat: Fersk Fisk | Price: 235 kg | Image: none
+  ID 166 | Cat: Fersk Fisk | Price: 160 kg | Image: none
+
+"R├©dsp├ªtter" appears 2 times:
+  ID 107 | Cat: Fersk Fisk | Price: 0.25 g | Image: Hel fisk/R├©dsp├ªtter.jpeg
+  ID 161 | Cat: Fersk Fisk | Price: 120 kg | Image: none
+
+"R├©dsp├ªttefilet" appears 2 times:
+  ID 108 | Cat: Fersk Fisk | Price: 0.33 g | Image: Fiskefilet/R├©dsp├ªttefilet.jpeg
+  ID 164 | Cat: Fersk Fisk | Price: 160 kg | Image: none
+
+"Laksefilet" appears 2 times:
+  ID 116 | Cat: Fersk Fisk | Price: 0.3 g | Image: Fiskefilet/Laksefilet.jpeg
+  ID 159 | Cat: Fersk Fisk | Price: 140 kg | Image: none
+
+"Havtaskefilet" appears 2 times:
+  ID 120 | Cat: Fersk Fisk | Price: 0.35 g | Image: Fiskefilet/Havtaskefilet.jpeg
+  ID 192 | Cat: Fersk Fisk | Price: 0.35 g | Image: Fiskefilet/Havtaskefilet.jpeg
+
+"├àl" appears 2 times:
+  ID 195 | Cat: Fersk Fisk | Price: 0.5 g | Image: Fiskefilet/Havtaskefilet.jpeg
+  ID 203 | Cat: Frostvarer | Price: 0.5 g | Image: Frost/Black tiger rejer.jpeg
+
+
+=== SIMILAR NAMES (potential duplicates) ===
+
+"Torskenuggets" <-> "Torskenuggets 6 stk"
+  ID 16 | Cat 6 | Price: 85 
+  ID 156 | Cat 6 | Price: 45 
+
+"1 fiskefilet med lille pommes" <-> "Lille pommes"
+  ID 17 | Cat 6 | Price: 60 
+  ID 175 | Cat 6 | Price: 35 
+
+"1 Fiskefrikadelle med lille pommes" <-> "Lille pommes"
+  ID 23 | Cat 6 | Price: 60 
+  ID 175 | Cat 6 | Price: 35 
+
+"Kylling burger med pommes" <-> "Kylling burger"
+  ID 31 | Cat 6 | Price: 95 
+  ID 188 | Cat 6 | Price: 70 
+
+"X Fiskefrikadeller" <-> "Fiskefrikadelle"
+  ID 39 | Cat 3 | Price: 60 
+  ID 40 | Cat 3 | Price: 18 
+
+"X Fiskefilet" <-> "Fiskefilet"
+  ID 41 | Cat 3 | Price: 60 
+  ID 42 | Cat 3 | Price: 18 
+  ID 220 | Cat 3 | Price: 120 
+
+"R├©get Sildefilet" <-> "Stk: R├©get Sildefilet"
+  ID 45 | Cat 2 | Price: 15 
+  ID 46 | Cat 2 | Price: 40 
+
+"R├©get Sildefilet" <-> "R├©get Sild"
+  ID 45 | Cat 2 | Price: 15 
+  ID 49 | Cat 2 | Price: 20 
+
+"Stk: R├©get Sildefilet" <-> "R├©get Sild"
+  ID 46 | Cat 2 | Price: 40 
+  ID 49 | Cat 2 | Price: 20 
+
+"R├©get Makrel" <-> "Lokal R├©get Makrel"
+  ID 48 | Cat 2 | Price: 55 
+  ID 67 | Cat 2 | Price: 25 
+
+"R├©get Makrel" <-> "Stk. R├©get Makrel lokale"
+  ID 48 | Cat 2 | Price: 55 
+  ID 68 | Cat 2 | Price: 40 
+
+"R├©get Makrel" <-> "stk. r├©get makrel"
+  ID 48 | Cat 2 | Price: 55 
+  ID 196 | Cat 2 | Price: 100 
+
+"R├©get ├àl" <-> "R├©get ├Ñl skive"
+  ID 51 | Cat 2 | Price: 0.3 g
+  ID 217 | Cat 2 | Price: 0.75 g
+
+"R├©get Musling" <-> "Stk: R├©get Musling"
+  ID 53 | Cat 2 | Price: 7 
+  ID 54 | Cat 2 | Price: 25 
+
+"Sk├ªrisingfilet" <-> "Ising"
+  ID 55 | Cat 1 | Price: 0.16 g
+  ID 126 | Cat 1 | Price: 0 g
+
+"Sk├ªrisingfilet" <-> "Isingfilet"
+  ID 55 | Cat 1 | Price: 0.16 g
+  ID 127 | Cat 1 | Price: 0.22 g
+
+"Stenbider" <-> "Renset Stenbiderrogn"
+  ID 57 | Cat 1 | Price: 0.08 g
+  ID 103 | Cat 1 | Price: 0.45 g
+
+"Stenbider" <-> "Urenset Stenbiderrogn"
+  ID 57 | Cat 1 | Price: 0.08 g
+  ID 104 | Cat 1 | Price: 0.35 g
+
+"Jomfruhummerhaler" <-> "Hummer"
+  ID 59 | Cat 1 | Price: 0.22 g
+  ID 64 | Cat 7 | Price: 150 
+  ID 61 | Cat 1 | Price: 0.35 g
+  ID 65 | Cat 7 | Price: 0.35 g
+
+"Jomfruhummerhaler" <-> "Pillede jomfruhummerhaler"
+  ID 59 | Cat 1 | Price: 0.22 g
+  ID 64 | Cat 7 | Price: 150 
+  ID 62 | Cat 7 | Price: 350 
+
+"Hummer" <-> "Pillede jomfruhummerhaler"
+  ID 61 | Cat 1 | Price: 0.35 g
+  ID 65 | Cat 7 | Price: 0.35 g
+  ID 62 | Cat 7 | Price: 350 
+
+"Hummer" <-> "Jomfruhummer (Hele)"
+  ID 61 | Cat 1 | Price: 0.35 g
+  ID 65 | Cat 7 | Price: 0.35 g
+  ID 213 | Cat 1 | Price: 0.2 kg
+
+"Stk. R├©get Makrel lokale" <-> "stk. r├©get makrel"
+  ID 68 | Cat 2 | Price: 40 
+  ID 196 | Cat 2 | Price: 100 
+
+"├ÿsters ├àben" <-> "├ÿsters"
+  ID 76 | Cat 9 | Price: 20 
+  ID 77 | Cat 9 | Price: 15 
+
+"├ÿsters" <-> "Stk. ├ÿsters"
+  ID 77 | Cat 9 | Price: 15 
+  ID 78 | Cat 9 | Price: 150 
+
+"Laksefrikadelle" <-> "X Laksefrikadelle"
+  ID 79 | Cat 3 | Price: 18 
+  ID 80 | Cat 3 | Price: 60 
+
+"Kartoffelrejer" <-> "X Kartoffelrejer"
+  ID 81 | Cat 4 | Price: 7 
+  ID 82 | Cat 4 | Price: 25 
+
+"Krabbekugler" <-> "X Krabbekugler"
+  ID 83 | Cat 4 | Price: 7 
+  ID 84 | Cat 4 | Price: 25 
+
+"Tempura Rejer" <-> "X Tempura Rejer"
+  ID 85 | Cat 4 | Price: 7 
+  ID 86 | Cat 4 | Price: 25 
+
+"Renset Stenbiderrogn" <-> "Urenset Stenbiderrogn"
+  ID 103 | Cat 1 | Price: 0.45 g
+  ID 104 | Cat 1 | Price: 0.35 g
+
+"Langeloins" <-> "Bl├Ñlangeloins"
+  ID 105 | Cat 1 | Price: 0.22 g
+  ID 190 | Cat 1 | Price: 0.22 g
+
+"Langefilet" <-> "Bl├Ñlange filet"
+  ID 106 | Cat 1 | Price: 0.22 g
+  ID 218 | Cat 1 | Price: 0.24 g
+
+"Skrubber" <-> "Fjorskrubber"
+  ID 111 | Cat 1 | Price: 0.15 g
+  ID 112 | Cat 1 | Price: 0.2 g
+
+"Skrubber" <-> "kg skrubber"
+  ID 111 | Cat 1 | Price: 0.15 g
+  ID 113 | Cat 1 | Price: 100 
+
+"Ising" <-> "Isingfilet"
+  ID 126 | Cat 1 | Price: 0 g
+  ID 127 | Cat 1 | Price: 0.22 g
+
+"R├©dfiskfilet" <-> "R├©dfisk"
+  ID 152 | Cat 1 | Price: 0.32 g
+  ID 199 | Cat 1 | Price: 0.16 g
+
+"Twister rejer" <-> "xTwister rejer"
+  ID 186 | Cat 4 | Price: 8 
+  ID 187 | Cat 4 | Price: 20 
+
+"Kaviar" <-> "Kaluga Kaviar"
+  ID 202 | Cat 9 | Price: 300 
+  ID 210 | Cat 9 | Price: 400 
+

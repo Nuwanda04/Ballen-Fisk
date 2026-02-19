@@ -1,0 +1,231 @@
+
+=== Fersk Fisk (ID 1) - 71 products ===
+  [55] Skærisingfilet - 0.16 /g
+  [56] Tun - 0.3 /g
+  [57] Stenbider - 0.08 /g
+  [58] Dorade - 0.16 /g
+  [59] Jomfruhummerhaler - 0.22 /g
+  [60] Søtunge - 0.25 /kg
+  [61] Hummer - 0.35 /g
+  [100] Torskefilet - 0.25 /g
+  [101] Torskeloins - 0.25 /g
+  [102] Torsk - hel fisk - 0.8 /g
+  [103] Renset Stenbiderrogn - 0.45 /g
+  [104] Urenset Stenbiderrogn - 0.35 /g
+  [105] Langeloins - 0.22 /g
+  [106] Langefilet - 0.22 /g
+  [107] Rødspætter - 0.25 /g
+  [108] Rødspættefilet - 0.33 /g
+  [109] Kulmuleloins - 0.25 /g
+  [110] Kulmulefilet - 0.22 /g
+  [111] Skrubber - 0.15 /g
+  [112] Fjorskrubber - 0.2 /g
+  [113] kg skrubber - 100
+  [114] Brosmeloins - 0.28 /g
+  [115] Brosmefilet - 0.28 /g
+  [116] Laksefilet - 0.3 /g
+  [117] Lakse steak - 80
+  [118] Havtaske haler - 0.3 /g
+  [119] Havtaskekæber - 0.3 /g
+  [120] Havtaskefilet - 0.35 /g
+  [121] Havtaske - hel fisk - 0.35 /g
+  [122] Rødtunge - hel fisk - 0.25 /g
+  [123] Rødtungefilet - 0.33 /g
+  [124] Havkatfilet - 0.25 /g
+  [125] Blåmuslinger 1 kg - 50
+  [126] Ising - 0 /g
+  [127] Isingfilet - 0.22 /g
+  [128] Multe - helfisk - 0 /g
+  [129] Multefilet - 0.25 /g
+  [130] Makrel - helfisk - 0.12 /g
+  [131] Makrelfilet - 0.18 /g
+  [132] Helleflynderfilet - 0.3 /g
+  [133] Helleflynder - helfisk - 0.22 /g
+  [134] Sild - helfisk - 0 /g
+  [135] Sildefilet - 0.08 /g
+  [136] Hornfisk - helfisk - 0.08 /g
+  [137] Hornfiskfilet - 0.25 /g
+  [138] Mørksejloins - 0.18 /g
+  [139] Mørksejfilet - 0.18 /g
+  [140] Lyssejfilet - 0.22 /g
+  [141] Lyssejloins - 0 /g
+  [145] Smørfisk - Escobar - 0.22 /g
+  [146] Pighvar - 0.28 /g
+  [147] Slethvar - 0.15 /g
+  [148] Kullerloins - 0.25 /g
+  [149] Kullerfilet - 0.19 /g
+  [150] Havkat - helfisk - 0 /g
+  [151] Havbars - 0.16 /g
+  [152] Rødfiskfilet - 0.32 /g
+  [155] Torskerogn - 0.25 /g
+  [173] Skrubbefilet - 0.25 /g
+  [180] Moonfisk - 0.2 /g
+  [190] Blålangeloins - 0.22 /g
+  [192] Havtaskefilet - 0.35 /g
+  [195] Ål - 0.5 /g
+  [198] Lakse ørred - 0.18 /g
+  [199] Rødfisk - 0.16 /g
+  [200] Fjeasing - 0.12 /g
+  [204] Søtunge - 0.25 /g
+  [211] Rokkevinde - 0.1
+  [213] Jomfruhummer (Hele) - 0.2 /kg
+  [216] Grey mullet - 20
+  [218] Blålange filet - 0.24 /g
+
+=== Røget Fisk (ID 2) - 22 products ===
+  [45] Røget Sildefilet - 15
+  [46] Stk: Røget Sildefilet - 40
+  [47] Varmrøget Færøsk Laks - 0.3 /g
+  [48] Røget Makrel - 55
+  [49] Røget Sild - 20
+  [50] Røget Dorado - 25
+  [51] Røget Ål - 0.3 /g
+  [52] Røget Torskerogn - 0.25 /g
+  [53] Røget Musling - 7
+  [54] Stk: Røget Musling - 25
+  [66] Røget Kryddermakrel - 30
+  [67] Lokal Røget Makrel - 25
+  [68] Stk. Røget Makrel lokale - 40
+  [69] Kold Røget Laks - 0.45 /g
+  [70] Kold Røget Hellefisk - 0.4 /g
+  [71] Røget Skalrejer - 0.22 /g
+  [72] Røget Hajbug - 0
+  [73] Røget Smørfisk - 0.35 /g
+  [74] Røget Hornfisk - 25
+  [93] stk Kryddermakrel - 55
+  [196] stk. røget makrel - 100
+  [217] Røget ål skive - 0.75 /g
+
+=== Fiskefrikadeller & Fileter (ID 3) - 10 products ===
+  [39] X Fiskefrikadeller - 60
+  [40] Fiskefrikadelle - 18
+  [41] X Fiskefilet - 60
+  [42] Fiskefilet - 18
+  [43] Mix Filet & delle - 60
+  [79] Laksefrikadelle - 18
+  [80] X Laksefrikadelle - 60
+  [99] Frikadelle mix - 60
+  [219] stk deller - 120
+  [220] fiskefilet - 120
+
+=== Friture rejer (ID 4) - 10 products ===
+  [44] Indbagte rejer med Aioli - 60
+  [81] Kartoffelrejer - 7
+  [82] X Kartoffelrejer - 25
+  [83] Krabbekugler - 7
+  [84] X Krabbekugler - 25
+  [85] Tempura Rejer - 7
+  [86] X Tempura Rejer - 25
+  [87] Stk. Mix Rejer/Krabbe - 25
+  [186] Twister rejer - 8
+  [187] xTwister rejer - 20
+
+=== Salater & Delikatesser (ID 5) - 15 products ===
+  [2] Tangsalat - 30
+  [3] Aioli - 20
+  [4] Sild - 50
+  [5] Kartoffelsalat - 0.1 /g
+  [96] Fiske fars 500g - 50
+  [153] Håndpillede rejer Lille - 35
+  [176] Garlic shrimp - 50
+  [178] Blæksprutte salat - 50
+  [197] Laksemuosse - 25
+  [201] Sardine - 40
+  [206] Fiskesennep - 20
+  [208] Remoulade lille 100 gr - 20
+  [209] Remoulade stor 200 gr - 30
+  [214] Stor 200 gr Reje/Skaldyr salat - 50
+  [215] Lille Skaldyr /reje salat 100gr - 30
+
+=== Færdigretter (ID 6) - 33 products ===
+  [13] Stjerneskud - 155
+  [14] Fish n' chips - 145
+  [15] Tempura rejer & krabbekugler - 85
+  [16] Torskenuggets - 85
+  [17] 1 fiskefilet med lille pommes - 60
+  [18] 2 Fiskefilet med stor pommes - 100
+  [19] 1 Fiskefilet med lille kartoffelsalat - 60
+  [20] 2 Fiskefilet med stor kartoffelsalat - 100
+  [21] 1 Fiskefilet med rugbrød - 50
+  [22] 2 Fiskefilet med rugbrød - 90
+  [23] 1 Fiskefrikadelle med lille pommes - 60
+  [24] 2 Fiskefrikadeller med stor pommes - 100
+  [25] 1 Fiskefrikadelle med lille kartoffelsalat - 60
+  [26] 2 Fiskefrikadeller med lille kartoffelsalat - 100
+  [27] 1 Fiskefrikadelle med rugbrød - 50
+  [28] 2 Fiskefrikadeller med rugbrød - 90
+  [29] Pommes frites - 50
+  [30] Quinoa or pelle - 60
+  [31] Kylling burger med pommes - 95
+  [32] Calamares med pommes - 100
+  [33] Rejer, salat, brød & aioli - 125
+  [34] Rejecoctail - 125
+  [35] Sandwich med frikadelle - 85
+  [36] Sandwich ribbenstech - 85
+  [37] Sandwich med rejer - 95
+  [38] Sandwich med laks - 95
+  [91] Kylling med pommes - 110
+  [92] Kylling med kartoffel - 110
+  [94] Calamares 8 stk - 55
+  [156] Torskenuggets 6 stk - 45
+  [175] Lille pommes - 35
+  [188] Kylling burger - 70
+  [189] Kuller - 50
+
+=== Frostvarer (ID 7) - 13 products ===
+  [62] Pillede jomfruhummerhaler - 350
+  [63] Skalrejer - 0.12 /g
+  [64] Jomfruhummerhaler - 150
+  [65] Hummer - 0.35 /g
+  [97] Gluten og laktose fri fiskefrikadeller - 60
+  [98] Krabbeklør - 0.1 /g
+  [179] Black Tiger rejer - 250
+  [185] Languster - 0.25 /g
+  [191] Stenbiderogn 200gr - 50 /none
+  [203] Ål - 0.5 /g
+  [205] Scallob Meat - 400
+  [207] Rapuja - 200
+  [212] Seafood - 150
+
+=== Drikkevarer (ID 8) - 14 products ===
+  [6] Alkoholfri øl - 40
+  [7] Vodka aprikos - 60
+  [8] Gin lemon - 60
+  [9] Sodavand - 20
+  [10] Kildevand - 20
+  [11] Samsø Saft - 45
+  [12] Kaffe - 25
+  [154] Sports cola - 25
+  [181] Vin flaske - 200
+  [182] Vin glas - 70
+  [183] Big beer - 60
+  [184] Small beer - 35
+  [193] Stor Samsø snap - 220
+  [194] Lille Samsø snap - 135
+
+=== Diverse (ID 9) - 25 products ===
+  [75] Rosé Rejer - 0.25 /g
+  [76] Østers Åben - 20
+  [77] Østers - 15
+  [78] Stk. Østers - 150
+  [89] Honning - 0
+  [90] Citron - 7
+  [142] Krabbekløer - 0.15 /g
+  [143] Krabbekløer - små - 0 /g
+  [144] Krabbekløer - 1 kg - 0 /g
+  [157] Koldrøget laks - 0 /none
+  [158] Varmrøget laks - 250 /kg
+  [159] Laksefilet - 140 /kg
+  [160] Torskeloins - 235 /kg
+  [161] Rødspætter - 120 /kg
+  [162] Hp rejer - 240 /stk
+  [164] Rødspættefilet - 160 /kg
+  [165] Torskefilet - 125 /kg
+  [166] Torskeloins - 160 /kg
+  [167] Skippersild krydder - 250 /stk
+  [168] Skippersild marineret - 250 /stk
+  [169] Line musling - 35 /kg
+  [171] Koldrøget laks - 180 /kg
+  [174] Panner mix - 15
+  [202] Kaviar - 300
+  [210] Kaluga Kaviar - 400

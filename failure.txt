@@ -1,0 +1,32 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details
+[1A[2K  1) tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Vores Udvalg')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Vores Udvalg')[22m
+
+
+       9 |         // Wait for the products section to load
+      10 |         // Assuming products are displayed in a container, verifying visibility
+    > 11 |         await expect(page.locator('text=Vores Udvalg')).toBeVisible();
+         |                                                         ^
+      12 |
+      13 |         // Get all product cards
+      14 |         // Adjust selector based on actual implementation.
+        at C:\Users\sivhv\Downloads\Ballen Fisk\tests\verify-products.spec.js:11:57
+
+    Error Context: test-results\verify-products-Product-Ve-55c5e-oducts-with-correct-details\error-context.md
+
+
+[1A[2K  1 failed
+    tests\verify-products.spec.js:5:5 › Product Verification › should display all products with correct details 

@@ -1,0 +1,19 @@
+{"id":142,"category_id":9,"name_da":"Krabbekl├©er","price":0.15,"unit":"g"}
+{"id":143,"category_id":9,"name_da":"Krabbekl├©er - sm├Ñ","price":0,"unit":"g"}
+{"id":144,"category_id":9,"name_da":"Krabbekl├©er - 1 kg","price":0,"unit":"g"}
+{"id":157,"category_id":9,"name_da":"Koldr├©get laks","price":0,"unit":"none"}
+{"id":158,"category_id":9,"name_da":"Varmr├©get laks","price":250,"unit":"kg"}
+{"id":159,"category_id":9,"name_da":"Laksefilet","price":140,"unit":"kg"}
+{"id":160,"category_id":9,"name_da":"Torskeloins","price":235,"unit":"kg"}
+{"id":161,"category_id":9,"name_da":"R├©dsp├ªtter","price":120,"unit":"kg"}
+{"id":164,"category_id":9,"name_da":"R├©dsp├ªttefilet","price":160,"unit":"kg"}
+{"id":165,"category_id":9,"name_da":"Torskefilet","price":125,"unit":"kg"}
+{"id":166,"category_id":9,"name_da":"Torskeloins","price":160,"unit":"kg"}
+{"id":167,"category_id":9,"name_da":"Skippersild krydder","price":250,"unit":"stk"}
+{"id":168,"category_id":9,"name_da":"Skippersild marineret","price":250,"unit":"stk"}
+{"id":169,"category_id":9,"name_da":"Line musling","price":35,"unit":"kg"}
+{"id":171,"category_id":9,"name_da":"Koldr├©get laks","price":180,"unit":"kg"}
+{"id":174,"category_id":9,"name_da":"Panner mix","price":15,"unit":null}
+{"id":176,"category_id":5,"name_da":"Garlic shrimp","price":50,"unit":null}
+{"id":189,"category_id":6,"name_da":"Kuller","price":50,"unit":null}
+{"id":201,"category_id":5,"name_da":"Sardine","price":40,"unit":null}

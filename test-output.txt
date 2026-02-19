@@ -1,0 +1,7 @@
+
+Running 1 test using 1 worker
+
+No horizontal overflow detected.
+  Ô£ô  1 tests\mobile-responsive.spec.js:8:1 ÔÇ║ Mobile Responsiveness Check (2.9s)
+
+  1 passed (5.4s)

@@ -1,0 +1,54 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[2m[WebServer] [22mBrowserslist: caniuse-lite is outdated. Please run:
+[2m[WebServer] [22m  npx update-browserslist-db@latest
+[2m[WebServer] [22m  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+[1A[2K[1/1] tests\verify-products.spec.js:5:5 › Product Verification › should report all product issues
+[1A[2Ktests\verify-products.spec.js:5:5 › Product Verification › should report all product issues
+Verifying category: Fersk Fisk
+
+[1A[2KVerifying category: Røget Fisk
+
+[1A[2KVerifying category: Fiskefrikadeller & Fileter
+
+[1A[2KVerifying category: Friture rejer
+
+[1A[2KVerifying category: Salater & Delikatesser
+
+[1A[2KVerifying category: Færdigretter
+
+[1A[2KVerifying category: Frostvarer
+
+[1A[2KVerifying category: Drikkevarer
+
+[1A[2KVerifying category: Diverse
+
+[1A[2K  1) tests\verify-products.spec.js:5:5 › Product Verification › should report all product issues ───
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.innerText: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#products').locator('.grid > div').nth(2).locator('.absolute.top-4.right-4')[22m
+
+
+      50 |                              // Verify Price
+      51 |                              const priceElement = card.locator('.absolute.top-4.right-4');
+    > 52 |                              const priceText = await priceElement.innerText();
+         |                                                                   ^
+      53 |                              // We could validate price text format here but keeping it loose for now.
+      54 |
+      55 |                              // Verify Image
+        at C:\Users\sivhv\Downloads\Ballen Fisk\tests\verify-products.spec.js:52:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\verify-products-Product-Ve-481d1-d-report-all-product-issues\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\verify-products-Product-Ve-481d1-d-report-all-product-issues\error-context.md
+
+
+[1A[2K  1 failed
+    tests\verify-products.spec.js:5:5 › Product Verification › should report all product issues ────

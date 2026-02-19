@@ -1,0 +1,76 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] tests\verify-products.spec.js:5:5 › Product Verification › should report all product issues
+[1A[2K[2m[WebServer] [22mBrowserslist: caniuse-lite is outdated. Please run:
+[2m[WebServer] [22m  npx update-browserslist-db@latest
+[2m[WebServer] [22m  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+[1A[2Ktests\verify-products.spec.js:5:5 › Product Verification › should report all product issues
+Verifying category: Fersk Fisk
+
+[1A[2KVerifying category: Røget Fisk
+
+[1A[2KVerifying category: Fiskefrikadeller & Fileter
+
+[1A[2KVerifying category: Friture rejer
+
+[1A[2KVerifying category: Salater & Delikatesser
+
+[1A[2KVerifying category: Færdigretter
+
+[1A[2KVerifying category: Frostvarer
+
+[1A[2KVerifying category: Drikkevarer
+
+[1A[2KVerifying category: Diverse
+
+[1A[2KVerification Complete.
+
+[1A[2KMissing Products: []
+
+[1A[2KMissing Images: [
+  [32m'1 Fiskefilet med lille kartoffelsalat (Menu/1 fiskefilet mlille kartoffelsalat.jpeg)'[39m,
+  [32m'1 Fiskefilet med rugbrød (Menu/1 fiskefilet mrugbrød.jpeg)'[39m,
+  [32m'1 Fiskefrikadelle med lille kartoffelsalat (Menu/1 fiskefrikadelle mlille kartoffelsalat.jpeg)'[39m,
+  [32m'1 Fiskefrikadelle med lille pommes (Menu/1 fiskefrikadelle mlille pommes.jpeg)'[39m,
+  [32m'1 Fiskefrikadelle med rugbrød (Menu/1 fiskefrikadelle mrugbrød.jpeg)'[39m,
+  [32m'2 Fiskefilet med rugbrød (Menu/2 fiskefilet mrugbrød.jpeg)'[39m,
+  [32m'2 Fiskefilet med stor kartoffelsalat (Menu/2 fiskefilet mstor kartoffelsalat.jpeg)'[39m,
+  [32m'2 Fiskefilet med stor pommes (Menu/2 fiskefilet mstor pommes.jpeg)'[39m,
+  [32m'2 Fiskefrikadeller med lille kartoffelsalat (Menu/2 fiskefrikadeller mlille kartoffelsalat.jpeg)'[39m,
+  [32m'2 Fiskefrikadeller med rugbrød (Menu/2 fiskefrikadeller mrugbrød.jpeg)'[39m,
+  [32m'2 Fiskefrikadeller med stor pommes (Menu/2 fiskefrikadeller mstor pommes.jpeg)'[39m,
+  [32m'Sandwich med frikadelle (Menu/Sandwich med frikadelle.jpeg)'[39m,
+  [32m'Vodka aprikos (Drikkevarer/Vodka Aprikos.jpeg)'[39m
+]
+
+[1A[2KOther Errors: []
+
+[1A[2K  1) tests\verify-products.spec.js:5:5 › Product Verification › should report all product issues ───
+
+    Error: Verification Failed:
+
+                Missing Products: 
+                Missing Images: 1 Fiskefilet med lille kartoffelsalat (Menu/1 fiskefilet mlille kartoffelsalat.jpeg), 1 Fiskefilet med rugbrød (Menu/1 fiskefilet mrugbrød.jpeg), 1 Fiskefrikadelle med lille kartoffelsalat (Menu/1 fiskefrikadelle mlille kartoffelsalat.jpeg), 1 Fiskefrikadelle med lille pommes (Menu/1 fiskefrikadelle mlille pommes.jpeg), 1 Fiskefrikadelle med rugbrød (Menu/1 fiskefrikadelle mrugbrød.jpeg), 2 Fiskefilet med rugbrød (Menu/2 fiskefilet mrugbrød.jpeg), 2 Fiskefilet med stor kartoffelsalat (Menu/2 fiskefilet mstor kartoffelsalat.jpeg), 2 Fiskefilet med stor pommes (Menu/2 fiskefilet mstor pommes.jpeg), 2 Fiskefrikadeller med lille kartoffelsalat (Menu/2 fiskefrikadeller mlille kartoffelsalat.jpeg), 2 Fiskefrikadeller med rugbrød (Menu/2 fiskefrikadeller mrugbrød.jpeg), 2 Fiskefrikadeller med stor pommes (Menu/2 fiskefrikadeller mstor pommes.jpeg), Sandwich med frikadelle (Menu/Sandwich med frikadelle.jpeg), Vodka aprikos (Drikkevarer/Vodka Aprikos.jpeg)
+                Errors: 
+                
+
+      92 |             Errors: ${errors.join(', ')}
+      93 |             `;
+    > 94 |             throw new Error(`Verification Failed:\n${report}`);
+         |                   ^
+      95 |         }
+      96 |     });
+      97 | });
+        at C:\Users\sivhv\Downloads\Ballen Fisk\tests\verify-products.spec.js:94:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\verify-products-Product-Ve-481d1-d-report-all-product-issues\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\verify-products-Product-Ve-481d1-d-report-all-product-issues\error-context.md
+
+
+[1A[2K  1 failed
+    tests\verify-products.spec.js:5:5 › Product Verification › should report all product issues ────

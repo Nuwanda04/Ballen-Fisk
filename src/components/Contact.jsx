@@ -1,26 +1,29 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Facebook, Clock, AlertCircle } from 'lucide-react';
+import { Clock, Facebook, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export const Contact = () => {
   const { t } = useLanguage();
 
   const openingHours = [
-    { period: '1. Juni - 1. September', hours: 'Man-Søn 10:00-18:00' },
+    { period: t('contact.season'), hours: t('contact.openingHoursLine') },
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+    <section className="relative py-12 md:py-24 bg-white overflow-hidden">
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold text-[#0B132B] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0B132B] mb-4">
             {t('contact.title')}
           </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            {t('contact.intro')}
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -107,12 +110,8 @@ export const Contact = () => {
               ))}
             </div>
 
-            <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-4 flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-amber-900 leading-relaxed">
-                {t('status.disclaimer')}
-              </p>
-            </div>
+
+
 
             <div className="mt-8 aspect-video rounded-xl overflow-hidden shadow-lg">
               <iframe
