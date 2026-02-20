@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Clock, Facebook, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { renderWithStrongDark } from '../utils/textUtils';
 
 export const Contact = () => {
   const { t } = useLanguage();
@@ -16,13 +17,13 @@ export const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-left mb-16 max-w-2xl w-fit mx-auto px-4 md:px-0"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-[#0B132B] mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {t('contact.intro')}
+          <p className="text-xl text-gray-600">
+            {renderWithStrongDark(t('contact.intro'))}
           </p>
         </motion.div>
 

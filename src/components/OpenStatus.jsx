@@ -28,15 +28,15 @@ export const OpenStatus = () => {
 
   return (
     <div className="flex items-center gap-3">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-        <div className={`w-2.5 h-2.5 rounded-full ${status.isOpen ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />
-        <span className="text-sm font-medium text-white">
+      <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+        <div className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full ${status.isOpen ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />
+        <span className="text-xs md:text-sm font-medium text-white whitespace-nowrap">
           {status.isOpen
             ? (language === 'de' ? 'Geöffnet' : language === 'en' ? 'Open' : 'Åben')
             : (language === 'de' ? 'Geschlossen' : language === 'en' ? 'Closed' : 'Lukket')}
         </span>
         {hint && (
-          <span className="text-xs text-white/50 hidden sm:inline">
+          <span className="text-xs text-white/50 hidden md:inline whitespace-nowrap">
             · {hint}
           </span>
         )}

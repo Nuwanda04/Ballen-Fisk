@@ -1,8 +1,16 @@
-import { categories, products } from '../data/products';
+import { categories, products, subcategories } from '../data/products';
 
 export const dataService = {
   async getCategories() {
     return [...categories].sort((a, b) => a.sort_order - b.sort_order);
+  },
+
+  async getSubcategories(categoryId = null) {
+    let result = [...subcategories];
+    if (categoryId) {
+      result = result.filter(s => s.category_id === categoryId);
+    }
+    return result;
   },
 
   async getProducts(categoryId = null) {

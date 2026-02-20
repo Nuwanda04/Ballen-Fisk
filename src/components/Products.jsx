@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronDown, Coffee, Fish, Flame, Package, Salad, Snowflake, Star, UtensilsCrossed } from 'lucide-react';
+import { ChevronDown, Coffee, Fish, Flame, Grid3X3, Package, Salad, Snowflake, Star, UtensilsCrossed, Wine } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { subcategories as subcategoriesData } from '../data/products';
 import { useLanguage } from '../i18n/LanguageContext';
 import { dataService } from '../services/dataService';
 
@@ -16,6 +17,7 @@ for (const [path, mod] of Object.entries(imageModules)) {
 }
 
 const categoryIcons = {
+  'all': Grid3X3,
   'fresh-fish': Fish,
   'smoked-fish': Flame,
   'ready-meals': UtensilsCrossed,
@@ -27,8 +29,20 @@ const categoryIcons = {
   'misc': Package
 };
 
+// Subcategory icons mapping
+const subcategoryIcons = {
+  'Fish': Fish,
+  'UtensilsCrossed': UtensilsCrossed,
+  'Cookie': Star,
+  'Shrimp': Star,
+  'Shellfish': Star,
+  'Coffee': Coffee,
+  'Wine': Wine
+};
+
 // Vibrant Pastel Colors Palette (Distinct from White, One Blue Rule)
 const gradientColors = [
+  '#FFFFFF', // White (0: All)
   '#FF7EB9', // Deep Pink (1: Diverse)
   '#FDBA74', // Deep Orange (2: Drikkevarer)
   '#FDE047', // Deep Yellow (3: Fersk Fisk)
@@ -45,6 +59,7 @@ export const Products = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -88,10 +103,21 @@ export const Products = () => {
     return product[`name_${language}`] || product.name_da;
   };
 
-  // Pagination logic
-  const filteredProducts = products.filter(product =>
-    selectedCategory === 'all' || product.category_id === selectedCategory // Assuming product has category_id
+  const getSubcategoryName = (subcategory) => {
+    return subcategory[`name_${language}`] || subcategory.name_da;
+  };
+
+  // Get subcategories for current category
+  const currentSubcategories = subcategoriesData.filter(
+    sub => sub.category_id === selectedCategory
   );
+
+  // Pagination logic
+  const filteredProducts = products.filter(product => {
+    const categoryMatch = selectedCategory === 0 || product.category_id === selectedCategory;
+    const subcategoryMatch = !selectedSubcategory || product.subcategory_id === selectedSubcategory;
+    return categoryMatch && subcategoryMatch;
+  });
 
   const indexOfLastProduct = currentPage * itemsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
@@ -106,11 +132,11 @@ export const Products = () => {
   return (
     <section id="products" className="relative pt-24 md:pt-48 pb-32 md:pb-52 overflow-hidden" style={{ background: 'linear-gradient(159deg, rgba(100,149,237,1) 0%, rgba(124,158,195,1) 100%)' }}>
       {/* Top Shape Divider (White Overlay) */}
-      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none rotate-180">
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none -mt-1">
         <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
           <path
             fill="#ffffff"
-            d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,200L0,200Z"
+            d="M0,0L0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,0Z"
           />
         </svg>
       </div>
@@ -129,13 +155,11 @@ export const Products = () => {
           <h2 className="text-5xl font-bold text-white mb-4">
             {t('products.title')}
           </h2>
-          <p className="text-xl text-white/90">{t('products.categories')}</p>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           {/* Sidebar Filters - Desktop */}
           <div className="hidden lg:block w-full lg:w-1/4 space-y-3">
-             <h3 className="text-xl font-bold text-white mb-6 border-b border-white/20 pb-2">{t('products.categories')}</h3>
              {categories.map((category, index) => {
               const Icon = categoryIcons[category.slug] || Package;
               const isActive = selectedCategory === category.id;
@@ -154,6 +178,7 @@ const convertHexToRgba = (hex, alpha) => {
                   key={category.id}
                   onClick={() => {
                     setSelectedCategory(category.id);
+                    setSelectedSubcategory(null);
                     setCurrentPage(1);
                   }}
                   style={{
@@ -264,7 +289,90 @@ const convertHexToRgba = (hex, alpha) => {
           </div>
 
           {/* Product Grid & Pagination */}
-          <div className="w-full lg:w-3/4 mt-0 lg:mt-16">
+          <div className="w-full lg:w-3/4 mt-0">
+            {/* Current Category Heading */}
+            {(() => {
+              const currentCategory = categories.find(c => c.id === selectedCategory);
+              if (!currentCategory) return null;
+              const Icon = categoryIcons[currentCategory.slug] || Package;
+              const catIndex = categories.indexOf(currentCategory);
+              const iconColor = catIndex >= 0 ? gradientColors[catIndex % gradientColors.length] : '#3E92CC';
+
+              return (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-6"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className="p-3 rounded-xl shadow-lg"
+                      style={{ backgroundColor: `${iconColor}40` }}
+                    >
+                      <Icon className="w-6 h-6 text-white" style={{ filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.3))' }} />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+                      {getCategoryName(currentCategory)}
+                    </h3>
+                    <span className="text-white/70 text-sm ml-auto">
+                      {filteredProducts.length} {filteredProducts.length === 1 ? t('products.item') : t('products.items')}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })()}
+
+            {/* Subcategory Filter Tags */}
+            {currentSubcategories.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                <motion.button
+                  onClick={() => {
+                    setSelectedSubcategory(null);
+                    setCurrentPage(1);
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    !selectedSubcategory
+                      ? 'text-white shadow-lg bg-white/30'
+                      : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
+                  }`}
+                >
+                  <span>{t('products.all')}</span>
+                </motion.button>
+                {currentSubcategories.map((subcategory) => {
+                  const Icon = subcategoryIcons[subcategory.icon] || Star;
+                  const isActive = selectedSubcategory === subcategory.id;
+                  const catIndex = categories.findIndex(c => c.id === selectedCategory);
+                  const myColor = catIndex >= 0 ? gradientColors[catIndex % gradientColors.length] : '#3E92CC';
+
+                  return (
+                    <motion.button
+                      key={subcategory.id}
+                      onClick={() => {
+                        setSelectedSubcategory(subcategory.id);
+                        setCurrentPage(1);
+                      }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                        isActive
+                          ? 'text-white shadow-lg'
+                          : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
+                      }`}
+                      style={isActive ? {
+                        backgroundColor: myColor,
+                        boxShadow: `0 4px 15px ${myColor}60`
+                      } : {}}
+                    >
+                      <Icon className="w-4 h-4" />
+                      <span>{getSubcategoryName(subcategory)}</span>
+                    </motion.button>
+                  );
+                })}
+              </div>
+            )}
+
             {/* Products Grid */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mb-16">
               <AnimatePresence mode="popLayout">
@@ -305,49 +413,115 @@ const convertHexToRgba = (hex, alpha) => {
                     </div>
 
                     <div className="p-3 md:p-5 flex flex-col flex-grow">
-                      <div className="flex flex-col md:flex-row md:items-start justify-between gap-1 md:gap-2">
-                        <h3 className="text-sm md:text-lg font-bold text-[#0B132B] leading-tight group-hover:text-[#3E92CC] transition-colors line-clamp-2 md:line-clamp-none">{getProductName(product)}</h3>
-                        <div className="self-start md:self-auto bg-white/90 backdrop-blur-sm px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold text-[#0B132B] shadow-sm whitespace-nowrap shrink-0 border border-gray-100">
-                          {product.price === 0 ? t('products.askStore') : `${product.price},-`}
-                          {product.unit && (
-                            <span className="text-[10px] md:text-xs text-gray-500 ml-1">/{product.unit}</span>
-                          )}
-                        </div>
+                      <h3 className="text-sm md:text-lg font-bold text-[#0B132B] leading-tight group-hover:text-[#3E92CC] transition-colors line-clamp-2 mb-2">{getProductName(product)}</h3>
+                      <div className="mt-auto pt-1 flex items-baseline justify-end gap-1.5">
+                        {product.price === 0 ? (
+                          <span className="text-sm font-medium text-gray-400 italic bg-gray-50 px-2 py-1 rounded-md">{t('products.askStore')}</span>
+                        ) : (
+                          (() => {
+                            let displayPrice = product.price;
+                            let displayUnit = product.unit ? `/${product.unit}` : '';
+
+                            // Convert grams to 100g for better readability
+                            if (product.unit === 'g') {
+                              displayPrice = product.price * 100;
+                              displayUnit = '/ 100g';
+
+                              // Format distinctively if needed, but standard number is fine
+                              // If it results in a long decimal, we might want to round, but usually these are clean.
+                              displayPrice = parseFloat(displayPrice.toFixed(2));
+                            }
+
+                            return (
+                              <>
+                                <span className="text-2xl md:text-3xl font-black text-[#0B132B] tracking-tight">
+                                  {displayPrice}
+                                </span>
+                                <div className="flex flex-col justify-end pb-1">
+                                  <span className="text-[10px] md:text-xs font-bold text-[#3E92CC] uppercase tracking-wider leading-none">
+                                    DKK
+                                  </span>
+                                  {displayUnit && (
+                                    <span className="text-[10px] md:text-xs font-medium text-gray-400 leading-none">
+                                      {displayUnit}
+                                    </span>
+                                  )}
+                                </div>
+                              </>
+                            );
+                          })()
+                        )}
                       </div>
-                      {product.description && <p className="text-gray-600 text-xs md:text-sm mt-1 md:mt-2 line-clamp-2 hidden md:block">{product.description}</p>}
+                      {product.description && <p className="text-gray-600 text-xs md:text-sm mt-2 line-clamp-2 hidden md:block">{product.description}</p>}
                     </div>
                   </motion.div>
                 );})}
               </AnimatePresence>
             </div>
 
-            {/* Pagination */}
+            {/* Condensed Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center flex-wrap gap-2">
                 <button
                   onClick={() => paginate(Math.max(1, currentPage - 1))}
                   disabled={currentPage === 1}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-white disabled:opacity-50 hover:bg-white/20 transition-colors font-medium"
+                  className="px-4 py-2 rounded-lg bg-white/10 text-white disabled:opacity-30 hover:bg-white/20 transition-colors font-medium text-sm"
                 >
                   {t('products.prev')}
                 </button>
-                {[...Array(totalPages)].map((_, i) => (
-                  <button
-                    key={i + 1}
-                    onClick={() => paginate(i + 1)}
-                    className={`w-10 h-10 rounded-lg font-bold transition-all ${
-                      currentPage === i + 1
-                        ? 'bg-white text-[#3E92CC] shadow-lg scale-110'
-                        : 'bg-white/10 text-white hover:bg-white/20'
-                    }`}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
+
+                {(() => {
+                  const pages = [];
+                  // Logic for condensed pagination:
+                  // Always show 1
+                  // Always show last page
+                  // Show current page and neighbours
+
+                  const showEllipsisStart = currentPage > 3;
+                  const showEllipsisEnd = currentPage < totalPages - 2;
+
+                  if (totalPages <= 7) {
+                    for (let i = 1; i <= totalPages; i++) pages.push(i);
+                  } else {
+                    pages.push(1);
+                    if (showEllipsisStart) pages.push('...');
+
+                    let start = Math.max(2, currentPage - 1);
+                    let end = Math.min(totalPages - 1, currentPage + 1);
+
+                    if (!showEllipsisStart) start = 2;
+                    if (!showEllipsisEnd) end = totalPages - 1;
+
+                    for (let i = start; i <= end; i++) {
+                      pages.push(i);
+                    }
+
+                    if (showEllipsisEnd) pages.push('...');
+                    pages.push(totalPages);
+                  }
+
+                  return pages.map((page, index) => (
+                    <button
+                      key={index}
+                      onClick={() => typeof page === 'number' && paginate(page)}
+                      disabled={page === '...'}
+                      className={`min-w-[40px] h-10 px-2 rounded-lg font-bold transition-all text-sm ${
+                        page === currentPage
+                          ? 'bg-white text-[#3E92CC] shadow-lg scale-105'
+                          : page === '...'
+                            ? 'text-white/60 cursor-default'
+                            : 'bg-white/10 text-white hover:bg-white/20'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ));
+                })()}
+
                 <button
                   onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-white disabled:opacity-50 hover:bg-white/20 transition-colors font-medium"
+                  className="px-4 py-2 rounded-lg bg-white/10 text-white disabled:opacity-30 hover:bg-white/20 transition-colors font-medium text-sm"
                 >
                   {t('products.next')}
                 </button>

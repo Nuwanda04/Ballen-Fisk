@@ -1,4 +1,4 @@
-import { Fish, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export const Footer = () => {
@@ -9,7 +9,11 @@ export const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
           <div className="flex items-center gap-3">
-            <Fish className="w-8 h-8 text-[#3E92CC]" />
+            <img
+              src="/faviconFish.png"
+              alt="Ballen Fisk Logo"
+              className="w-10 h-10 object-contain drop-shadow-md"
+            />
             <div>
               <div className="text-xl font-bold">Ballen Fisk</div>
               <div className="text-sm text-white/60">{t('footer.since')}</div>
@@ -18,7 +22,7 @@ export const Footer = () => {
 
           <div className="text-center">
             <p className="text-sm text-white/60 mb-1">
-              {t('footer.copyright')}
+              {t('footer.copyright').replace('{year}', new Date().getFullYear())}
             </p>
             <p className="text-xs text-white/40 italic">
               {t('products.disclaimer')}
@@ -29,7 +33,7 @@ export const Footer = () => {
             <div className="flex items-center gap-2 text-sm text-white/80">
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-400 fill-red-400 animate-pulse" />
-              <span>for Samsø</span>
+              <span>in Samsø</span>
             </div>
             <div className="text-sm text-white/60">
               <p>Ballen Fisk • {t('footer.tagline')}</p>
