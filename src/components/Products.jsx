@@ -6,19 +6,13 @@ import { useLanguage } from '../i18n/useLanguage';
 import { dataService } from '../services/dataService';
 
 // Pre-resolve all asset images at build time (handles spaces/special chars in paths)
-const imageModules = import.meta.glob('../assets/optimized/**/*.jpg', {
-  eager: true,
-  import: 'default'
-});
+const imageModules = import.meta.glob('../assets/**/*.{jpeg,jpg,png,webp,svg}', { eager: true });
 const imageMap = {};
-for (const [path, imageUrl] of Object.entries(imageModules)) {
-  // Use the catalogue's original path keys while serving optimized JPGs.
-  const key = path.split('/optimized/')[1];
+for (const [path, mod] of Object.entries(imageModules)) {
+  // Robustly handle path: use everything after "/assets/"
+  const key = path.split('/assets/')[1];
   if (key) {
-    imageMap[key] = imageUrl;
-    if (key.endsWith('.jpg')) {
-      imageMap[`${key.slice(0, -4)}.jpeg`] = imageUrl;
-    }
+    imageMap[key] = mod.default;
   }
 }
 

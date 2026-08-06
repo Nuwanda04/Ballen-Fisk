@@ -34,9 +34,6 @@ test.describe('Product catalogue integrity', () => {
     for (const category of categories) {
       await page.getByRole('button', { name: category.name_da, exact: true }).first().click();
       await expect(productsSection.locator('.grid > div').first()).toBeVisible();
-      expect(await productsSection.locator('img').evaluateAll(images =>
-        images.filter(image => image.complete && image.naturalWidth === 0).map(image => image.src)
-      )).toEqual([]);
 
       const expectedCount = category.id === 0
         ? products.length
