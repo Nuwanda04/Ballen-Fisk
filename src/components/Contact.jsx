@@ -122,20 +122,33 @@ export const Contact = () => {
 
 
 
-            <div className="mt-8 aspect-video rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2232.8!2d10.6387!3d55.8164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ4JzU5LjAiTiAxMMKwMzgnMTkuMyJF!5e0!3m2!1sda!2sdk!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={t('contact.mapTitle')}
-              />
-            </div>
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mx-auto mt-8 max-w-6xl rounded-2xl bg-white p-4 shadow-xl md:mt-10 md:p-6"
+        >
+          <div className="mb-4 flex items-center gap-3">
+            <MapPin className="h-7 w-7 text-[#3E92CC]" aria-hidden="true" />
+            <h3 className="text-2xl font-bold text-[#0B132B]">
+              {t('contact.mapTitle')}
+            </h3>
+          </div>
+          <div className="aspect-[16/7] overflow-hidden rounded-xl shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2232.8!2d10.6387!3d55.8164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ4JzU5LjAiTiAxMMKwMzgnMTkuMyJF!5e0!3m2!1sda!2sdk!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={t('contact.mapTitle')}
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
