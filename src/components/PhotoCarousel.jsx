@@ -11,13 +11,13 @@ import shopFront from '../assets/carousel/shop-front.jpg';
 import shopFrontSky from '../assets/carousel/shop-front-sky.jpg';
 import terraceExterior from '../assets/carousel/terrace-exterior.jpg';
 import terraceHarbor from '../assets/carousel/terrace-harbor.jpg';
-import heroShop from '../assets/butikHero.jpg';
+import oldHero from '../assets/butik-billede.jpg';
 import { SectionAtmosphere } from './SectionAtmosphere';
 
 const slides = [
   ['terraceHarbor', terraceHarbor],
   ['fishTerrace', fishTerrace],
-  ['heroShop', heroShop],
+  ['oldHero', oldHero],
   ['shopFront', shopFront],
   ['shopCloseUp', shopCloseUp],
   ['fishCounter', fishCounter],

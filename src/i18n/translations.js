@@ -78,7 +78,7 @@ export const translations = {
       chooseSlide: 'Vælg billede',
       goTo: 'Gå til billede',
       images: {
-        heroShop: 'Ballen Fisk ved havnen',
+        oldHero: 'Den gamle fiskevogn ved Ballen Havn',
         shopFront: 'Ballen Fisk ved havnen',
         shopCloseUp: 'Et nærmere kig på butikken',
         fishCounter: 'Fisk i butiksdisken',
@@ -200,7 +200,7 @@ export const translations = {
       chooseSlide: 'Choose image',
       goTo: 'Go to image',
       images: {
-        heroShop: 'Ballen Fisk at the harbour',
+        oldHero: 'The old fish van at Ballen Harbor',
         shopFront: 'Ballen Fisk at the harbour',
         shopCloseUp: 'A closer look at the shop',
         fishCounter: 'Fish in the shop counter',
@@ -322,7 +322,7 @@ export const translations = {
       chooseSlide: 'Bild auswählen',
       goTo: 'Zu Bild',
       images: {
-        heroShop: 'Ballen Fisk am Hafen',
+        oldHero: 'Der alte Fischwagen am Ballen Hafen',
         shopFront: 'Ballen Fisk am Hafen',
         shopCloseUp: 'Ein näherer Blick auf den Laden',
         fishCounter: 'Fisch in der Ladentheke',
