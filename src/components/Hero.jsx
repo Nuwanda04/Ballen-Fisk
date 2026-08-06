@@ -163,9 +163,15 @@ export const Hero = () => {
       <div className="absolute -bottom-[1px] left-0 right-0 leading-none">
         <svg viewBox="0 0 1440 320" className="w-full h-auto block" preserveAspectRatio="none">
           <defs>
+            <linearGradient id="hero-divider-grid-gradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#5FA8D3" />
+              <stop offset="35%" stopColor="#3E92CC" />
+              <stop offset="65%" stopColor="#2A7AB8" />
+              <stop offset="100%" stopColor="#0B132B" />
+            </linearGradient>
             <pattern id="hero-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
               <rect width="48" height="48" fill="#ffffff" />
-              <path d="M48 0H0V48" fill="none" stroke="#7DB7F4" strokeOpacity="0.24" strokeWidth="1" />
+              <path d="M48 0H0V48" fill="none" stroke="url(#hero-divider-grid-gradient)" strokeOpacity="0.28" strokeWidth="1" />
             </pattern>
           </defs>
           <path
