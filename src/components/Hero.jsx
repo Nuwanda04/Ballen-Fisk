@@ -65,15 +65,15 @@ export const Hero = () => {
 
       {primaryNav('relative z-40 container flex lg:hidden items-center justify-center gap-5 pb-4')}
 
-      <div className="relative z-10 container pt-4 pb-48 lg:pb-36 flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
+      <div className="relative z-10 container pt-4 pb-[19rem] lg:pb-52 flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
+        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-10 items-center h-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4 }}
             className="relative block order-last mb-0 lg:mb-0 flex-1 flex items-center justify-center"
           >
-            <div className="relative w-full max-w-[380px] lg:max-w-xl mx-auto lg:ml-auto aspect-[16/10]">
+            <div className="relative w-full max-w-[420px] lg:max-w-[700px] mx-auto lg:ml-auto aspect-[16/10]">
             <div className="w-full h-full rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 relative z-10">
               <img
                 src={heroImage}
@@ -131,16 +131,16 @@ export const Hero = () => {
                 <span className="sm:hidden">{t('hero.sinceMobile')}</span>
               </motion.div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-2xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-2xl">
                 {t('hero.title')}
               </h1>
 
-              <p className="text-xl md:text-2xl font-medium mb-6 lg:mb-8 opacity-90 text-balance leading-relaxed">
+              <p className="text-lg md:text-xl font-medium mb-6 lg:mb-8 opacity-90 text-balance leading-relaxed">
                 {t('hero.subtitle')}
               </p>
             </motion.div>
 
-            <p className="text-lg text-white/60 mb-8 leading-relaxed text-left max-w-lg mx-auto lg:mx-0 px-4 md:px-0">
+            <p className="text-base md:text-lg text-white/60 mb-8 leading-relaxed text-left max-w-lg mx-auto lg:mx-0 px-4 md:px-0">
               {renderWithStrong(t('hero.description'))}
             </p>
 
