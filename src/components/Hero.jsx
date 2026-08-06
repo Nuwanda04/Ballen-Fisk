@@ -171,7 +171,7 @@ export const Hero = () => {
             </linearGradient>
             <pattern id="hero-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
               <rect width="48" height="48" fill="#ffffff" />
-              <path d="M48 0H0V48" fill="none" stroke="url(#hero-divider-grid-gradient)" strokeOpacity="0.28" strokeWidth="1" />
+              <path d="M48 0H0V48" fill="none" stroke="url(#hero-divider-grid-gradient)" strokeOpacity="0.42" strokeWidth="1" />
             </pattern>
           </defs>
           <path
