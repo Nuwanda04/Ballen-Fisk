@@ -32,6 +32,7 @@ export const LanguageSwitcher = () => {
   ];
 
   const currentLanguage = languages.find(l => l.code === language) || languages[0];
+  const languageHref = (code) => code === 'da' ? '/' : `/${code}/`;
 
   return (
     <>
@@ -52,8 +53,9 @@ export const LanguageSwitcher = () => {
         {isOpen && (
           <div className="absolute right-0 top-full mt-2 bg-[#0B132B] border border-white/10 rounded-xl shadow-xl overflow-hidden min-w-[140px] z-[60]">
             {languages.map(({ code, label }) => (
-              <button
+              <a
                 key={code}
+                href={languageHref(code)}
                 onClick={() => {
                   changeLanguage(code);
                   setIsOpen(false);
@@ -72,7 +74,7 @@ export const LanguageSwitcher = () => {
                 <span className={`text-sm ${language === code ? 'text-white font-bold' : 'text-white/80'}`}>
                   {label}
                 </span>
-              </button>
+              </a>
             ))}
           </div>
         )}
@@ -81,8 +83,9 @@ export const LanguageSwitcher = () => {
       {/* Desktop List */}
       <div className="hidden md:flex gap-2">
         {languages.map(({ code, label }) => (
-          <button
+          <a
             key={code}
+            href={languageHref(code)}
             onClick={() => changeLanguage(code)}
             className={`px-2 py-1.5 rounded-lg transition-all duration-300 ${
               language === code
@@ -96,7 +99,7 @@ export const LanguageSwitcher = () => {
               alt={label}
               className="w-7 h-5 object-cover rounded-sm"
             />
-          </button>
+          </a>
         ))}
       </div>
     </>
