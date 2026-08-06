@@ -50,7 +50,7 @@ export const History = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold text-[#0B132B] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0B132B] mb-4">
             {t('history.title')}
           </h2>
           <p className="text-xl text-gray-600">{t('history.founder')}</p>

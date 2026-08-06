@@ -19,7 +19,7 @@ export const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-left mb-16 max-w-2xl w-fit mx-auto px-4 md:px-0"
+          className="text-left mb-12 max-w-2xl w-fit mx-auto px-4 md:px-0"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-[#0B132B] mb-4">
             {t('contact.title')}
@@ -29,7 +29,7 @@ export const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

@@ -162,7 +162,7 @@ export const Products = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <h2 className="text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('products.title')}
           </h2>
         </motion.div>
@@ -324,7 +324,7 @@ const convertHexToRgba = (hex, alpha) => {
                     <h3 className="text-2xl md:text-3xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                       {getCategoryName(currentCategory)}
                     </h3>
-                    <span className="text-white/70 text-sm ml-auto">
+                    <span className="text-white/90 text-sm ml-auto">
                       {filteredProducts.length} {filteredProducts.length === 1 ? t('products.item') : t('products.items')}
                     </span>
                   </div>
@@ -384,7 +384,7 @@ const convertHexToRgba = (hex, alpha) => {
             )}
 
             {/* Products Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16">
               <AnimatePresence mode="popLayout">
                 {currentProducts.map((product) => {
                   const imageUrl = failedImages.has(product.id) ? null : resolveImage(product.image);
@@ -400,9 +400,10 @@ const convertHexToRgba = (hex, alpha) => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    className="group bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col"
+                    className="group bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col border-t-4 border-transparent"
+                    style={{ borderTopColor: placeholderColor }}
                   >
-                    <div className="relative h-32 md:h-48 overflow-hidden">
+                    <div className="relative h-36 md:h-48 overflow-hidden">
                       {imageUrl ? (
                         <img
                           src={imageUrl}
@@ -436,7 +437,7 @@ const convertHexToRgba = (hex, alpha) => {
 
                     </div>
 
-                    <div className="p-3 md:p-5 flex flex-col flex-grow">
+                    <div className="p-4 md:p-5 flex flex-col flex-grow">
                       <h3 className="text-sm md:text-lg font-bold text-[#0B132B] leading-tight group-hover:text-[#3E92CC] transition-colors line-clamp-2 mb-2">{getProductName(product)}</h3>
                       <div className="mt-auto pt-1 flex items-baseline justify-end gap-1.5">
                         {product.price === 0 ? (
@@ -458,7 +459,7 @@ const convertHexToRgba = (hex, alpha) => {
 
                             return (
                               <>
-                                <span className="text-2xl md:text-3xl font-black text-[#0B132B] tracking-tight">
+                                <span className="text-xl md:text-3xl font-black text-[#0B132B] tracking-tight">
                                   {displayPrice}
                                 </span>
                                 <div className="flex flex-col justify-end pb-1">
@@ -466,7 +467,7 @@ const convertHexToRgba = (hex, alpha) => {
                                     DKK
                                   </span>
                                   {displayUnit && (
-                                    <span className="text-[10px] md:text-xs font-medium text-gray-400 leading-none">
+                                    <span className="text-[10px] md:text-xs font-medium text-[#0B132B]/70 leading-none">
                                       {displayUnit}
                                     </span>
                                   )}

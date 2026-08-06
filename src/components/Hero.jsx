@@ -6,8 +6,28 @@ import { renderWithStrong } from '../utils/textUtils';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { OpenStatus } from './OpenStatus';
 
+const navLinks = [
+  ['history', 'nav.history'],
+  ['products', 'nav.products'],
+  ['contact', 'nav.contact']
+];
+
 export const Hero = () => {
   const { t } = useLanguage();
+
+  const primaryNav = (className) => (
+    <nav aria-label={t('nav.primary')} className={className}>
+      {navLinks.map(([section, label]) => (
+        <a
+          key={section}
+          href={`#${section}`}
+          className="text-xs lg:text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors"
+        >
+          {t(label)}
+        </a>
+      ))}
+    </nav>
+  );
 
   return (
     <header id="top" className="relative overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
@@ -37,33 +57,13 @@ export const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-4"
         >
-          <nav aria-label={t('nav.primary')} className="hidden lg:flex items-center gap-5 mr-2">
-            <a href="#history" className="text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
-              {t('nav.history')}
-            </a>
-            <a href="#products" className="text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
-              {t('nav.products')}
-            </a>
-            <a href="#contact" className="text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
-              {t('nav.contact')}
-            </a>
-          </nav>
+          {primaryNav('hidden lg:flex items-center gap-5 mr-2')}
           <OpenStatus />
           <LanguageSwitcher />
         </motion.div>
       </nav>
 
-      <nav aria-label={t('nav.primary')} className="relative z-40 container flex lg:hidden items-center justify-center gap-5 pb-4">
-        <a href="#history" className="text-xs font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
-          {t('nav.history')}
-        </a>
-        <a href="#products" className="text-xs font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
-          {t('nav.products')}
-        </a>
-        <a href="#contact" className="text-xs font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
-          {t('nav.contact')}
-        </a>
-      </nav>
+      {primaryNav('relative z-40 container flex lg:hidden items-center justify-center gap-5 pb-4')}
 
       <div className="relative z-10 container pt-4 pb-32 lg:pb-20 flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
