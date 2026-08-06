@@ -80,7 +80,6 @@ export const Hero = () => {
                 alt="Ballen Fisk at Ballen Havn"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/60 to-transparent" />
             </div>
 
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-bottom-6 lg:-left-6 z-20 w-max">
