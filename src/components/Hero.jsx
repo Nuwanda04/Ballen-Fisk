@@ -10,7 +10,7 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <div id="top" className="relative overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
+    <header id="top" className="relative overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-[#3E92CC] rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5FA8D3] rounded-full blur-3xl animate-pulse delay-1000" />
@@ -156,6 +156,6 @@ export const Hero = () => {
           />
         </svg>
       </div>
-    </div>
+    </header>
   );
 };

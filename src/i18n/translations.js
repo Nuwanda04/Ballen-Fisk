@@ -9,7 +9,8 @@ export const translations = {
       products: 'Produkter',
       history: 'Historie',
       contact: 'Kontakt',
-      primary: 'Hovednavigation'
+      primary: 'Hovednavigation',
+      skip: 'Spring til hovedindhold'
     },
     hero: {
       title: 'Ballen Fisk',
@@ -78,8 +79,8 @@ export const translations = {
     footer: {
       copyright: '© {year} Ballen Fisk. Alle rettigheder forbeholdes.',
       since: 'Fiskeri fra Samsø siden 1997',
-      tagline: 'Tradition & Kvalitet'
-      ,madeWith: 'Lavet med',
+      tagline: 'Tradition & Kvalitet',
+      madeWith: 'Lavet med',
       inLocation: 'på Samsø'
     }
   },
@@ -93,7 +94,8 @@ export const translations = {
       products: 'Products',
       history: 'History',
       contact: 'Contact',
-      primary: 'Primary navigation'
+      primary: 'Primary navigation',
+      skip: 'Skip to main content'
     },
     hero: {
       title: 'Ballen Fish',
@@ -162,8 +164,8 @@ export const translations = {
     footer: {
       copyright: '© {year} Ballen Fish. All rights reserved.',
       since: 'Fishing from Samsø since 1997',
-      tagline: 'Tradition & Quality'
-      ,madeWith: 'Made with',
+      tagline: 'Tradition & Quality',
+      madeWith: 'Made with',
       inLocation: 'in Samsø'
     }
   },
@@ -177,7 +179,8 @@ export const translations = {
       products: 'Produkte',
       history: 'Geschichte',
       contact: 'Kontakt',
-      primary: 'Hauptnavigation'
+      primary: 'Hauptnavigation',
+      skip: 'Zum Hauptinhalt springen'
     },
     hero: {
       title: 'Ballen Fisch',
@@ -246,8 +249,8 @@ export const translations = {
     footer: {
       copyright: '© {year} Ballen Fisch. Alle Rechte vorbehalten.',
       since: 'Fischerei von Samsø seit 1997',
-      tagline: 'Tradition & Qualität'
-      ,madeWith: 'Mit Liebe gemacht',
+      tagline: 'Tradition & Qualität',
+      madeWith: 'Mit Liebe gemacht',
       inLocation: 'auf Samsø'
     }
   }

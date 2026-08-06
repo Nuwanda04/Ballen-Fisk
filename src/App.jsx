@@ -4,15 +4,32 @@ import { Hero } from './components/Hero';
 import { History } from './components/History';
 import { Products } from './components/Products';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { useLanguage } from './i18n/useLanguage';
+
+const SkipLink = () => {
+  const { t } = useLanguage();
+
+  return (
+    <a
+      href="#main"
+      className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#0B132B] focus:shadow-xl"
+    >
+      {t('nav.skip')}
+    </a>
+  );
+};
 
 function App() {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-white">
         <Hero />
-        <History />
-        <Products />
-        <Contact />
+        <SkipLink />
+        <main id="main">
+          <History />
+          <Products />
+          <Contact />
+        </main>
         <Footer />
       </div>
     </LanguageProvider>
