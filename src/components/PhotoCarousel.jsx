@@ -11,16 +11,18 @@ import shopFront from '../assets/carousel/shop-front.jpg';
 import shopFrontSky from '../assets/carousel/shop-front-sky.jpg';
 import terraceExterior from '../assets/carousel/terrace-exterior.jpg';
 import terraceHarbor from '../assets/carousel/terrace-harbor.jpg';
+import heroShop from '../assets/butikHero.jpg';
 import { SectionAtmosphere } from './SectionAtmosphere';
 
 const slides = [
+  ['terraceHarbor', terraceHarbor],
+  ['fishTerrace', fishTerrace],
+  ['heroShop', heroShop],
   ['shopFront', shopFront],
   ['shopCloseUp', shopCloseUp],
   ['fishCounter', fishCounter],
   ['fishOnIce', fishOnIce],
-  ['terraceHarbor', terraceHarbor],
   ['terraceExterior', terraceExterior],
-  ['fishTerrace', fishTerrace],
   ['shopFrontSky', shopFrontSky],
   ['lobsterHandling', lobsterHandling],
   ['liveLobster', liveLobster]
@@ -29,6 +31,7 @@ const slides = [
 export const PhotoCarousel = () => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(null);
 
   useEffect(() => {
@@ -38,6 +41,16 @@ export const PhotoCarousel = () => {
       image.src = source;
     });
   }, []);
+
+  useEffect(() => {
+    if (isPaused) return undefined;
+
+    const timer = window.setInterval(() => {
+      setCurrentSlide((slide) => (slide + 1) % slides.length);
+    }, 6000);
+
+    return () => window.clearInterval(timer);
+  }, [isPaused]);
 
   const goToSlide = (index) => {
     setCurrentSlide((index + slides.length) % slides.length);
@@ -55,6 +68,7 @@ export const PhotoCarousel = () => {
   };
 
   const handleTouchStart = (event) => {
+    setIsPaused(true);
     touchStartX.current = event.touches[0]?.clientX ?? null;
   };
 
@@ -66,6 +80,7 @@ export const PhotoCarousel = () => {
       goToSlide(currentSlide + (distance < 0 ? 1 : -1));
     }
     touchStartX.current = null;
+    setIsPaused(false);
   };
 
   const [slideKey, image] = slides[currentSlide];
@@ -91,6 +106,12 @@ export const PhotoCarousel = () => {
           aria-label={t('gallery.label')}
           tabIndex="0"
           onKeyDown={handleKeyDown}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
+          }}
         >
           <div
             className="relative aspect-[16/10] touch-pan-y overflow-hidden rounded-3xl bg-[#0B132B] shadow-2xl md:aspect-[16/9]"

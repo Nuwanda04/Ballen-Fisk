@@ -30,8 +30,8 @@ function App() {
           <SkipLink />
           <main id="main">
             <History />
-            <Products />
             <PhotoCarousel />
+            <Products />
             <Contact />
           </main>
           <Footer />

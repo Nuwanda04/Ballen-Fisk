@@ -12,6 +12,10 @@ export const Contact = () => {
   return (
     <section id="contact" className="relative py-12 md:py-24 bg-white overflow-hidden">
       <SectionAtmosphere />
+      <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#FF7EB9]/[0.12] blur-[90px]" />
+      <div className="pointer-events-none absolute right-[-6rem] top-1/3 h-80 w-80 rounded-full bg-[#FDBA74]/[0.13] blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-24 left-1/3 h-72 w-72 rounded-full bg-[#86EFAC]/[0.10] blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-[#E376D4]/[0.09] blur-[110px]" />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,9 +38,9 @@ export const Contact = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
+            <div className="border-t-4 border-[#FF7EB9] bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#3E92CC] to-[#0B132B] rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#FF7EB9] to-[#B82568] rounded-xl flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -60,9 +64,9 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
+            <div className="border-t-4 border-[#FDBA74] bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#3E92CC] to-[#0B132B] rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#FDBA74] to-[#E376D4] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -101,7 +105,7 @@ export const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl p-8 shadow-xl"
+            className="border-t-4 border-[#9153CE] bg-white rounded-2xl p-8 shadow-xl"
           >
             <div className="flex items-center gap-3 mb-6">
               <Clock className="w-8 h-8 text-[#3E92CC]" />
