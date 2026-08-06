@@ -81,7 +81,7 @@ export const translations = {
       title: 'Ballen Fish',
       subtitle: 'Quality Fish & Homemade Smoked Products',
       since: 'Your local fishmonger since 1997 <br class="mobile-only" />• <strong>Ballen Harbor</strong> • <strong>Samsø</strong>',
-      description: 'Welcome to Samsø\'s favourite fishmonger at Ballen Harbor. We offer daily fresh-caught fish from the Kattegat, home-smoked specialities from our own smokehouse, and the island\'s best fish cakes – all crafted with tradition and passion.',
+      description: 'Welcome to <strong>Samsø\'s</strong> favourite fishmonger at <strong>Ballen Harbor</strong>. We offer daily <strong>fresh-caught fish</strong> from the Kattegat, home-smoked specialities from our own <strong>smokehouse</strong>, and the island\'s best <strong>fish cakes</strong> – all crafted with tradition and passion.',
       cta: 'View Our Selection',
       smokehouseTitle: 'Own Smokehouse',
       smokehouseSubtitle: 'Smoked the Traditional Way'
@@ -127,7 +127,7 @@ export const translations = {
     },
     contact: {
       title: 'Visit Us',
-      intro: 'Find us at Ballen Harbor on Samsø – enjoy fresh fish on our terrace overlooking the harbor, or take our homemade smoked goods and fish cakes home with you.',
+      intro: 'Find us at <strong>Ballen Harbor</strong> on <strong>Samsø</strong> – enjoy <strong>fresh fish</strong> on our terrace overlooking the harbor, or take our homemade <strong>smoked goods</strong> and <strong>fish cakes</strong> home with you.',
       address: 'Strandvejen 83, 8305 Ballen Harbor, Samsø',
       phone: 'Phone',
       email: 'Email',
@@ -152,7 +152,7 @@ export const translations = {
       title: 'Ballen Fisch',
       subtitle: 'Qualitätsfisch & Hausgemachte Räucherprodukte',
       since: 'Ihr lokaler Fischhändler seit 1997 <br class="mobile-only" />• <strong>Ballen Hafen</strong> • <strong>Samsø</strong>',
-      description: 'Willkommen bei Samsøs beliebtestem Fischhändler am Ballen Hafen. Wir bieten täglich frisch gefangenen Fisch aus dem Kattegat, hausgeräucherte Spezialitäten aus unserer eigenen Räucherei und die besten Fischfrikadellen der Insel – alles mit Handwerk und Leidenschaft zubereitet.',
+      description: 'Willkommen bei <strong>Samsøs</strong> beliebtestem Fischhändler am <strong>Ballen Hafen</strong>. Wir bieten täglich <strong>frisch gefangenen Fisch</strong> aus dem Kattegat, hausgeräucherte Spezialitäten aus unserer eigenen <strong>Räucherei</strong> und die besten <strong>Fischfrikadellen</strong> der Insel – alles mit Handwerk und Leidenschaft zubereitet.',
       cta: 'Produkte Ansehen',
       smokehouseTitle: 'Eigene Räucherei',
       smokehouseSubtitle: 'Traditionell geräuchert'
@@ -198,7 +198,7 @@ export const translations = {
     },
     contact: {
       title: 'Besuchen Sie Uns',
-      intro: 'Finden Sie uns am Ballen Hafen auf Samsø – genießen Sie frischen Fisch auf unserer Terrasse mit Hafenblick, oder nehmen Sie unsere hausgeräucherten Spezialitäten und Fischfrikadellen mit nach Hause.',
+      intro: 'Finden Sie uns am <strong>Ballen Hafen</strong> auf <strong>Samsø</strong> – genießen Sie <strong>frischen Fisch</strong> auf unserer Terrasse mit Hafenblick, oder nehmen Sie unsere hausgeräucherten <strong>Spezialitäten</strong> und <strong>Fischfrikadellen</strong> mit nach Hause.',
       address: 'Strandvejen 83, 8305 Ballen Hafen, Samsø',
       phone: 'Telefon',
       email: 'E-Mail',
