@@ -64,6 +64,11 @@
     -webkit-mask: url('/shape-dividers/products-bottom-mask.svg') center / 100% 100% no-repeat;
     mask: url('/shape-dividers/products-bottom-mask.svg') center / 100% 100% no-repeat;
   }
+
+  .section-atmosphere-glow {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 16%, black 84%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 16%, black 84%, transparent 100%);
+  }
 }
 
 html {
