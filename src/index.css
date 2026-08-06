@@ -29,6 +29,13 @@
   .delay-1000 {
     animation-delay: 1000ms;
   }
+
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(147, 197, 253, 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(147, 197, 253, 0.18) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
 }
 
 html {
