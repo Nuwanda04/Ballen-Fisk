@@ -48,6 +48,14 @@ export const Contact = () => {
                     {t('contact.postalCity')}<br />
                     {t('contact.country')}
                   </p>
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Strandvejen%2083%2C%208305%20Ballen%2C%20Denmark"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-3 text-sm font-semibold text-[#3E92CC] hover:underline"
+                  >
+                    {t('contact.directions')}
+                  </a>
                 </div>
               </div>
             </div>

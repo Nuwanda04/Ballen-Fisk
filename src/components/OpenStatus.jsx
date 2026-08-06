@@ -21,7 +21,7 @@ export const OpenStatus = () => {
       : t('status.seasonShort');    // Off-season — show when the season is
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3" role="status" aria-live="polite" aria-label={`${status.isOpen ? t('status.open') : t('status.closed')}${hint ? `, ${hint}` : ''}`}>
       <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
         <div className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full ${status.isOpen ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />
         <span className="text-xs md:text-sm font-medium text-white whitespace-nowrap">

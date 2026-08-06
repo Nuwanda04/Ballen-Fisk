@@ -1,4 +1,5 @@
 import { Contact } from './components/Contact';
+import { MotionConfig } from 'framer-motion';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { History } from './components/History';
@@ -22,16 +23,18 @@ const SkipLink = () => {
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-white">
-        <Hero />
-        <SkipLink />
-        <main id="main">
-          <History />
-          <Products />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <MotionConfig reducedMotion="user">
+        <div className="min-h-screen bg-white">
+          <Hero />
+          <SkipLink />
+          <main id="main">
+            <History />
+            <Products />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </MotionConfig>
     </LanguageProvider>
   );
 }
