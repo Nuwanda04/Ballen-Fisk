@@ -27,7 +27,7 @@ function App() {
         <div className="min-h-screen bg-white">
           <Hero />
           <SkipLink />
-          <main id="main" className="bg-grid-pattern">
+          <main id="main">
             <History />
             <Products />
             <Contact />

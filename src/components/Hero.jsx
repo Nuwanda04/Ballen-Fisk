@@ -162,8 +162,14 @@ export const Hero = () => {
 
       <div className="absolute -bottom-[1px] left-0 right-0 leading-none">
         <svg viewBox="0 0 1440 320" className="w-full h-auto block" preserveAspectRatio="none">
+          <defs>
+            <pattern id="hero-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+              <rect width="48" height="48" fill="#ffffff" />
+              <path d="M48 0H0V48" fill="none" stroke="#7DB7F4" strokeOpacity="0.24" strokeWidth="1" />
+            </pattern>
+          </defs>
           <path
-            fill="#ffffff"
+            fill="url(#hero-divider-grid)"
             d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           />
         </svg>

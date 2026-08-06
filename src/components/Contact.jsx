@@ -11,7 +11,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-12 md:py-24 bg-transparent overflow-hidden">
+    <section id="contact" className="relative py-12 md:py-24 bg-white bg-grid-pattern overflow-hidden">
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

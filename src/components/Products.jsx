@@ -143,8 +143,14 @@ export const Products = () => {
       {/* Top Shape Divider (White Overlay) */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none -mt-1">
         <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
+          <defs>
+            <pattern id="products-top-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+              <rect width="48" height="48" fill="#ffffff" />
+              <path d="M48 0H0V48" fill="none" stroke="#7DB7F4" strokeOpacity="0.24" strokeWidth="1" />
+            </pattern>
+          </defs>
           <path
-            fill="#ffffff"
+            fill="url(#products-top-divider-grid)"
             d="M0,0L0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,0Z"
           />
         </svg>
@@ -565,8 +571,14 @@ const convertHexToRgba = (hex, alpha) => {
 
       <div className="absolute bottom-0 left-0 right-0 -mb-px">
         <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
+          <defs>
+            <pattern id="products-bottom-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+              <rect width="48" height="48" fill="#ffffff" />
+              <path d="M48 0H0V48" fill="none" stroke="#7DB7F4" strokeOpacity="0.24" strokeWidth="1" />
+            </pattern>
+          </defs>
           <path
-            fill="#ffffff"
+            fill="url(#products-bottom-divider-grid)"
             d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,200L0,200Z"
           />
         </svg>
