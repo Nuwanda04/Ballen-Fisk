@@ -142,18 +142,13 @@ export const Products = () => {
     <section id="products" className="relative pt-24 md:pt-48 pb-32 md:pb-52 overflow-hidden" style={{ background: 'linear-gradient(159deg, rgba(100,149,237,1) 0%, rgba(124,158,195,1) 100%)' }}>
       {/* Top Shape Divider (White Overlay) */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none -mt-1">
-        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none" shapeRendering="crispEdges">
-          <defs>
-            <pattern id="products-top-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-              <rect width="48" height="48" fill="#ffffff" />
-              <path d="M48 0H0V48" fill="none" stroke="#2A7AB8" strokeOpacity="0.58" strokeWidth="1" />
-            </pattern>
-          </defs>
+        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
           <path
-            fill="url(#products-top-divider-grid)"
+            fill="#ffffff"
             d="M0,0L0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,0Z"
           />
         </svg>
+        <div className="shape-divider-grid shape-divider-grid--products-top" />
       </div>
 
       <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -570,18 +565,13 @@ const convertHexToRgba = (hex, alpha) => {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 -mb-px">
-        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none" shapeRendering="crispEdges">
-          <defs>
-            <pattern id="products-bottom-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-              <rect width="48" height="48" fill="#ffffff" />
-              <path d="M48 0H0V48" fill="none" stroke="#2A7AB8" strokeOpacity="0.58" strokeWidth="1" />
-            </pattern>
-          </defs>
+        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
           <path
-            fill="url(#products-bottom-divider-grid)"
+            fill="#ffffff"
             d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,200L0,200Z"
           />
         </svg>
+        <div className="shape-divider-grid shape-divider-grid--products-bottom" />
       </div>
     </section>
   );

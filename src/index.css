@@ -36,6 +36,34 @@
       linear-gradient(90deg, rgba(42, 122, 184, 0.26) 1px, transparent 1px);
     background-size: 48px 48px;
   }
+
+  .shape-divider-grid {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(42, 122, 184, 0.26) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(42, 122, 184, 0.26) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: 0 0;
+    background-repeat: repeat;
+  }
+
+  .shape-divider-grid--hero {
+    -webkit-mask: url('/shape-dividers/hero-mask.svg') center / 100% 100% no-repeat;
+    mask: url('/shape-dividers/hero-mask.svg') center / 100% 100% no-repeat;
+  }
+
+  .shape-divider-grid--products-top {
+    -webkit-mask: url('/shape-dividers/products-top-mask.svg') center / 100% 100% no-repeat;
+    mask: url('/shape-dividers/products-top-mask.svg') center / 100% 100% no-repeat;
+  }
+
+  .shape-divider-grid--products-bottom {
+    -webkit-mask: url('/shape-dividers/products-bottom-mask.svg') center / 100% 100% no-repeat;
+    mask: url('/shape-dividers/products-bottom-mask.svg') center / 100% 100% no-repeat;
+  }
 }
 
 html {
