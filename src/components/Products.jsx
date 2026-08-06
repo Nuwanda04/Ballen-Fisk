@@ -6,15 +6,22 @@ import { useLanguage } from '../i18n/useLanguage';
 import { dataService } from '../services/dataService';
 
 // Pre-resolve all asset images at build time (handles spaces/special chars in paths)
-const imageModules = import.meta.glob('../assets/**/*.{jpeg,jpg,png,webp,svg}', { eager: true });
+const imageModules = import.meta.glob('../assets/**/*.{jpeg,jpg,png,webp,svg}', {
+  eager: true,
+  import: 'default'
+});
 const imageMap = {};
 for (const [path, mod] of Object.entries(imageModules)) {
-  // Robustly handle path: use everything after "/assets/"
-  const key = path.split('/assets/')[1];
+  // Keep the lookup independent of URL encoding and path separator differences.
+  const key = path.split('/assets/')[1]?.normalize('NFC').replaceAll('\\', '/');
   if (key) {
-    imageMap[key] = mod.default;
+    imageMap[key] = mod;
   }
 }
+
+const resolveImage = (imagePath) => imagePath
+  ? imageMap[imagePath.normalize('NFC').replaceAll('\\', '/')] || null
+  : null;
 
 const categoryIcons = {
   'all': Grid3X3,
@@ -377,7 +384,7 @@ const convertHexToRgba = (hex, alpha) => {
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mb-16">
               <AnimatePresence mode="popLayout">
                 {currentProducts.map((product) => {
-                  const imageUrl = product.image ? imageMap[product.image] || null : null;
+                  const imageUrl = resolveImage(product.image);
                   const category = categories.find(c => c.id === product.category_id);
                   const Icon = category ? (categoryIcons[category.slug] || Package) : Package;
                   const categoryIndex = category ? categories.indexOf(category) : 0;

@@ -35,6 +35,11 @@ test.describe('Product catalogue integrity', () => {
       await page.getByRole('button', { name: category.name_da, exact: true }).first().click();
       await expect(productsSection.locator('.grid > div').first()).toBeVisible();
 
+      const brokenImages = await productsSection.locator('img').evaluateAll((images) => images
+        .filter((image) => image.currentSrc && image.naturalWidth === 0)
+        .map((image) => ({ alt: image.alt, src: image.currentSrc })));
+      expect(brokenImages, `Broken product images in ${category.name_da}`).toEqual([]);
+
       const expectedCount = category.id === 0
         ? products.length
         : products.filter(product => product.category_id === category.id).length;
