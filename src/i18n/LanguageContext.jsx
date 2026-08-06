@@ -14,6 +14,17 @@ export const LanguageProvider = ({ children }) => {
 
   useEffect(() => {
     document.documentElement.lang = language;
+    const seo = translations[language].seo;
+    document.title = seo.title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    metaDescription?.setAttribute('content', seo.description);
+
+    const openGraphDescription = document.querySelector('meta[property="og:description"]');
+    openGraphDescription?.setAttribute('content', seo.description);
+
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    twitterDescription?.setAttribute('content', seo.description);
   }, [language]);
 
   const changeLanguage = (lang) => {

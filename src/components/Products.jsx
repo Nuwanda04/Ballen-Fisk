@@ -69,6 +69,7 @@ export const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [failedImages, setFailedImages] = useState(() => new Set());
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
@@ -385,7 +386,7 @@ const convertHexToRgba = (hex, alpha) => {
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mb-16">
               <AnimatePresence mode="popLayout">
                 {currentProducts.map((product) => {
-                  const imageUrl = resolveImage(product.image);
+                  const imageUrl = failedImages.has(product.id) ? null : resolveImage(product.image);
                   const category = categories.find(c => c.id === product.category_id);
                   const Icon = category ? (categoryIcons[category.slug] || Package) : Package;
                   const categoryIndex = category ? categories.indexOf(category) : 0;
@@ -407,6 +408,11 @@ const convertHexToRgba = (hex, alpha) => {
                           alt={getProductName(product)}
                           loading="lazy"
                           decoding="async"
+                          onError={() => setFailedImages((current) => {
+                            const next = new Set(current);
+                            next.add(product.id);
+                            return next;
+                          })}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                       ) : (
