@@ -1,5 +1,4 @@
 import { Contact } from './components/Contact';
-import { AnalyticsConsent } from './components/AnalyticsConsent';
 import { MotionConfig } from 'framer-motion';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
@@ -34,7 +33,6 @@ function App() {
             <Contact />
           </main>
           <Footer />
-          <AnalyticsConsent />
         </div>
       </MotionConfig>
     </LanguageProvider>
