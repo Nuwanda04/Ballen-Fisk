@@ -8,6 +8,15 @@ export const Contact = () => {
   const { t } = useLanguage();
 
   const openingHours = t('contact.schedule');
+  const scheduleAccents = ['#FF7EB9', '#FDBA74', '#FDE047', '#86EFAC', '#5EEAD4', '#E376D4'];
+  const scheduleBackgrounds = [
+    'bg-[#FF7EB9]/[0.07]',
+    'bg-[#FDBA74]/[0.08]',
+    'bg-[#FDE047]/[0.10]',
+    'bg-[#86EFAC]/[0.09]',
+    'bg-[#5EEAD4]/[0.09]',
+    'bg-[#E376D4]/[0.08]'
+  ];
 
   return (
     <section id="contact" className="relative py-12 md:py-24 bg-white overflow-hidden">
@@ -114,11 +123,15 @@ export const Contact = () => {
               </h3>
             </div>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 mb-8">
               {openingHours.map((schedule, index) => (
-                <div key={index} className="border-b border-gray-200 pb-4 last:border-0">
+                <div
+                  key={index}
+                  className={`rounded-r-xl border-l-4 px-4 py-3 ${scheduleBackgrounds[index]}`}
+                  style={{ borderLeftColor: scheduleAccents[index] }}
+                >
                   <div className="font-semibold text-[#0B132B] mb-1">{schedule.period}</div>
-                  <div className="text-gray-600">{schedule.hours}</div>
+                  <div className="text-[#0B132B]/75">{schedule.hours}</div>
                 </div>
               ))}
             </div>

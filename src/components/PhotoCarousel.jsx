@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../i18n/useLanguage';
@@ -83,8 +84,18 @@ export const PhotoCarousel = () => {
     setIsPaused(false);
   };
 
-  const [slideKey, image] = slides[currentSlide];
-  const imagePosition = slideKey === 'lobsterHandling' ? 'center 22%' : 'center';
+  const getRelativePosition = (index) => {
+    let distance = index - currentSlide;
+    if (distance > slides.length / 2) distance -= slides.length;
+    if (distance < -slides.length / 2) distance += slides.length;
+    return distance;
+  };
+
+  const getCardPosition = (position) => {
+    if (position === -1) return { left: '-22%', scale: 0.92, opacity: 0.5, zIndex: 10 };
+    if (position === 1) return { left: '50%', scale: 0.92, opacity: 0.5, zIndex: 10 };
+    return { left: '14%', scale: 1, opacity: 1, zIndex: 20 };
+  };
 
   return (
     <section id="gallery" className="relative overflow-hidden bg-white py-16 md:py-24">
@@ -114,20 +125,46 @@ export const PhotoCarousel = () => {
           }}
         >
           <div
-            className="relative aspect-[16/10] touch-pan-y overflow-hidden rounded-3xl bg-[#0B132B] shadow-2xl md:aspect-[16/9]"
+            className="relative aspect-[16/10] touch-pan-y overflow-visible rounded-3xl bg-[#0B132B] shadow-2xl md:aspect-[16/9]"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            <img
-              key={slideKey}
-              src={image}
-              alt={t(`gallery.images.${slideKey}`)}
-              className="h-full w-full object-cover"
-              style={{ objectPosition: imagePosition }}
-              loading="eager"
-              decoding="async"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/75 via-transparent to-transparent" />
+            {slides.map(([slideKey, image], index) => {
+              const position = getRelativePosition(index);
+              if (Math.abs(position) > 1) return null;
+              const imagePosition = slideKey === 'lobsterHandling' ? 'center 22%' : 'center';
+              const cardPosition = getCardPosition(position);
+
+              return (
+                <motion.div
+                  key={slideKey}
+                  className="absolute top-0 h-full w-[84%] overflow-hidden rounded-3xl bg-[#0B132B] shadow-2xl md:w-[72%]"
+                  animate={cardPosition}
+                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  aria-hidden={position !== 0}
+                >
+                  <img
+                    src={image}
+                    alt={position === 0 ? t(`gallery.images.${slideKey}`) : ''}
+                    className="h-full w-full object-cover"
+                    style={{ objectPosition: imagePosition }}
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/75 via-transparent to-transparent" />
+                  {position === 0 && (
+                    <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-white md:bottom-7 md:left-8 md:right-8">
+                      <p className="text-sm font-semibold md:text-base">
+                        {t(`gallery.images.${slideKey}`)}
+                      </p>
+                      <p className="text-xs font-medium text-white/80" aria-live="polite">
+                        {currentSlide + 1} / {slides.length}
+                      </p>
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
 
             <button
               type="button"
@@ -146,14 +183,6 @@ export const PhotoCarousel = () => {
               <ChevronRight className="h-6 w-6" aria-hidden="true" />
             </button>
 
-            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-white md:bottom-7 md:left-8 md:right-8">
-              <p className="text-sm font-semibold md:text-base">
-                {t(`gallery.images.${slideKey}`)}
-              </p>
-              <p className="text-xs font-medium text-white/80" aria-live="polite">
-                {currentSlide + 1} / {slides.length}
-              </p>
-            </div>
           </div>
 
           <div className="mt-5 flex flex-wrap justify-center gap-2" role="tablist" aria-label={t('gallery.chooseSlide')}>
