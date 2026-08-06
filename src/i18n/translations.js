@@ -68,6 +68,27 @@ export const translations = {
       items: 'varer',
       all: 'Alle'
     },
+    gallery: {
+      title: 'Et kig fra Ballen Fisk',
+      subtitle: 'Frisk fisk, havneliv og terrassen ved Ballen Havn.',
+      label: 'Billedegalleri',
+      previous: 'Forrige billede',
+      next: 'Næste billede',
+      chooseSlide: 'Vælg billede',
+      goTo: 'Gå til billede',
+      images: {
+        shopFront: 'Ballen Fisk ved havnen',
+        shopCloseUp: 'Et nærmere kig på butikken',
+        fishCounter: 'Fisk i butiksdisken',
+        fishOnIce: 'Frisk fisk på is',
+        terraceHarbor: 'Terrassen med udsigt over havnen',
+        terraceExterior: 'Terrassen udefra',
+        fishTerrace: 'Fisketerrassen ved havnen',
+        shopFrontSky: 'Fiskevognen i solskin',
+        lobsterHandling: 'Hummer fra dagens udvalg',
+        liveLobster: 'Hummere klar til butikken'
+      }
+    },
     contact: {
       title: 'Besøg Os',
       intro: 'Find os ved <strong>Ballen Havn</strong> på <strong>Samsø</strong> – nyd <strong>frisk fisk</strong> på vores terrasse med udsigt over havnen, eller tag vores hjemmelavede <strong>røgvarer</strong> og <strong>fiskefrikadeller</strong> med hjem.',
@@ -160,6 +181,27 @@ export const translations = {
       items: 'items',
       all: 'All'
     },
+    gallery: {
+      title: 'A Look Around Ballen Fisk',
+      subtitle: 'Fresh fish, harbour life, and the terrace at Ballen Harbor.',
+      label: 'Photo gallery',
+      previous: 'Previous image',
+      next: 'Next image',
+      chooseSlide: 'Choose image',
+      goTo: 'Go to image',
+      images: {
+        shopFront: 'Ballen Fisk at the harbour',
+        shopCloseUp: 'A closer look at the shop',
+        fishCounter: 'Fish in the shop counter',
+        fishOnIce: 'Fresh fish on ice',
+        terraceHarbor: 'The terrace overlooking the harbour',
+        terraceExterior: 'The terrace from outside',
+        fishTerrace: 'The fish terrace by the harbour',
+        shopFrontSky: 'The fish shop in the sunshine',
+        lobsterHandling: 'Lobster from today’s selection',
+        liveLobster: 'Lobsters ready for the shop'
+      }
+    },
     contact: {
       title: 'Visit Us',
       intro: 'Find us at <strong>Ballen Harbor</strong> on <strong>Samsø</strong> – enjoy <strong>fresh fish</strong> on our terrace overlooking the harbor, or take our homemade <strong>smoked goods</strong> and <strong>fish cakes</strong> home with you.',
@@ -251,6 +293,27 @@ export const translations = {
       item: 'Artikel',
       items: 'Artikel',
       all: 'Alle'
+    },
+    gallery: {
+      title: 'Ein Blick auf Ballen Fisch',
+      subtitle: 'Frischer Fisch, Hafenleben und die Terrasse am Ballen Hafen.',
+      label: 'Bildergalerie',
+      previous: 'Vorheriges Bild',
+      next: 'Nächstes Bild',
+      chooseSlide: 'Bild auswählen',
+      goTo: 'Zu Bild',
+      images: {
+        shopFront: 'Ballen Fisk am Hafen',
+        shopCloseUp: 'Ein näherer Blick auf den Laden',
+        fishCounter: 'Fisch in der Ladentheke',
+        fishOnIce: 'Frischer Fisch auf Eis',
+        terraceHarbor: 'Die Terrasse mit Blick auf den Hafen',
+        terraceExterior: 'Die Terrasse von außen',
+        fishTerrace: 'Die Fischterrasse am Hafen',
+        shopFrontSky: 'Der Fischladen im Sonnenschein',
+        lobsterHandling: 'Hummer aus dem heutigen Sortiment',
+        liveLobster: 'Hummer für den Laden'
+      }
     },
     contact: {
       title: 'Besuchen Sie Uns',

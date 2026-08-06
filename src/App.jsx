@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { History } from './components/History';
 import { Products } from './components/Products';
+import { PhotoCarousel } from './components/PhotoCarousel';
 import { LanguageProvider } from './i18n/LanguageContext';
 import { useLanguage } from './i18n/useLanguage';
 
@@ -30,6 +31,7 @@ function App() {
           <main id="main">
             <History />
             <Products />
+            <PhotoCarousel />
             <Contact />
           </main>
           <Footer />
