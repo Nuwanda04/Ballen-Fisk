@@ -9,7 +9,7 @@ export const translations = {
     hero: {
       title: 'Ballen Fisk',
       subtitle: 'Kvalitetsfisk & Hjemmelavede Røgvarer',
-      since: 'Din lokale fiskehandler siden 1985 <br class="mobile-only" />• <strong>Ballen Havn</strong> • <strong>Samsø</strong>',
+      since: 'Din lokale fiskehandler siden 1997 <br class="mobile-only" />• <strong>Ballen Havn</strong> • <strong>Samsø</strong>',
       description: 'Velkommen til <strong>Samsøs</strong> foretrukne fiskehandler ved <strong>Ballen Havn</strong>. Vi tilbyder dagligt <strong>friskfanget fisk</strong> fra Kattegat, hjemmerøgede specialiteter fra vores eget <strong>røgeri</strong> og de bedste <strong>fiskefrikadeller</strong> på øen – alt lavet med håndværk og passion.',
       cta: 'Se Vores Udvalg',
       smokehouseTitle: 'Eget Røgeri',
@@ -23,14 +23,15 @@ export const translations = {
     },
     history: {
       title: 'Vores Historie',
-      founded: 'Det Hele Begynder',
-      shopOpened: 'Butikken Åbner',
+      founded: 'Fiskeri fra kutteren',
+      oldVehicle: 'Den gamle fiskevogn købes',
       founder: 'Drevet af Mogens Hede Vollbrecht',
-      story1: 'Den 1. april 1985 startede Mogens Hede Vollbrecht – bedre kendt som Fiskermogens – sin karriere som fisker ved Samsøs kyster. Med sin båd og et par hænder fulde af ambition begyndte han at sælge friskfanget fisk direkte fra Ballen Havn til øens beboere og sommergæster.',
-      story2: 'I 1996 åbnede den fysiske butik på Strandvejen 83 i Ballen Havn. Med eget røgeri og et voksende udvalg af hjemmelavede specialiteter blev Ballen Fisk hurtigt et fast stop for både lokale og turister, der søger ægte smag fra Kattegat.',
-      story3: 'I dag, efter 40 års dedikation, er Ballen Fisk en uundværlig del af Samsø. Butikken forener traditionelt fiskerhåndværk med moderne delikatessekunst – fra friskrøgede laks og makrel til hjemmelavede fiskefrikadeller og sæsonens bedste fangst.',
-      milestoneTitle: 'Fra Fisker til Fiskehus',
-      milestoneDesc: 'Gennem fire årtier har Ballen Fisk udviklet sig fra et traditionelt fiskeudsalg til en fuldendt delikatessebutik med eget røgeri. Vores hjemmerøgede produkter, friske fisk og berømte fiskefrikadeller trækker gæster fra hele Danmark til Ballen Havn.'
+      story1: 'I 1997 begyndte Mogens Hede Vollbrecht – bedre kendt som Fiskermogens – at fiske fra kutteren ved Samsøs kyster.',
+      story2: 'På grund af stigende efterspørgsel på fisk og færre fisk i havet købte han i 2009 den gamle fiskevogn, hvorfra Ballen Fisk kunne betjene både lokale og sommergæster.',
+      story3: 'I 2015 blev terrassen lavet, så gæster kunne nyde frisk fisk med udsigt over Ballen Havn.',
+      milestoneTitle: 'En ny fiskevogn',
+      milestoneDesc: 'I 2019 blev den nye fiskevogn indviet. Den markerede næste kapitel for Ballen Fisk og er i dag rammen om butikkens udvalg af frisk fisk, røgvarer og hjemmelavede specialiteter.',
+      newVehicle: 'Ny fiskevogn indviet'
     },
     products: {
       title: 'Vores Udvalg',
@@ -65,7 +66,7 @@ export const translations = {
     },
     footer: {
       copyright: '© {year} Ballen Fisk. Alle rettigheder forbeholdes.',
-      since: 'Professionelt fiskeri siden 1985',
+      since: 'Professionelt fiskeri siden 1997',
       tagline: 'Tradition & Kvalitet'
     }
   },
@@ -79,7 +80,7 @@ export const translations = {
     hero: {
       title: 'Ballen Fish',
       subtitle: 'Quality Fish & Homemade Smoked Products',
-      since: 'Your local fishmonger since 1985 <br class="mobile-only" />• <strong>Ballen Harbor</strong> • <strong>Samsø</strong>',
+      since: 'Your local fishmonger since 1997 <br class="mobile-only" />• <strong>Ballen Harbor</strong> • <strong>Samsø</strong>',
       description: 'Welcome to Samsø\'s favourite fishmonger at Ballen Harbor. We offer daily fresh-caught fish from the Kattegat, home-smoked specialities from our own smokehouse, and the island\'s best fish cakes – all crafted with tradition and passion.',
       cta: 'View Our Selection',
       smokehouseTitle: 'Own Smokehouse',
@@ -93,14 +94,15 @@ export const translations = {
     },
     history: {
       title: 'Our History',
-      founded: 'It All Begins',
-      shopOpened: 'The Shop Opens',
+      founded: 'Fishing from the Cutter',
+      oldVehicle: 'The Old Fish Van Is Bought',
       founder: 'Run by Mogens Hede Vollbrecht',
-      story1: 'On April 1, 1985, Mogens Hede Vollbrecht – known locally as Fishermogens – began his career as a fisherman along the shores of Samsø. With his boat and a pair of hands full of ambition, he started selling fresh-caught fish directly from Ballen Harbor to the island\'s residents and summer visitors.',
-      story2: 'In 1996, the physical shop opened at Strandvejen 83 in Ballen Harbor. With its own smokehouse and a growing selection of homemade specialities, Ballen Fish quickly became a must-visit for locals and tourists alike, seeking authentic flavours from the Kattegat.',
-      story3: 'Today, after 40 years of dedication, Ballen Fish is an indispensable part of Samsø. The shop merges traditional fishing craft with modern deli artistry – from freshly smoked salmon and mackerel to homemade fish cakes and the season\'s finest catch.',
-      milestoneTitle: 'From Fisherman to Fish House',
-      milestoneDesc: 'Over four decades, Ballen Fish has evolved from a traditional fish stall to a complete gourmet deli with its own smokehouse. Our home-smoked products, fresh fish, and famous fish cakes draw guests from across Denmark to Ballen Harbor.'
+      story1: 'In 1997, Mogens Hede Vollbrecht – known locally as Fishermogens – began fishing from the cutter along the shores of Samsø.',
+      story2: 'As demand for fish grew and fewer fish remained in the sea, he bought the old fish van in 2009, serving locals and summer visitors from Ballen.',
+      story3: 'In 2015, the terrace was built so guests could enjoy fresh fish overlooking Ballen Harbor.',
+      milestoneTitle: 'A New Fish Van',
+      milestoneDesc: 'The new fish van was inaugurated in 2019. It marked the next chapter for Ballen Fish and is now home to the shop\'s selection of fresh fish, smoked goods, and homemade specialities.',
+      newVehicle: 'New Fish Van Inaugurated'
     },
     products: {
       title: 'Our Selection',
@@ -135,7 +137,7 @@ export const translations = {
     },
     footer: {
       copyright: '© {year} Ballen Fish. All rights reserved.',
-      since: 'Professional fishing since 1985',
+      since: 'Professional fishing since 1997',
       tagline: 'Tradition & Quality'
     }
   },
@@ -149,7 +151,7 @@ export const translations = {
     hero: {
       title: 'Ballen Fisch',
       subtitle: 'Qualitätsfisch & Hausgemachte Räucherprodukte',
-      since: 'Ihr lokaler Fischhändler seit 1985 <br class="mobile-only" />• <strong>Ballen Hafen</strong> • <strong>Samsø</strong>',
+      since: 'Ihr lokaler Fischhändler seit 1997 <br class="mobile-only" />• <strong>Ballen Hafen</strong> • <strong>Samsø</strong>',
       description: 'Willkommen bei Samsøs beliebtestem Fischhändler am Ballen Hafen. Wir bieten täglich frisch gefangenen Fisch aus dem Kattegat, hausgeräucherte Spezialitäten aus unserer eigenen Räucherei und die besten Fischfrikadellen der Insel – alles mit Handwerk und Leidenschaft zubereitet.',
       cta: 'Produkte Ansehen',
       smokehouseTitle: 'Eigene Räucherei',
@@ -163,14 +165,15 @@ export const translations = {
     },
     history: {
       title: 'Unsere Geschichte',
-      founded: 'Alles Beginnt',
-      shopOpened: 'Der Laden Öffnet',
+      founded: 'Fischerei vom Kutter',
+      oldVehicle: 'Der alte Fischwagen wird gekauft',
       founder: 'Geführt von Mogens Hede Vollbrecht',
-      story1: 'Am 1. April 1985 begann Mogens Hede Vollbrecht – lokal bekannt als Fischermogens – seine Karriere als Fischer an den Küsten von Samsø. Mit seinem Boot und Händen voller Ehrgeiz begann er, frisch gefangenen Fisch direkt vom Ballen Hafen an die Inselbewohner und Sommergäste zu verkaufen.',
-      story2: '1996 wurde das Geschäft am Strandvejen 83 im Ballen Hafen eröffnet. Mit eigener Räucherei und einem wachsenden Sortiment hausgemachter Spezialitäten wurde Ballen Fisch schnell ein fester Anlaufpunkt für Einheimische und Touristen, die den authentischen Geschmack des Kattegats suchen.',
-      story3: 'Heute, nach 40 Jahren Hingabe, ist Ballen Fisch ein unverzichtbarer Teil von Samsø. Das Geschäft verbindet traditionelles Fischerhandwerk mit moderner Delikatessenkunst – von frisch geräuchertem Lachs und Makrele bis hin zu hausgemachten Fischfrikadellen und dem besten Fang der Saison.',
-      milestoneTitle: 'Vom Fischer zum Fischhaus',
-      milestoneDesc: 'Über vier Jahrzehnte hat sich Ballen Fisch vom traditionellen Fischstand zu einer Gourmet-Delikatesse mit eigener Räucherei entwickelt. Unsere hausgeräucherten Produkte, frischen Fische und berühmten Fischfrikadellen locken Gäste aus ganz Dänemark zum Ballen Hafen.'
+      story1: '1997 begann Mogens Hede Vollbrecht – lokal bekannt als Fischermogens – mit dem Kutter an den Küsten von Samsø zu fischen.',
+      story2: 'Aufgrund der steigenden Nachfrage nach Fisch und weniger Fischen im Meer kaufte er 2009 den alten Fischwagen, um Einheimische und Sommergäste in Ballen zu bedienen.',
+      story3: '2015 wurde die Terrasse gebaut, damit Gäste frischen Fisch mit Blick auf den Ballen Hafen genießen konnten.',
+      milestoneTitle: 'Ein neuer Fischwagen',
+      milestoneDesc: '2019 wurde der neue Fischwagen eingeweiht. Er markierte das nächste Kapitel für Ballen Fisch und beherbergt heute das Sortiment an frischem Fisch, Räucherwaren und hausgemachten Spezialitäten.',
+      newVehicle: 'Neuer Fischwagen eingeweiht'
     },
     products: {
       title: 'Unser Sortiment',
@@ -205,7 +208,7 @@ export const translations = {
     },
     footer: {
       copyright: '© {year} Ballen Fisch. Alle Rechte vorbehalten.',
-      since: 'Professionelle Fischerei seit 1985',
+      since: 'Professionelle Fischerei seit 1997',
       tagline: 'Tradition & Qualität'
     }
   }

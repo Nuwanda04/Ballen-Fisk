@@ -3,10 +3,10 @@ import { Calendar, Fish, Sparkles, Store } from 'lucide-react';
 import { useLanguage } from '../i18n/useLanguage';
 
 const yearColors = {
-  '1985': { bg: 'from-[#5FA8D3] to-[#3E92CC]', dot: 'border-[#5FA8D3]', line: 'bg-[#5FA8D3]' },
-  '1996': { bg: 'from-[#3E92CC] to-[#2A7AB8]', dot: 'border-[#3E92CC]', line: 'bg-[#3E92CC]' },
-  '2005': { bg: 'from-[#2A7AB8] to-[#1C2541]', dot: 'border-[#2A7AB8]', line: 'bg-[#2A7AB8]' },
-  '2025': { bg: 'from-[#1C2541] to-[#0B132B]', dot: 'border-[#1C2541]', line: 'bg-[#1C2541]' },
+  '1997': { bg: 'from-[#5FA8D3] to-[#3E92CC]', dot: 'border-[#5FA8D3]', line: 'bg-[#5FA8D3]' },
+  '2009': { bg: 'from-[#3E92CC] to-[#2A7AB8]', dot: 'border-[#3E92CC]', line: 'bg-[#3E92CC]' },
+  '2015': { bg: 'from-[#2A7AB8] to-[#1C2541]', dot: 'border-[#2A7AB8]', line: 'bg-[#2A7AB8]' },
+  '2019': { bg: 'from-[#1C2541] to-[#0B132B]', dot: 'border-[#1C2541]', line: 'bg-[#1C2541]' },
 };
 
 export const History = () => {
@@ -14,27 +14,27 @@ export const History = () => {
 
   const timeline = [
     {
-      year: '1985',
+      year: '1997',
       icon: Fish,
       title: t('history.founded'),
       description: t('history.story1')
     },
     {
-      year: '1996',
+      year: '2009',
       icon: Store,
-      title: t('history.shopOpened'),
+      title: t('history.oldVehicle'),
       description: t('history.story2')
     },
     {
-      year: '2005',
+      year: '2015',
       icon: Sparkles,
       title: t('history.milestoneTitle'),
       description: t('history.milestoneDesc')
     },
     {
-      year: '2025',
+      year: '2019',
       icon: Calendar,
-      title: '40 År',
+      title: t('history.newVehicle'),
       description: t('history.story3')
     }
   ];
@@ -64,7 +64,7 @@ export const History = () => {
           {timeline.map((item, index) => {
             const Icon = item.icon;
             const isEven = index % 2 === 0;
-            const colors = yearColors[item.year] || yearColors['1985'];
+            const colors = yearColors[item.year] || yearColors['1997'];
 
             return (
               <motion.div
