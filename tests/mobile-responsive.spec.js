@@ -21,7 +21,7 @@ test('Mobile Responsiveness Check', async ({ page }, testInfo) => {
   expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 1); // Allow 1px tolerance
 
   // 2. Check Key Elements Visibility
-  await expect(page.locator('nav')).toBeVisible(); // simplified check, might need specific selector if simple 'nav' doesn't exist
+  await expect(page.locator('nav').first()).toBeVisible();
   await expect(page.locator('h1')).toBeVisible(); // Hero title
   await expect(page.locator('#products')).toBeVisible();
   await expect(page.locator('footer')).toBeVisible();
