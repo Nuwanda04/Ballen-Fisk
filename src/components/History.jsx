@@ -40,7 +40,7 @@ export const History = () => {
   ];
 
   return (
-    <section id="history" className="relative z-20 pt-0 pb-20 bg-white bg-grid-pattern overflow-hidden">
+    <section id="history" className="relative z-20 pt-0 pb-20 bg-transparent overflow-hidden">
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

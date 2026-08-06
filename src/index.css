@@ -31,10 +31,13 @@
   }
 
   .bg-grid-pattern {
+    background-color: #ffffff;
     background-image:
-      linear-gradient(rgba(147, 197, 253, 0.18) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(147, 197, 253, 0.18) 1px, transparent 1px);
-    background-size: 48px 48px;
+      radial-gradient(circle at 12% 0%, rgba(191, 219, 254, 0.32), transparent 34%),
+      radial-gradient(circle at 88% 42%, rgba(224, 242, 254, 0.45), transparent 40%),
+      linear-gradient(rgba(147, 197, 253, 0.11) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(147, 197, 253, 0.11) 1px, transparent 1px);
+    background-size: auto, auto, 48px 48px, 48px 48px;
   }
 }
 
