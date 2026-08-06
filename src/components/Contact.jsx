@@ -7,9 +7,7 @@ import { renderWithStrongDark } from '../utils/textUtils';
 export const Contact = () => {
   const { t } = useLanguage();
 
-  const openingHours = [
-    { period: t('contact.season'), hours: t('contact.openingHoursLine') },
-  ];
+  const openingHours = t('contact.schedule');
 
   return (
     <section id="contact" className="relative py-12 md:py-24 bg-white overflow-hidden">

@@ -17,22 +17,61 @@
 const schedule = {
   seasons: [
     {
-      name: 'Højsæson',
-      from: [4, 1],   // April 1
-      to: [10, 31],   // Oct 31
-      days: [0, 1, 2, 3, 4, 5, 6], // All days
+      name: 'May 1 – June 25',
+      from: [5, 1],
+      to: [6, 25],
+      days: [0, 1, 2, 3, 4, 5, 6],
       open: '10:00',
       close: '18:00',
     },
-    // Example: Add shoulder season when needed
-    // {
-    //   name: 'Forsæson',
-    //   from: [5, 1],
-    //   to: [5, 31],
-    //   days: [4, 5, 6, 0], // Thu-Sun
-    //   open: '11:00',
-    //   close: '16:00',
-    // },
+    {
+      name: 'June 26 – August 6, Sunday–Thursday',
+      from: [6, 26],
+      to: [8, 6],
+      days: [0, 1, 2, 3, 4],
+      open: '10:00',
+      close: '20:00',
+    },
+    {
+      name: 'June 26 – August 6, Friday–Saturday',
+      from: [6, 26],
+      to: [8, 6],
+      days: [5, 6],
+      open: '10:00',
+      close: '21:00',
+    },
+    {
+      name: 'August 7 – August 31',
+      from: [8, 7],
+      to: [8, 31],
+      days: [0, 1, 2, 3, 4, 5, 6],
+      open: '10:00',
+      close: '20:00',
+    },
+    {
+      name: 'September 1 – September 30',
+      from: [9, 1],
+      to: [9, 30],
+      days: [0, 1, 2, 3, 4, 5, 6],
+      open: '10:00',
+      close: '18:00',
+    },
+    {
+      name: 'October 1 – fall break, Sunday–Thursday',
+      from: [10, 1],
+      to: [10, 31],
+      days: [0, 1, 2, 3, 4],
+      open: '10:00',
+      close: '16:00',
+    },
+    {
+      name: 'October 1 – fall break, Friday–Saturday',
+      from: [10, 1],
+      to: [10, 31],
+      days: [5, 6],
+      open: '10:00',
+      close: '18:00',
+    },
   ],
 };
 // ===== END CONFIG =====

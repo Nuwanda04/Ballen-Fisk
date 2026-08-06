@@ -32,7 +32,7 @@ export const translations = {
       open: 'Åben Nu',
       closed: 'Lukket',
       openingHours: 'Åbningstider',
-      seasonShort: 'Sæson: April – Okt',
+      seasonShort: 'Sæsonåbningstider',
 
     },
     history: {
@@ -102,8 +102,15 @@ export const translations = {
       email: 'Email',
       facebook: 'Følg Os På Facebook',
       mapTitle: 'Ballen Fisk på kortet',
-      season: 'April - Oktober',
-      openingHoursLine: 'Man-Søn 10:00-18:00'
+      season: 'Sæsonåbningstider',
+      schedule: [
+        { period: 'Påskeferie – 1. maj', hours: 'Søndag–torsdag 10:00–16:00 · Fredag–lørdag 10:00–18:00' },
+        { period: '1. maj – 25. juni', hours: 'Alle dage 10:00–18:00' },
+        { period: '26. juni – 7. august', hours: 'Søndag–torsdag 10:00–20:00 · Fredag–lørdag 10:00–21:00' },
+        { period: '7. august – 1. september', hours: 'Alle dage 10:00–20:00' },
+        { period: '1. september – 1. oktober', hours: 'Alle dage 10:00–18:00' },
+        { period: '1. oktober – efterårsferie', hours: 'Søndag–torsdag 10:00–16:00 · Fredag–lørdag 10:00–18:00' }
+      ]
     },
     footer: {
       copyright: '© {year} Ballen Fisk. Alle rettigheder forbeholdes.',
@@ -146,7 +153,7 @@ export const translations = {
       open: 'Open Now',
       closed: 'Closed',
       openingHours: 'Opening Hours',
-      seasonShort: 'Season: April – Oct',
+      seasonShort: 'Seasonal hours',
       disclaimer: 'Always check our website for the most accurate times, as Google Maps may be outdated.'
     },
     history: {
@@ -216,8 +223,15 @@ export const translations = {
       email: 'Email',
       facebook: 'Follow Us On Facebook',
       mapTitle: 'Ballen Fisk on the map',
-      season: 'April - October',
-      openingHoursLine: 'Mon-Sun 10:00-18:00'
+      season: 'Seasonal opening hours',
+      schedule: [
+        { period: 'Easter break – 1 May', hours: 'Sunday–Thursday 10:00–16:00 · Friday–Saturday 10:00–18:00' },
+        { period: '1 May – 25 June', hours: 'Daily 10:00–18:00' },
+        { period: '26 June – 7 August', hours: 'Sunday–Thursday 10:00–20:00 · Friday–Saturday 10:00–21:00' },
+        { period: '7 August – 1 September', hours: 'Daily 10:00–20:00' },
+        { period: '1 September – 1 October', hours: 'Daily 10:00–18:00' },
+        { period: '1 October – autumn break', hours: 'Sunday–Thursday 10:00–16:00 · Friday–Saturday 10:00–18:00' }
+      ]
     },
     footer: {
       copyright: '© {year} Ballen Fisk. All rights reserved.',
@@ -260,7 +274,7 @@ export const translations = {
       open: 'Jetzt Geöffnet',
       closed: 'Geschlossen',
       openingHours: 'Öffnungszeiten',
-      seasonShort: 'Saison: April – Okt',
+      seasonShort: 'Saisonale Öffnungszeiten',
       disclaimer: 'Bitte prüfen Sie immer unsere Website für aktuelle Zeiten, da Google Maps veraltet sein kann.'
     },
     history: {
@@ -330,8 +344,15 @@ export const translations = {
       email: 'E-Mail',
       facebook: 'Folgen Sie Uns Auf Facebook',
       mapTitle: 'Ballen Fisk auf der Karte',
-      season: 'April - Oktober',
-      openingHoursLine: 'Mo-So 10:00-18:00'
+      season: 'Saisonale Öffnungszeiten',
+      schedule: [
+        { period: 'Osterferien – 1. Mai', hours: 'Sonntag–Donnerstag 10:00–16:00 · Freitag–Samstag 10:00–18:00' },
+        { period: '1. Mai – 25. Juni', hours: 'Täglich 10:00–18:00' },
+        { period: '26. Juni – 7. August', hours: 'Sonntag–Donnerstag 10:00–20:00 · Freitag–Samstag 10:00–21:00' },
+        { period: '7. August – 1. September', hours: 'Täglich 10:00–20:00' },
+        { period: '1. September – 1. Oktober', hours: 'Täglich 10:00–18:00' },
+        { period: '1. Oktober – Herbstferien', hours: 'Sonntag–Donnerstag 10:00–16:00 · Freitag–Samstag 10:00–18:00' }
+      ]
     },
     footer: {
       copyright: '© {year} Ballen Fisk. Alle Rechte vorbehalten.',
