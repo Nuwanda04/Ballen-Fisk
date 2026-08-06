@@ -92,8 +92,8 @@ export const PhotoCarousel = () => {
   };
 
   const getCardPosition = (position) => {
-    if (position === -1) return { left: '-22%', scale: 0.92, opacity: 0.5, zIndex: 10 };
-    if (position === 1) return { left: '50%', scale: 0.92, opacity: 0.5, zIndex: 10 };
+    if (position === -1) return { left: '-3%', scale: 0.94, opacity: 0.42, zIndex: 10 };
+    if (position === 1) return { left: '55%', scale: 0.94, opacity: 0.42, zIndex: 10 };
     return { left: '14%', scale: 1, opacity: 1, zIndex: 20 };
   };
 
@@ -125,7 +125,7 @@ export const PhotoCarousel = () => {
           }}
         >
           <div
-            className="relative aspect-[16/10] touch-pan-y overflow-visible rounded-3xl bg-[#0B132B] shadow-2xl md:aspect-[16/9]"
+            className="relative aspect-[16/10] touch-pan-y overflow-visible rounded-3xl bg-transparent md:aspect-[16/9]"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
@@ -138,7 +138,7 @@ export const PhotoCarousel = () => {
               return (
                 <motion.div
                   key={slideKey}
-                  className="absolute top-0 h-full w-[84%] overflow-hidden rounded-3xl bg-[#0B132B] shadow-2xl md:w-[72%]"
+                  className={`absolute top-0 h-full overflow-hidden rounded-3xl shadow-2xl ${position === 0 ? 'w-[84%] bg-[#0B132B] md:w-[72%]' : 'w-[52%] md:w-[48%]'}`}
                   animate={cardPosition}
                   transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                   aria-hidden={position !== 0}
@@ -151,7 +151,9 @@ export const PhotoCarousel = () => {
                     loading="eager"
                     decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/75 via-transparent to-transparent" />
+                  {position === 0 && (
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/60 via-transparent to-transparent" />
+                  )}
                   {position === 0 && (
                     <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-white md:bottom-7 md:left-8 md:right-8">
                       <p className="text-sm font-semibold md:text-base">
