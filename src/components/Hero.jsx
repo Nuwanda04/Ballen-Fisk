@@ -149,7 +149,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="group relative px-8 py-4 bg-white text-[#0B132B] border-2 border-[#0B132B] rounded-full font-bold text-lg shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all flex items-center justify-center gap-3 mx-auto lg:mx-0 w-fit"
+              className="group relative mt-2 px-8 py-4 bg-white text-[#0B132B] border-2 border-[#0B132B] rounded-full font-bold text-lg shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all flex items-center justify-center gap-3 mx-auto lg:mx-0 w-fit"
               onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t('hero.cta')}
