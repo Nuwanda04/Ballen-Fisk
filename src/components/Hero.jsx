@@ -127,7 +127,8 @@ export const Hero = () => {
                 transition={{ delay: 0.3 }}
                 className="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md mb-4 lg:mb-6 border border-white/30 text-sm font-medium tracking-wider uppercase"
               >
-                {renderWithStrong(t('hero.since'))}
+                <span className="hidden sm:inline">{renderWithStrong(t('hero.since'))}</span>
+                <span className="sm:hidden">{t('hero.sinceMobile')}</span>
               </motion.div>
 
               <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-2xl">
