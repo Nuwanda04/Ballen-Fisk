@@ -142,17 +142,11 @@ export const Products = () => {
     <section id="products" className="relative pt-24 md:pt-48 pb-32 md:pb-52 overflow-hidden" style={{ background: 'linear-gradient(159deg, rgba(100,149,237,1) 0%, rgba(124,158,195,1) 100%)' }}>
       {/* Top Shape Divider (White Overlay) */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none -mt-1">
-        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none" shapeRendering="crispEdges">
           <defs>
-            <linearGradient id="products-top-divider-grid-gradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#5FA8D3" />
-              <stop offset="35%" stopColor="#3E92CC" />
-              <stop offset="65%" stopColor="#2A7AB8" />
-              <stop offset="100%" stopColor="#0B132B" />
-            </linearGradient>
             <pattern id="products-top-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
               <rect width="48" height="48" fill="#ffffff" />
-              <path d="M48 0H0V48" fill="none" stroke="url(#products-top-divider-grid-gradient)" strokeOpacity="0.42" strokeWidth="1" />
+              <path d="M48 0H0V48" fill="none" stroke="#2A7AB8" strokeOpacity="0.58" strokeWidth="1" />
             </pattern>
           </defs>
           <path
@@ -576,17 +570,11 @@ const convertHexToRgba = (hex, alpha) => {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 -mb-px">
-        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none" shapeRendering="crispEdges">
           <defs>
-            <linearGradient id="products-bottom-divider-grid-gradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#5FA8D3" />
-              <stop offset="35%" stopColor="#3E92CC" />
-              <stop offset="65%" stopColor="#2A7AB8" />
-              <stop offset="100%" stopColor="#0B132B" />
-            </linearGradient>
             <pattern id="products-bottom-divider-grid" width="48" height="48" patternUnits="userSpaceOnUse">
               <rect width="48" height="48" fill="#ffffff" />
-              <path d="M48 0H0V48" fill="none" stroke="url(#products-bottom-divider-grid-gradient)" strokeOpacity="0.42" strokeWidth="1" />
+              <path d="M48 0H0V48" fill="none" stroke="#2A7AB8" strokeOpacity="0.58" strokeWidth="1" />
             </pattern>
           </defs>
           <path
