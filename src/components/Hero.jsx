@@ -10,7 +10,7 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
+    <div id="top" className="relative overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-[#3E92CC] rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5FA8D3] rounded-full blur-3xl animate-pulse delay-1000" />
@@ -27,7 +27,9 @@ export const Hero = () => {
             alt="Ballen Fisk Logo"
             className="w-10 h-10 object-contain drop-shadow-md"
           />
-          <span className="text-2xl font-bold text-white">Ballen Fisk</span>
+          <a href="#top" className="text-2xl font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm">
+            Ballen Fisk
+          </a>
         </motion.div>
 
         <motion.div
@@ -35,6 +37,17 @@ export const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-4"
         >
+          <nav aria-label={t('nav.primary')} className="hidden lg:flex items-center gap-5 mr-2">
+            <a href="#history" className="text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
+              {t('nav.history')}
+            </a>
+            <a href="#products" className="text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
+              {t('nav.products')}
+            </a>
+            <a href="#contact" className="text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors">
+              {t('nav.contact')}
+            </a>
+          </nav>
           <OpenStatus />
           <LanguageSwitcher />
         </motion.div>

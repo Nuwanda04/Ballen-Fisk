@@ -31,9 +31,9 @@ export const Footer = () => {
 
           <div className="flex flex-col items-center md:items-end gap-2">
             <div className="flex items-center gap-2 text-sm text-white/80">
-              <span>Made with</span>
+              <span>{t('footer.madeWith')}</span>
               <Heart className="w-4 h-4 text-red-400 fill-red-400 animate-pulse" />
-              <span>in Samsø</span>
+              <span>{t('footer.inLocation')}</span>
             </div>
             <div className="text-sm text-white/60">
               <p>Ballen Fisk • {t('footer.tagline')}</p>

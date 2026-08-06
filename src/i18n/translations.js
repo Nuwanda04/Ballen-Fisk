@@ -4,7 +4,8 @@ export const translations = {
       home: 'Hjem',
       products: 'Produkter',
       history: 'Historie',
-      contact: 'Kontakt'
+      contact: 'Kontakt',
+      primary: 'Hovednavigation'
     },
     hero: {
       title: 'Ballen Fisk',
@@ -19,6 +20,7 @@ export const translations = {
       open: 'Åben Nu',
       closed: 'Lukket',
       openingHours: 'Åbningstider',
+      seasonShort: 'Sæson: April – Okt',
 
     },
     history: {
@@ -57,10 +59,14 @@ export const translations = {
     contact: {
       title: 'Besøg Os',
       intro: 'Find os ved <strong>Ballen Havn</strong> på <strong>Samsø</strong> – nyd <strong>frisk fisk</strong> på vores terrasse med udsigt over havnen, eller tag vores hjemmelavede <strong>røgvarer</strong> og <strong>fiskefrikadeller</strong> med hjem.',
-      address: 'Strandvejen 83, 8305 Ballen Havn, Samsø',
+      address: 'Adresse',
+      street: 'Strandvejen 83',
+      postalCity: '8305 Ballen Havn',
+      country: 'Samsø, Danmark',
       phone: 'Telefon',
       email: 'Email',
       facebook: 'Følg Os På Facebook',
+      mapTitle: 'Ballen Fisk på kortet',
       season: 'April - Oktober',
       openingHoursLine: 'Man-Søn 10:00-18:00'
     },
@@ -68,6 +74,8 @@ export const translations = {
       copyright: '© {year} Ballen Fisk. Alle rettigheder forbeholdes.',
       since: 'Professionelt fiskeri siden 1997',
       tagline: 'Tradition & Kvalitet'
+      ,madeWith: 'Lavet med',
+      inLocation: 'på Samsø'
     }
   },
   en: {
@@ -75,7 +83,8 @@ export const translations = {
       home: 'Home',
       products: 'Products',
       history: 'History',
-      contact: 'Contact'
+      contact: 'Contact',
+      primary: 'Primary navigation'
     },
     hero: {
       title: 'Ballen Fish',
@@ -90,6 +99,7 @@ export const translations = {
       open: 'Open Now',
       closed: 'Closed',
       openingHours: 'Opening Hours',
+      seasonShort: 'Season: April – Oct',
       disclaimer: 'Always check our website for the most accurate times, as Google Maps may be outdated.'
     },
     history: {
@@ -128,10 +138,14 @@ export const translations = {
     contact: {
       title: 'Visit Us',
       intro: 'Find us at <strong>Ballen Harbor</strong> on <strong>Samsø</strong> – enjoy <strong>fresh fish</strong> on our terrace overlooking the harbor, or take our homemade <strong>smoked goods</strong> and <strong>fish cakes</strong> home with you.',
-      address: 'Strandvejen 83, 8305 Ballen Harbor, Samsø',
+      address: 'Address',
+      street: 'Strandvejen 83',
+      postalCity: '8305 Ballen Harbor',
+      country: 'Samsø, Denmark',
       phone: 'Phone',
       email: 'Email',
       facebook: 'Follow Us On Facebook',
+      mapTitle: 'Ballen Fisk on the map',
       season: 'April - October',
       openingHoursLine: 'Mon-Sun 10:00-18:00'
     },
@@ -139,6 +153,8 @@ export const translations = {
       copyright: '© {year} Ballen Fish. All rights reserved.',
       since: 'Professional fishing since 1997',
       tagline: 'Tradition & Quality'
+      ,madeWith: 'Made with',
+      inLocation: 'in Samsø'
     }
   },
   de: {
@@ -146,7 +162,8 @@ export const translations = {
       home: 'Startseite',
       products: 'Produkte',
       history: 'Geschichte',
-      contact: 'Kontakt'
+      contact: 'Kontakt',
+      primary: 'Hauptnavigation'
     },
     hero: {
       title: 'Ballen Fisch',
@@ -161,6 +178,7 @@ export const translations = {
       open: 'Jetzt Geöffnet',
       closed: 'Geschlossen',
       openingHours: 'Öffnungszeiten',
+      seasonShort: 'Saison: April – Okt',
       disclaimer: 'Bitte prüfen Sie immer unsere Website für aktuelle Zeiten, da Google Maps veraltet sein kann.'
     },
     history: {
@@ -199,10 +217,14 @@ export const translations = {
     contact: {
       title: 'Besuchen Sie Uns',
       intro: 'Finden Sie uns am <strong>Ballen Hafen</strong> auf <strong>Samsø</strong> – genießen Sie <strong>frischen Fisch</strong> auf unserer Terrasse mit Hafenblick, oder nehmen Sie unsere hausgeräucherten <strong>Spezialitäten</strong> und <strong>Fischfrikadellen</strong> mit nach Hause.',
-      address: 'Strandvejen 83, 8305 Ballen Hafen, Samsø',
+      address: 'Adresse',
+      street: 'Strandvejen 83',
+      postalCity: '8305 Ballen Hafen',
+      country: 'Samsø, Dänemark',
       phone: 'Telefon',
       email: 'E-Mail',
       facebook: 'Folgen Sie Uns Auf Facebook',
+      mapTitle: 'Ballen Fisk auf der Karte',
       season: 'April - Oktober',
       openingHoursLine: 'Mo-So 10:00-18:00'
     },
@@ -210,6 +232,8 @@ export const translations = {
       copyright: '© {year} Ballen Fisch. Alle Rechte vorbehalten.',
       since: 'Professionelle Fischerei seit 1997',
       tagline: 'Tradition & Qualität'
+      ,madeWith: 'Mit Liebe gemacht',
+      inLocation: 'auf Samsø'
     }
   }
 };

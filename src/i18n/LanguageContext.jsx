@@ -12,6 +12,10 @@ export const LanguageProvider = ({ children }) => {
     }
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   const changeLanguage = (lang) => {
     setLanguage(lang);
     localStorage.setItem('language', lang);

@@ -2,14 +2,8 @@ import { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/useLanguage';
 import { getDetailedStatus } from '../utils/openingHours';
 
-const seasonLabel = {
-  da: 'Sæson: April – Okt',
-  en: 'Season: April – Oct',
-  de: 'Saison: April – Okt'
-};
-
 export const OpenStatus = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const [status, setStatus] = useState(() => getDetailedStatus(language));
 
   useEffect(() => {
@@ -24,7 +18,7 @@ export const OpenStatus = () => {
     ? status.hint
     : status.todayHours
       ? status.hint               // In-season but closed right now
-      : seasonLabel[language];    // Off-season — show when the season is
+      : t('status.seasonShort');    // Off-season — show when the season is
 
   return (
     <div className="flex items-center gap-3">
@@ -32,8 +26,8 @@ export const OpenStatus = () => {
         <div className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full ${status.isOpen ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />
         <span className="text-xs md:text-sm font-medium text-white whitespace-nowrap">
           {status.isOpen
-            ? (language === 'de' ? 'Geöffnet' : language === 'en' ? 'Open' : 'Åben')
-            : (language === 'de' ? 'Geschlossen' : language === 'en' ? 'Closed' : 'Lukket')}
+            ? t('status.open')
+            : t('status.closed')}
         </span>
         {hint && (
           <span className="text-xs text-white/50 hidden md:inline whitespace-nowrap">

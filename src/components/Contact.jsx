@@ -11,7 +11,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section className="relative py-12 md:py-24 bg-white overflow-hidden">
+    <section id="contact" className="relative py-12 md:py-24 bg-white overflow-hidden">
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,9 +44,9 @@ export const Contact = () => {
                     {t('contact.address')}
                   </h3>
                   <p className="text-gray-600">
-                    Strandvejen 83<br />
-                    8305 Ballen Havn<br />
-                    Samsø, Danmark
+                    {t('contact.street')}<br />
+                    {t('contact.postalCity')}<br />
+                    {t('contact.country')}
                   </p>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ballen Fisk Location"
+                title={t('contact.mapTitle')}
               />
             </div>
           </motion.div>
