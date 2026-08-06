@@ -14,7 +14,7 @@ export const translations = {
     hero: {
       title: 'Ballen Fisk',
       subtitle: 'Kvalitetsfisk & Hjemmelavede Røgvarer',
-      since: 'Din lokale fiskehandler siden 1997 <br class="mobile-only" />• <strong>Ballen Havn</strong> • <strong>Samsø</strong>',
+      since: 'Fiskeri fra Samsø siden 1997 <br class="mobile-only" />• <strong>Ballen Fisk siden 2009</strong> • <strong>Ballen Havn</strong>',
       description: 'Velkommen til <strong>Samsøs</strong> foretrukne fiskehandler ved <strong>Ballen Havn</strong>. Vi tilbyder dagligt <strong>friskfanget fisk</strong> fra Kattegat, hjemmerøgede specialiteter fra vores eget <strong>røgeri</strong> og de bedste <strong>fiskefrikadeller</strong> på øen – alt lavet med håndværk og passion.',
       cta: 'Se Vores Udvalg',
       smokehouseTitle: 'Eget Røgeri',
@@ -37,6 +37,7 @@ export const translations = {
       story3: 'I 2015 blev terrassen lavet, så gæster kunne nyde frisk fisk med udsigt over Ballen Havn.',
       milestoneTitle: 'En ny fiskevogn',
       milestoneDesc: 'I 2019 blev den nye fiskevogn indviet. Den markerede næste kapitel for Ballen Fisk og er i dag rammen om butikkens udvalg af frisk fisk, røgvarer og hjemmelavede specialiteter.',
+      terrace: 'Terrassen bliver lavet',
       newVehicle: 'Ny fiskevogn indviet'
     },
     products: {
@@ -76,7 +77,7 @@ export const translations = {
     },
     footer: {
       copyright: '© {year} Ballen Fisk. Alle rettigheder forbeholdes.',
-      since: 'Professionelt fiskeri siden 1997',
+      since: 'Fiskeri fra Samsø siden 1997',
       tagline: 'Tradition & Kvalitet'
       ,madeWith: 'Lavet med',
       inLocation: 'på Samsø'
@@ -97,7 +98,7 @@ export const translations = {
     hero: {
       title: 'Ballen Fish',
       subtitle: 'Quality Fish & Homemade Smoked Products',
-      since: 'Your local fishmonger since 1997 <br class="mobile-only" />• <strong>Ballen Harbor</strong> • <strong>Samsø</strong>',
+      since: 'Fishing from Samsø since 1997 <br class="mobile-only" />• <strong>Ballen Fisk since 2009</strong> • <strong>Ballen Harbor</strong>',
       description: 'Welcome to <strong>Samsø\'s</strong> favourite fishmonger at <strong>Ballen Harbor</strong>. We offer daily <strong>fresh-caught fish</strong> from the Kattegat, home-smoked specialities from our own <strong>smokehouse</strong>, and the island\'s best <strong>fish cakes</strong> – all crafted with tradition and passion.',
       cta: 'View Our Selection',
       smokehouseTitle: 'Own Smokehouse',
@@ -120,6 +121,7 @@ export const translations = {
       story3: 'In 2015, the terrace was built so guests could enjoy fresh fish overlooking Ballen Harbor.',
       milestoneTitle: 'A New Fish Van',
       milestoneDesc: 'The new fish van was inaugurated in 2019. It marked the next chapter for Ballen Fish and is now home to the shop\'s selection of fresh fish, smoked goods, and homemade specialities.',
+      terrace: 'The Terrace Is Built',
       newVehicle: 'New Fish Van Inaugurated'
     },
     products: {
@@ -159,7 +161,7 @@ export const translations = {
     },
     footer: {
       copyright: '© {year} Ballen Fish. All rights reserved.',
-      since: 'Professional fishing since 1997',
+      since: 'Fishing from Samsø since 1997',
       tagline: 'Tradition & Quality'
       ,madeWith: 'Made with',
       inLocation: 'in Samsø'
@@ -180,7 +182,7 @@ export const translations = {
     hero: {
       title: 'Ballen Fisch',
       subtitle: 'Qualitätsfisch & Hausgemachte Räucherprodukte',
-      since: 'Ihr lokaler Fischhändler seit 1997 <br class="mobile-only" />• <strong>Ballen Hafen</strong> • <strong>Samsø</strong>',
+      since: 'Fischerei von Samsø seit 1997 <br class="mobile-only" />• <strong>Ballen Fisch seit 2009</strong> • <strong>Ballen Hafen</strong>',
       description: 'Willkommen bei <strong>Samsøs</strong> beliebtestem Fischhändler am <strong>Ballen Hafen</strong>. Wir bieten täglich <strong>frisch gefangenen Fisch</strong> aus dem Kattegat, hausgeräucherte Spezialitäten aus unserer eigenen <strong>Räucherei</strong> und die besten <strong>Fischfrikadellen</strong> der Insel – alles mit Handwerk und Leidenschaft zubereitet.',
       cta: 'Produkte Ansehen',
       smokehouseTitle: 'Eigene Räucherei',
@@ -203,6 +205,7 @@ export const translations = {
       story3: '2015 wurde die Terrasse gebaut, damit Gäste frischen Fisch mit Blick auf den Ballen Hafen genießen konnten.',
       milestoneTitle: 'Ein neuer Fischwagen',
       milestoneDesc: '2019 wurde der neue Fischwagen eingeweiht. Er markierte das nächste Kapitel für Ballen Fisch und beherbergt heute das Sortiment an frischem Fisch, Räucherwaren und hausgemachten Spezialitäten.',
+      terrace: 'Die Terrasse wird gebaut',
       newVehicle: 'Neuer Fischwagen eingeweiht'
     },
     products: {
@@ -242,7 +245,7 @@ export const translations = {
     },
     footer: {
       copyright: '© {year} Ballen Fisch. Alle Rechte vorbehalten.',
-      since: 'Professionelle Fischerei seit 1997',
+      since: 'Fischerei von Samsø seit 1997',
       tagline: 'Tradition & Qualität'
       ,madeWith: 'Mit Liebe gemacht',
       inLocation: 'auf Samsø'

@@ -28,14 +28,14 @@ export const History = () => {
     {
       year: '2015',
       icon: Sparkles,
-      title: t('history.milestoneTitle'),
-      description: t('history.milestoneDesc')
+      title: t('history.terrace'),
+      description: t('history.story3')
     },
     {
       year: '2019',
       icon: Calendar,
       title: t('history.newVehicle'),
-      description: t('history.story3')
+      description: t('history.milestoneDesc')
     }
   ];
 

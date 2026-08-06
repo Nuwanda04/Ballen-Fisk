@@ -34,7 +34,7 @@ test.describe('Product catalogue integrity', () => {
     }
   });
 
-  test('renders every category and its first page', async ({ page }) => {
+  test('renders every category and every product page without broken images', async ({ page }) => {
     await page.goto('/');
     const productsSection = page.locator('#products');
     await expect(productsSection).toBeVisible();
@@ -43,15 +43,23 @@ test.describe('Product catalogue integrity', () => {
       await page.getByRole('button', { name: category.name_da, exact: true }).first().click();
       await expect(productsSection.locator('.grid > div').first()).toBeVisible();
 
-      const brokenImages = await productsSection.locator('img').evaluateAll((images) => images
-        .filter((image) => image.currentSrc && image.naturalWidth === 0)
-        .map((image) => ({ alt: image.alt, src: image.currentSrc })));
-      expect(brokenImages, `Broken product images in ${category.name_da}`).toEqual([]);
-
       const expectedCount = category.id === 0
         ? products.length
         : products.filter(product => product.category_id === category.id).length;
       expect(expectedCount).toBeGreaterThan(0);
+
+      const totalPages = Math.ceil(expectedCount / 6);
+      for (let currentPage = 1; currentPage <= totalPages; currentPage += 1) {
+        const brokenImages = await productsSection.locator('img').evaluateAll((images) => images
+          .filter((image) => image.currentSrc && image.naturalWidth === 0)
+          .map((image) => ({ alt: image.alt, src: image.currentSrc })));
+        expect(brokenImages, `Broken product images in ${category.name_da}, page ${currentPage}`).toEqual([]);
+
+        if (currentPage < totalPages) {
+          await productsSection.getByRole('button', { name: 'Næste', exact: true }).click();
+          await expect(productsSection.locator('.grid > div').first()).toBeVisible();
+        }
+      }
     }
   });
 });
