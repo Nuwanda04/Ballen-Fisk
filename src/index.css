@@ -31,31 +31,10 @@
   }
 
   .bg-grid-pattern {
-    position: relative;
-    isolation: isolate;
-    background-color: #ffffff;
-  }
-
-  .bg-grid-pattern::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='grid-blue' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235FA8D3'/%3E%3Cstop offset='.35' stop-color='%233E92CC'/%3E%3Cstop offset='.65' stop-color='%232A7AB8'/%3E%3Cstop offset='1' stop-color='%230B132B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M48 0H0V48' fill='none' stroke='url(%23grid-blue)' stroke-opacity='.58' stroke-width='1'/%3E%3C/svg%3E");
+    background-image:
+      linear-gradient(rgba(42, 122, 184, 0.26) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(42, 122, 184, 0.26) 1px, transparent 1px);
     background-size: 48px 48px;
-  }
-
-  .bg-grid-pattern::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background:
-      radial-gradient(circle at 12% 18%, rgba(95, 168, 211, 0.16), transparent 28%),
-      radial-gradient(circle at 86% 35%, rgba(62, 146, 204, 0.12), transparent 30%),
-      radial-gradient(circle at 58% 88%, rgba(42, 122, 184, 0.08), transparent 34%);
   }
 }
 

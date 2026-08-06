@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Clock, Facebook, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '../i18n/useLanguage';
+import { SectionAtmosphere } from './SectionAtmosphere';
 import { renderWithStrongDark } from '../utils/textUtils';
 
 export const Contact = () => {
@@ -11,7 +12,8 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-12 md:py-24 bg-white bg-grid-pattern overflow-hidden">
+    <section id="contact" className="relative py-12 md:py-24 bg-white overflow-hidden">
+      <SectionAtmosphere />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, Fish, Sparkles, Store } from 'lucide-react';
 import { useLanguage } from '../i18n/useLanguage';
+import { SectionAtmosphere } from './SectionAtmosphere';
 
 const yearColors = {
   '1997': { bg: 'from-[#5FA8D3] to-[#3E92CC]', dot: 'border-[#5FA8D3]', line: 'bg-[#5FA8D3]' },
@@ -40,7 +41,8 @@ export const History = () => {
   ];
 
   return (
-    <section id="history" className="relative z-20 pt-0 pb-20 bg-white bg-grid-pattern overflow-hidden">
+    <section id="history" className="relative z-20 pt-0 pb-20 bg-white overflow-hidden">
+      <SectionAtmosphere />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
