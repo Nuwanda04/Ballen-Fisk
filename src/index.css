@@ -35,6 +35,8 @@
       linear-gradient(rgba(42, 122, 184, 0.26) 1px, transparent 1px),
       linear-gradient(90deg, rgba(42, 122, 184, 0.26) 1px, transparent 1px);
     background-size: 48px 48px;
+    background-position: 0 0;
+    background-attachment: fixed;
   }
 
   .shape-divider-grid {
@@ -47,6 +49,7 @@
       linear-gradient(90deg, rgba(42, 122, 184, 0.26) 1px, transparent 1px);
     background-size: 48px 48px;
     background-position: 0 0;
+    background-attachment: fixed;
     background-repeat: repeat;
   }
 
