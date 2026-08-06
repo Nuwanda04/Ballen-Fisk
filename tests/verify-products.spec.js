@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { expect, test } from '@playwright/test';
 import { categories, products, subcategories } from '../src/data/products.js';
+import { productTranslations } from '../src/data/productTranslations.js';
 
 const assetsRoot = path.resolve('src/assets');
 
@@ -23,6 +24,13 @@ test.describe('Product catalogue integrity', () => {
       if (product.image) {
         expect(fs.existsSync(path.join(assetsRoot, product.image)), `${product.image} is missing`).toBe(true);
       }
+    }
+  });
+
+  test('has English and German names for every product', () => {
+    for (const product of products) {
+      expect(productTranslations.en[product.id], `${product.name_da} is missing an English name`).toBeTruthy();
+      expect(productTranslations.de[product.id], `${product.name_da} is missing a German name`).toBeTruthy();
     }
   });
 

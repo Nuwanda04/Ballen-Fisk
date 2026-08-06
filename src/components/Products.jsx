@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, Coffee, Fish, Flame, Grid3X3, Package, Salad, Snowflake, Star, UtensilsCrossed, Wine } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { subcategories as subcategoriesData } from '../data/products';
+import { productTranslations } from '../data/productTranslations';
 import { useLanguage } from '../i18n/useLanguage';
 import { dataService } from '../services/dataService';
 
@@ -107,7 +108,7 @@ export const Products = () => {
   };
 
   const getProductName = (product) => {
-    return product[`name_${language}`] || product.name_da;
+    return product[`name_${language}`] || productTranslations[language]?.[product.id] || product.name_da;
   };
 
   const getSubcategoryName = (subcategory) => {
