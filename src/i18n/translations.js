@@ -86,7 +86,7 @@ export const translations = {
         terraceHarbor: 'Terrassen med udsigt over havnen',
         terraceExterior: 'Terrassen udefra',
         fishTerrace: 'Fisketerrassen ved havnen',
-        shopFrontSky: 'Fiskevognen i solskin',
+        shopFrontSky: 'Menu ved Ballen Fisk',
         lobsterHandling: 'Hummer fra dagens udvalg',
         liveLobster: 'Hummere klar til butikken'
       }
@@ -208,7 +208,7 @@ export const translations = {
         terraceHarbor: 'The terrace overlooking the harbour',
         terraceExterior: 'The terrace from outside',
         fishTerrace: 'The fish terrace by the harbour',
-        shopFrontSky: 'The fish shop in the sunshine',
+        shopFrontSky: 'The menu at Ballen Fisk',
         lobsterHandling: 'Lobster from today’s selection',
         liveLobster: 'Lobsters ready for the shop'
       }
@@ -330,7 +330,7 @@ export const translations = {
         terraceHarbor: 'Die Terrasse mit Blick auf den Hafen',
         terraceExterior: 'Die Terrasse von außen',
         fishTerrace: 'Die Fischterrasse am Hafen',
-        shopFrontSky: 'Der Fischladen im Sonnenschein',
+        shopFrontSky: 'Die Speisekarte von Ballen Fisk',
         lobsterHandling: 'Hummer aus dem heutigen Sortiment',
         liveLobster: 'Hummer für den Laden'
       }
