@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../i18n/useLanguage';
 import fishCounter from '../assets/carousel/fish-counter.jpg';
 import fishOnIce from '../assets/carousel/fish-on-ice.jpg';
@@ -30,6 +30,14 @@ export const PhotoCarousel = () => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
   const touchStartX = useRef(null);
+
+  useEffect(() => {
+    slides.forEach(([, source]) => {
+      const image = new Image();
+      image.decoding = 'async';
+      image.src = source;
+    });
+  }, []);
 
   const goToSlide = (index) => {
     setCurrentSlide((index + slides.length) % slides.length);
@@ -95,7 +103,7 @@ export const PhotoCarousel = () => {
               alt={t(`gallery.images.${slideKey}`)}
               className="h-full w-full object-cover"
               style={{ objectPosition: imagePosition }}
-              loading={currentSlide === 0 ? 'eager' : 'lazy'}
+              loading="eager"
               decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/75 via-transparent to-transparent" />
