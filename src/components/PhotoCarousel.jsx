@@ -61,6 +61,7 @@ export const PhotoCarousel = () => {
   };
 
   const [slideKey, image] = slides[currentSlide];
+  const imagePosition = slideKey === 'lobsterHandling' ? 'center 22%' : 'center';
 
   return (
     <section id="gallery" className="relative overflow-hidden bg-white py-16 md:py-24">
@@ -93,6 +94,7 @@ export const PhotoCarousel = () => {
               src={image}
               alt={t(`gallery.images.${slideKey}`)}
               className="h-full w-full object-cover"
+              style={{ objectPosition: imagePosition }}
               loading={currentSlide === 0 ? 'eager' : 'lazy'}
               decoding="async"
             />
