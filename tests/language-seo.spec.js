@@ -7,6 +7,6 @@ for (const language of ['en', 'de']) {
     await expect(page.locator('html')).toHaveAttribute('lang', language);
     await expect(page).toHaveTitle(language === 'en' ? /Fresh fish/ : /Frischer Fisch/);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', new RegExp(`/${language}/$`));
-    await expect(page.locator('h1')).toHaveText(language === 'en' ? 'Ballen Fish' : 'Ballen Fisch');
+    await expect(page.locator('h1')).toHaveText('Ballen Fisk');
   });
 }
