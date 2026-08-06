@@ -107,9 +107,9 @@ export const translations = {
         { period: 'Påskeferie – 1. maj', hours: 'Søndag–torsdag 10:00–16:00 · Fredag–lørdag 10:00–18:00' },
         { period: '2. maj – 25. juni', hours: 'Alle dage 10:00–18:00' },
         { period: '26. juni – 7. august', hours: 'Søndag–torsdag 10:00–20:00 · Fredag–lørdag 10:00–21:00' },
-        { period: '8. august – 1. september', hours: 'Alle dage 10:00–20:00' },
-        { period: '2. september – 1. oktober', hours: 'Alle dage 10:00–18:00' },
-        { period: '2. oktober – efterårsferie', hours: 'Søndag–torsdag 10:00–16:00 · Fredag–lørdag 10:00–18:00' }
+        { period: '8. august – 31. august', hours: 'Alle dage 10:00–20:00' },
+        { period: '1. september – 30. september', hours: 'Alle dage 10:00–18:00' },
+        { period: '1. oktober – efterårsferie', hours: 'Søndag–torsdag 10:00–16:00 · Fredag–lørdag 10:00–18:00' }
       ]
     },
     footer: {
@@ -228,9 +228,9 @@ export const translations = {
         { period: 'Easter break – 1 May', hours: 'Sunday–Thursday 10:00–16:00 · Friday–Saturday 10:00–18:00' },
         { period: '2 May – 25 June', hours: 'Daily 10:00–18:00' },
         { period: '26 June – 7 August', hours: 'Sunday–Thursday 10:00–20:00 · Friday–Saturday 10:00–21:00' },
-        { period: '8 August – 1 September', hours: 'Daily 10:00–20:00' },
-        { period: '2 September – 1 October', hours: 'Daily 10:00–18:00' },
-        { period: '2 October – autumn break', hours: 'Sunday–Thursday 10:00–16:00 · Friday–Saturday 10:00–18:00' }
+        { period: '8 August – 31 August', hours: 'Daily 10:00–20:00' },
+        { period: '1 September – 30 September', hours: 'Daily 10:00–18:00' },
+        { period: '1 October – autumn break', hours: 'Sunday–Thursday 10:00–16:00 · Friday–Saturday 10:00–18:00' }
       ]
     },
     footer: {
@@ -349,9 +349,9 @@ export const translations = {
         { period: 'Osterferien – 1. Mai', hours: 'Sonntag–Donnerstag 10:00–16:00 · Freitag–Samstag 10:00–18:00' },
         { period: '2. Mai – 25. Juni', hours: 'Täglich 10:00–18:00' },
         { period: '26. Juni – 7. August', hours: 'Sonntag–Donnerstag 10:00–20:00 · Freitag–Samstag 10:00–21:00' },
-        { period: '8. August – 1. September', hours: 'Täglich 10:00–20:00' },
-        { period: '2. September – 1. Oktober', hours: 'Täglich 10:00–18:00' },
-        { period: '2. Oktober – Herbstferien', hours: 'Sonntag–Donnerstag 10:00–16:00 · Freitag–Samstag 10:00–18:00' }
+        { period: '8. August – 31. August', hours: 'Täglich 10:00–20:00' },
+        { period: '1. September – 30. September', hours: 'Täglich 10:00–18:00' },
+        { period: '1. Oktober – Herbstferien', hours: 'Sonntag–Donnerstag 10:00–16:00 · Freitag–Samstag 10:00–18:00' }
       ]
     },
     footer: {
