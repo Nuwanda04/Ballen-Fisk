@@ -18,7 +18,7 @@ const schedule = {
   seasons: [
     {
       name: 'May 1 – June 25',
-      from: [5, 1],
+      from: [5, 2],
       to: [6, 25],
       days: [0, 1, 2, 3, 4, 5, 6],
       open: '10:00',
@@ -27,7 +27,7 @@ const schedule = {
     {
       name: 'June 26 – August 6, Sunday–Thursday',
       from: [6, 26],
-      to: [8, 6],
+      to: [8, 7],
       days: [0, 1, 2, 3, 4],
       open: '10:00',
       close: '20:00',
@@ -35,30 +35,30 @@ const schedule = {
     {
       name: 'June 26 – August 6, Friday–Saturday',
       from: [6, 26],
-      to: [8, 6],
+      to: [8, 7],
       days: [5, 6],
       open: '10:00',
       close: '21:00',
     },
     {
       name: 'August 7 – August 31',
-      from: [8, 7],
-      to: [8, 31],
+      from: [8, 8],
+      to: [9, 1],
       days: [0, 1, 2, 3, 4, 5, 6],
       open: '10:00',
       close: '20:00',
     },
     {
       name: 'September 1 – September 30',
-      from: [9, 1],
-      to: [9, 30],
+      from: [9, 2],
+      to: [10, 1],
       days: [0, 1, 2, 3, 4, 5, 6],
       open: '10:00',
       close: '18:00',
     },
     {
       name: 'October 1 – fall break, Sunday–Thursday',
-      from: [10, 1],
+      from: [10, 2],
       to: [10, 31],
       days: [0, 1, 2, 3, 4],
       open: '10:00',
@@ -66,7 +66,7 @@ const schedule = {
     },
     {
       name: 'October 1 – fall break, Friday–Saturday',
-      from: [10, 1],
+      from: [10, 2],
       to: [10, 31],
       days: [5, 6],
       open: '10:00',
