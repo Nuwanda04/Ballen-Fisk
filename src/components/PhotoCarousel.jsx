@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../i18n/useLanguage';
 import fishCounter from '../assets/carousel/fish-counter.jpg';
@@ -167,23 +166,6 @@ export const PhotoCarousel = () => {
                 </motion.div>
               );
             })}
-
-            <button
-              type="button"
-              onClick={() => goToSlide(currentSlide - 1)}
-              className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/75 text-white backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:left-5"
-              aria-label={t('gallery.previous')}
-            >
-              <ChevronLeft className="h-6 w-6" aria-hidden="true" />
-            </button>
-            <button
-              type="button"
-              onClick={() => goToSlide(currentSlide + 1)}
-              className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/75 text-white backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:right-5"
-              aria-label={t('gallery.next')}
-            >
-              <ChevronRight className="h-6 w-6" aria-hidden="true" />
-            </button>
 
           </div>
 
