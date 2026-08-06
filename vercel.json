@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/en", "destination": "/" },
+    { "source": "/en/", "destination": "/" },
+    { "source": "/de", "destination": "/" },
+    { "source": "/de/", "destination": "/" }
+  ]
+}
