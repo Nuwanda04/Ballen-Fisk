@@ -5,7 +5,7 @@ test.use({
   userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1',
 });
 
-test('Mobile Responsiveness Check', async ({ page }) => {
+test('Mobile Responsiveness Check', async ({ page }, testInfo) => {
   await page.goto('/');
 
   // 1. Check for horizontal scroll (overflow)
@@ -27,5 +27,5 @@ test('Mobile Responsiveness Check', async ({ page }) => {
   await expect(page.locator('footer')).toBeVisible();
 
   // 3. Screenshot
-  await page.screenshot({ path: 'mobile-home.png', fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath('mobile-home.png'), fullPage: true });
 });

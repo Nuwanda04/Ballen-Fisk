@@ -118,7 +118,7 @@ export const products = [
     "name_da": "Samsø Saft",
     "price": 45,
     "unit": null,
-    "image": "Drikkevarer/Samsø saft.jpeg"
+    "image": "Drikkevarer/Samsø saft.jpg"
   },
   {
     "id": 12,
@@ -363,7 +363,6 @@ export const products = [
     "unit": null,
     "image": "Menu/Sandwich mlaks.jpeg"
   },
-
   {
     "id": 40,
     "category_id": 2,
@@ -382,7 +381,6 @@ export const products = [
     "unit": null,
     "image": "Frikadelle og Fiskfilet/Fiskefilet.jpeg"
   },
-
   {
     "id": 44,
     "category_id": 7,
@@ -397,16 +395,15 @@ export const products = [
     "name_da": "Røget Sildefilet",
     "price": 15,
     "unit": null,
-    "image": "Røget fisk/Røget Sildefilet.jpeg"
+    "image": "Røget fisk/Røget sildefilet.jpg"
   },
-
   {
     "id": 47,
     "category_id": 3,
     "name_da": "Varmrøget Færøsk Laks",
     "price": 0.3,
     "unit": "g",
-    "image": "Røget fisk/Røget færøsk laks.jpeg"
+    "image": "Røget fisk/Røget Færøsk laks.jpg"
   },
   {
     "id": 48,
@@ -414,7 +411,7 @@ export const products = [
     "name_da": "Røget Makrel",
     "price": 55,
     "unit": null,
-    "image": "Røget fisk/Røget Makrel.jpeg"
+    "image": "Røget fisk/Røget Makrel.jpg"
   },
   {
     "id": 49,
@@ -446,7 +443,7 @@ export const products = [
     "name_da": "Røget Torskerogn",
     "price": 0.25,
     "unit": "g",
-    "image": "Røget fisk/Røget Torskerovn.jpeg"
+    "image": "Røget fisk/Røget Torskerogn.jpg"
   },
   {
     "id": 53,
@@ -456,13 +453,12 @@ export const products = [
     "unit": null,
     "image": "Røget fisk/Røget Musling.jpeg"
   },
-
   {
     "id": 55,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Skærisingfilet",
-    "price": 0.16,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -470,7 +466,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Tun",
-    "price": 0.3,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Tun.jpeg"
   },
@@ -479,7 +475,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Stenbider",
-    "price": 0.08,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Stenbider.jpeg"
   },
@@ -488,7 +484,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Dorade",
-    "price": 0.16,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Dorado.jpeg"
   },
@@ -497,7 +493,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Jomfruhummerhaler",
-    "price": 0.22,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -505,7 +501,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Søtunge",
-    "price": 0.25,
+    "price": 0,
     "unit": "kg",
     "image": "Hel fisk/Søtunge.jpeg"
   },
@@ -559,16 +555,15 @@ export const products = [
     "name_da": "Røget Kryddermakrel",
     "price": 30,
     "unit": null,
-    "image": "Røget fisk/Røget Kryddermakrel.jpeg"
+    "image": "Røget fisk/Røget Kryddermakrel.jpg"
   },
-
   {
     "id": 69,
     "category_id": 3,
     "name_da": "Kold Røget Laks",
     "price": 0.45,
     "unit": "g",
-    "image": "Røget fisk/Kold røget laks.jpeg"
+    "image": "Røget fisk/Kold røget laks.jpg"
   },
   {
     "id": 70,
@@ -576,7 +571,7 @@ export const products = [
     "name_da": "Kold Røget Hellefisk",
     "price": 0.4,
     "unit": "g",
-    "image": "Røget fisk/Kold røget hellefisk.jpeg"
+    "image": "Røget fisk/Koldt røget hellefisk.jpg"
   },
   {
     "id": 71,
@@ -584,7 +579,7 @@ export const products = [
     "name_da": "Røget Skalrejer",
     "price": 0.22,
     "unit": "g",
-    "image": "Røget fisk/Røget skalrejer.jpeg"
+    "image": "Røget fisk/Røget Skalrejer.jpg"
   },
   {
     "id": 72,
@@ -600,7 +595,7 @@ export const products = [
     "name_da": "Røget Smørfisk",
     "price": 0.35,
     "unit": "g",
-    "image": "Røget fisk/Røget Smørfisk.jpeg"
+    "image": "Røget fisk/Røget smørfisk.jpg"
   },
   {
     "id": 74,
@@ -636,7 +631,6 @@ export const products = [
     "unit": null,
     "image": "Misc/Østers.jpeg"
   },
-
   {
     "id": 79,
     "category_id": 2,
@@ -646,7 +640,6 @@ export const products = [
     "unit": null,
     "image": "Frikadelle og Fiskfilet/Laksefrikadelle.jpeg"
   },
-
   {
     "id": 81,
     "category_id": 7,
@@ -655,7 +648,6 @@ export const products = [
     "unit": null,
     "image": "Friture rejer/Kartoffelrejer.jpeg"
   },
-
   {
     "id": 83,
     "category_id": 7,
@@ -664,7 +656,6 @@ export const products = [
     "unit": null,
     "image": "Friture rejer/Krabbekugler.jpeg"
   },
-
   {
     "id": 85,
     "category_id": 7,
@@ -673,7 +664,6 @@ export const products = [
     "unit": null,
     "image": "Friture rejer/Tempura Rejer.jpeg"
   },
-
   {
     "id": 89,
     "category_id": 9,
@@ -706,8 +696,6 @@ export const products = [
     "price": 110,
     "unit": null
   },
-
-
   {
     "id": 96,
     "category_id": 6,
@@ -732,13 +720,12 @@ export const products = [
     "unit": "g",
     "image": "Hel fisk/Krabbeklør.jpeg"
   },
-
   {
     "id": 100,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Torskefilet",
-    "price": 0.25,
+    "price": 0,
     "unit": "g",
     "image": "Fiskefilet/Torskefilet.jpeg"
   },
@@ -747,7 +734,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Torskeloins",
-    "price": 0.25,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Torskeloins.jpeg"
   },
@@ -756,7 +743,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Torsk - hel fisk",
-    "price": 0.8,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Torsk.jpeg"
   },
@@ -765,7 +752,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Renset Stenbiderrogn",
-    "price": 0.45,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -773,7 +760,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Urenset Stenbiderrogn",
-    "price": 0.35,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -781,16 +768,16 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Langeloins",
-    "price": 0.22,
+    "price": 0,
     "unit": "g",
-    "image": "Hel fisk/Langeloins.jpeg"
+    "image": "Fiskefilet/Lange loins.jpg"
   },
   {
     "id": 106,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Langefilet",
-    "price": 0.22,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -798,25 +785,25 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Rødspætter",
-    "price": 0.25,
+    "price": 0,
     "unit": "g",
-    "image": "Hel fisk/Rødspætter.jpeg"
+    "image": "Hel fisk/Rødspætter.jpg"
   },
   {
     "id": 108,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Rødspættefilet",
-    "price": 0.33,
+    "price": 0,
     "unit": "g",
-    "image": "Fiskefilet/Rødspættefilet.jpeg"
+    "image": "Fiskefilet/Rødspætte filet.jpg"
   },
   {
     "id": 109,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Kulmuleloins",
-    "price": 0.25,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -824,7 +811,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Kulmulefilet",
-    "price": 0.22,
+    "price": 0,
     "unit": "g",
     "image": "Fiskefilet/Kulmulefilet.jpeg"
   },
@@ -833,7 +820,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Skrubber",
-    "price": 0.15,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Skrubber.jpeg"
   },
@@ -842,7 +829,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Fjordskrubber",
-    "price": 0.2,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Skrubber.jpeg"
   },
@@ -851,7 +838,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "kg skrubber",
-    "price": 100,
+    "price": 0,
     "unit": null,
     "image": "Hel fisk/Skrubber.jpeg"
   },
@@ -860,7 +847,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Brosmeloins",
-    "price": 0.28,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Brosmeloins.jpeg"
   },
@@ -869,7 +856,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Brosmefilet",
-    "price": 0.28,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -877,16 +864,16 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Laksefilet",
-    "price": 0.3,
+    "price": 0,
     "unit": "g",
-    "image": "Fiskefilet/Laksefilet.jpeg"
+    "image": "Fiskefilet/Ferøsk lakse filet.jpg"
   },
   {
     "id": 117,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Laksesteak",
-    "price": 80,
+    "price": 0,
     "unit": null
   },
   {
@@ -894,7 +881,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Havtaske haler",
-    "price": 0.3,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -902,7 +889,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Havtaskekæber",
-    "price": 0.3,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -910,16 +897,16 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Havtaskefilet",
-    "price": 0.35,
+    "price": 0,
     "unit": "g",
-    "image": "Fiskefilet/Havtaskefilet.jpeg"
+    "image": "Fiskefilet/Havtaske filet.jpg"
   },
   {
     "id": 121,
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Havtaske - hel fisk",
-    "price": 0.35,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -927,7 +914,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Rødtunge - hel fisk",
-    "price": 0.25,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -935,7 +922,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Rødtungefilet",
-    "price": 0.33,
+    "price": 0,
     "unit": "g",
     "image": "Fiskefilet/Rødtungefilet.jpeg"
   },
@@ -944,7 +931,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Havkatfilet",
-    "price": 0.25,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -969,7 +956,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Isingfilet",
-    "price": 0.22,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -985,7 +972,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Multefilet",
-    "price": 0.25,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -993,7 +980,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Makrel - helfisk",
-    "price": 0.12,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Makrel.jpeg"
   },
@@ -1002,7 +989,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Makrelfilet",
-    "price": 0.18,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1010,7 +997,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Helleflynderfilet",
-    "price": 0.3,
+    "price": 0,
     "unit": "g",
     "image": "Fiskefilet/Helleflynderfilet.jpeg"
   },
@@ -1019,7 +1006,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Helleflynder - helfisk",
-    "price": 0.22,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1035,7 +1022,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Sildefilet",
-    "price": 0.08,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1043,7 +1030,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Hornfisk - helfisk",
-    "price": 0.08,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Hornfisk.jpeg"
   },
@@ -1052,7 +1039,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Hornfiskfilet",
-    "price": 0.25,
+    "price": 0,
     "unit": "g",
     "image": "Fiskefilet/Hornfiskfilet.jpeg"
   },
@@ -1061,7 +1048,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Mørksejloins",
-    "price": 0.18,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1069,7 +1056,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Mørksejfilet",
-    "price": 0.18,
+    "price": 0,
     "unit": "g",
     "image": "Fiskefilet/Mørksejfilet.jpeg"
   },
@@ -1078,7 +1065,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Lyssejfilet",
-    "price": 0.22,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1103,7 +1090,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Smørfisk - Escobar",
-    "price": 0.22,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1111,7 +1098,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Pighvar",
-    "price": 0.28,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Pighvar.jpeg"
   },
@@ -1120,7 +1107,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Slethvar",
-    "price": 0.15,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Slethvar.jpeg"
   },
@@ -1129,7 +1116,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Kullerloins",
-    "price": 0.25,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Kullerloins.jpeg"
   },
@@ -1138,8 +1125,9 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Kullerfilet",
-    "price": 0.19,
-    "unit": "g"
+    "price": 0,
+    "unit": "g",
+    "image": "Fiskefilet/Kuller filet.jpg"
   },
   {
     "id": 150,
@@ -1154,7 +1142,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Havbars",
-    "price": 0.16,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1162,7 +1150,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Rødfiskfilet",
-    "price": 0.32,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1188,13 +1176,9 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Torskerogn",
-    "price": 0.25,
+    "price": 0,
     "unit": "g"
   },
-
-
-
-
   {
     "id": 162,
     "category_id": 9,
@@ -1202,18 +1186,14 @@ export const products = [
     "price": 240,
     "unit": "stk"
   },
-
-
-
   {
     "id": 173,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Skrubbefilet",
-    "price": 0.25,
+    "price": 0,
     "unit": "g"
   },
-
   {
     "id": 175,
     "category_id": 2,
@@ -1232,7 +1212,6 @@ export const products = [
     "unit": null,
     "image": "Salat/Hvidløgsrejer.jpeg"
   },
-
   {
     "id": 178,
     "category_id": 6,
@@ -1255,7 +1234,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Moonfisk",
-    "price": 0.2,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Moonfisk.jpeg"
   },
@@ -1310,15 +1289,12 @@ export const products = [
     "unit": null,
     "image": "Friture rejer/Twister rejer.jpeg"
   },
-
-
-
   {
     "id": 190,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Blålangeloins",
-    "price": 0.22,
+    "price": 0,
     "unit": "g",
     "image": "Hel fisk/Langeloins.jpeg"
   },
@@ -1329,7 +1305,6 @@ export const products = [
     "price": 50,
     "unit": "none"
   },
-
   {
     "id": 193,
     "category_id": 8,
@@ -1353,10 +1328,9 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Ål",
-    "price": 0.5,
+    "price": 0,
     "unit": "g"
   },
-
   {
     "id": 197,
     "category_id": 6,
@@ -1370,7 +1344,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Lakseørred",
-    "price": 0.18,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1378,7 +1352,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Rødfisk",
-    "price": 0.16,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1386,7 +1360,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Fjeasing",
-    "price": 0.12,
+    "price": 0,
     "unit": "g"
   },
   {
@@ -1411,7 +1385,6 @@ export const products = [
     "price": 0.5,
     "unit": "g"
   },
-
   {
     "id": 205,
     "category_id": 4,
@@ -1466,7 +1439,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Rokkevinde",
-    "price": 0.1,
+    "price": 0,
     "unit": null,
     "image": "Hel fisk/Rokkevinge.jpeg"
   },
@@ -1484,7 +1457,7 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Jomfruhummer (Hele)",
-    "price": 0.2,
+    "price": 0,
     "unit": "kg"
   },
   {
@@ -1510,17 +1483,16 @@ export const products = [
     "category_id": 1,
     "subcategory_id": 1,
     "name_da": "Multe",
-    "price": 20,
+    "price": 0,
     "unit": null,
     "image": "Hel fisk/Grey mullet.jpeg"
   },
-
   {
     "id": 218,
     "category_id": 1,
     "subcategory_id": 2,
     "name_da": "Blålangefilet",
-    "price": 0.24,
+    "price": 0,
     "unit": "g"
   }
 ];

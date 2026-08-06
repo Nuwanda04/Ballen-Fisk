@@ -21,3 +21,17 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Generated test and audit output
+test-results/
+playwright-report/
+mobile-home.png
+category_audit.txt
+debug_output*.txt
+duplicate_report.txt
+failure.txt
+target_products.txt
+test_output*.txt
+test-output*.txt
+verification_output.txt
+verification_report*.txt

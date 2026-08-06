@@ -37,12 +37,6 @@ const schedule = {
 };
 // ===== END CONFIG =====
 
-const DAY_NAMES = {
-  da: ['Søndag', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag'],
-  en: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-  de: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
-};
-
 const LABELS = {
   da: {
     closedSeason: 'Lukket for sæsonen',

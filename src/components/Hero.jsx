@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Flame } from 'lucide-react';
-import heroImage from '../assets/butik-billede.jpg';
-import { useLanguage } from '../i18n/LanguageContext';
+import heroImage from '../assets/butikHero.jpg';
+import { useLanguage } from '../i18n/useLanguage';
 import { renderWithStrong } from '../utils/textUtils';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { OpenStatus } from './OpenStatus';
@@ -52,7 +52,7 @@ export const Hero = () => {
             <div className="w-full h-full rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 relative z-10">
               <img
                 src={heroImage}
-                alt="Fresh fish on ice"
+                alt="Ballen Fisk at Ballen Havn"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/60 to-transparent" />

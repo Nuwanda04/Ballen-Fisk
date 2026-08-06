@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Clock, Facebook, MapPin, Phone } from 'lucide-react';
-import { useLanguage } from '../i18n/LanguageContext';
+import { useLanguage } from '../i18n/useLanguage';
 import { renderWithStrongDark } from '../utils/textUtils';
 
 export const Contact = () => {

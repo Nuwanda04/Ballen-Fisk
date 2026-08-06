@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Calendar, Fish, Sparkles, Store } from 'lucide-react';
-import { useLanguage } from '../i18n/LanguageContext';
+import { useLanguage } from '../i18n/useLanguage';
 
 const yearColors = {
   '1985': { bg: 'from-[#5FA8D3] to-[#3E92CC]', dot: 'border-[#5FA8D3]', line: 'bg-[#5FA8D3]' },

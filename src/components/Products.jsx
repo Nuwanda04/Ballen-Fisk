@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, Coffee, Fish, Flame, Grid3X3, Package, Salad, Snowflake, Star, UtensilsCrossed, Wine } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { subcategories as subcategoriesData } from '../data/products';
-import { useLanguage } from '../i18n/LanguageContext';
+import { useLanguage } from '../i18n/useLanguage';
 import { dataService } from '../services/dataService';
 
 // Pre-resolve all asset images at build time (handles spaces/special chars in paths)
@@ -378,13 +378,10 @@ const convertHexToRgba = (hex, alpha) => {
               <AnimatePresence mode="popLayout">
                 {currentProducts.map((product) => {
                   const imageUrl = product.image ? imageMap[product.image] || null : null;
-
-                  // Find category/icon details for this product
                   const category = categories.find(c => c.id === product.category_id);
                   const Icon = category ? (categoryIcons[category.slug] || Package) : Package;
-                  // Use same color logic as sidebar
-                  const catIndex = category ? categories.indexOf(category) : -1;
-                  const iconColor = catIndex >= 0 ? gradientColors[catIndex % gradientColors.length] : '#3E92CC';
+                  const categoryIndex = category ? categories.indexOf(category) : 0;
+                  const placeholderColor = gradientColors[categoryIndex % gradientColors.length];
 
                   return (
                   <motion.div
@@ -400,11 +397,23 @@ const convertHexToRgba = (hex, alpha) => {
                         <img
                           src={imageUrl}
                           alt={getProductName(product)}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
-                          <Fish className="w-12 h-12 md:w-16 md:h-16 text-[#3E92CC]/20" />
+                        <div
+                          className="w-full h-full flex flex-col items-center justify-center gap-2 text-center px-4"
+                          style={{
+                            background: `linear-gradient(135deg, ${placeholderColor}45, rgba(255,255,255,0.95))`
+                          }}
+                          role="img"
+                          aria-label={`${getProductName(product)} — ${t('products.noPhoto')}`}
+                        >
+                          <Icon className="w-10 h-10 md:w-14 md:h-14 text-[#3E92CC]/60" />
+                          <span className="text-xs md:text-sm font-semibold text-[#0B132B]/60">
+                            {t('products.noPhoto')}
+                          </span>
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -532,7 +541,7 @@ const convertHexToRgba = (hex, alpha) => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="mt-8 text-center text-sm text-white/60 italic font-light max-w-2xl mx-auto"
+              className="mt-8 text-center text-sm text-white/80 italic font-light max-w-2xl mx-auto bg-white/10 rounded-xl px-4 py-3"
             >
               * {t('products.disclaimer')}
             </motion.p>

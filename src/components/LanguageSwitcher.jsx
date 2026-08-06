@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { useLanguage } from '../i18n/LanguageContext';
+import { useLanguage } from '../i18n/useLanguage';
 
 export const LanguageSwitcher = () => {
   const { language, changeLanguage } = useLanguage();
