@@ -1,5 +1,11 @@
 export const translations = {
   da: {
+    analytics: {
+      title: 'Hjælp os med at forbedre siden',
+      description: 'Vi bruger anonymiserede brugsdata til at forstå, hvad der fungerer på siden. Statistik aktiveres kun, hvis du accepterer.',
+      accept: 'Accepter statistik',
+      decline: 'Afvis'
+    },
     seo: {
       title: 'Ballen Fisk | Frisk fisk og røgvarer på Samsø',
       description: 'Ballen Fisk ved Ballen Havn på Samsø. Frisk fisk, hjemmelavede røgvarer, fiskefrikadeller og sæsonens udvalg siden 2009.'
@@ -86,6 +92,12 @@ export const translations = {
     }
   },
   en: {
+    analytics: {
+      title: 'Help us improve the site',
+      description: 'We use anonymised usage data to understand what works on the site. Analytics is only activated if you accept.',
+      accept: 'Accept analytics',
+      decline: 'Decline'
+    },
     seo: {
       title: 'Ballen Fisk | Fresh fish and smoked seafood on Samsø',
       description: 'Ballen Fisk at Ballen Harbor on Samsø. Fresh fish, homemade smoked seafood, fish cakes, and seasonal selection since 2009.'
@@ -172,6 +184,12 @@ export const translations = {
     }
   },
   de: {
+    analytics: {
+      title: 'Helfen Sie uns, die Seite zu verbessern',
+      description: 'Wir verwenden anonymisierte Nutzungsdaten, um die Website zu verbessern. Statistiken werden nur aktiviert, wenn Sie zustimmen.',
+      accept: 'Statistik akzeptieren',
+      decline: 'Ablehnen'
+    },
     seo: {
       title: 'Ballen Fisk | Frischer Fisch und Räucherwaren auf Samsø',
       description: 'Ballen Fisk am Ballen Hafen auf Samsø. Frischer Fisch, hausgemachte Räucherwaren, Fischfrikadellen und saisonale Auswahl seit 2009.'
