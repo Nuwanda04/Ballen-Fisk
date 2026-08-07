@@ -145,10 +145,11 @@ export const Contact = () => {
                           {schedule.period}
                         </th>
                         {hours.length === 1 ? (
-                          <td colSpan={2} className="border-t border-[#E2E8F0] px-3 py-4 text-sm text-[#0B132B]/75 sm:px-4">
-                            <span className="block text-xs font-semibold text-[#0B132B]/55 sm:inline">{hours[0].label}</span>
-                            <span className="block font-semibold text-[#0B132B] sm:ml-2 sm:inline">{hours[0].time}</span>
-                          </td>
+                          [0, 1].map((column) => (
+                            <td key={column} className="border-t border-[#E2E8F0] px-3 py-4 text-sm font-semibold text-[#0B132B] sm:px-4">
+                              {hours[0].time}
+                            </td>
+                          ))
                         ) : (
                           hours.map((hour) => (
                             <td key={hour.label} className="border-t border-[#E2E8F0] px-3 py-4 text-sm text-[#0B132B]/75 sm:px-4">
