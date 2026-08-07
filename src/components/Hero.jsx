@@ -48,9 +48,9 @@ export const Hero = () => {
           <img
             src="/faviconFish.png"
             alt="Ballen Fisk Logo"
-            className="h-8 w-8 object-contain drop-shadow-md sm:h-10 sm:w-10"
+            className="h-7 w-7 object-contain drop-shadow-md sm:h-10 sm:w-10"
           />
-          <a href="#top" className="whitespace-nowrap text-xl font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm sm:text-2xl">
+          <a href="#top" className="whitespace-nowrap text-lg font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm sm:text-2xl">
             Ballen Fisk
           </a>
         </motion.div>
