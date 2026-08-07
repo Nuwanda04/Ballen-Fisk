@@ -140,10 +140,10 @@ export const Products = () => {
   };
 
   return (
-    <section id="products" className="relative pt-24 md:pt-48 pb-32 md:pb-52 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0B132B 0%, #1C2541 52%, #3E92CC 100%)' }}>
+    <section id="products" className="relative pt-24 md:pt-48 xl:pt-[14rem] xl2:pt-[15rem] 2xl:pt-[16rem] 2xl3:pt-[17rem] 2xl2:pt-[18rem] 3xl:pt-[20rem] 4xl:pt-[22rem] pb-32 md:pb-52 xl:pb-[14rem] xl2:pb-[15rem] 2xl:pb-[16rem] 2xl3:pb-[17rem] 2xl2:pb-[18rem] 3xl:pb-[20rem] 4xl:pb-[22rem] overflow-hidden" style={{ background: 'linear-gradient(135deg, #0B132B 0%, #1C2541 52%, #3E92CC 100%)' }}>
       {/* Top Shape Divider (White Overlay) */}
-      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none -mt-1">
-        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
+      <div className="absolute top-0 left-0 right-0 w-full h-auto md:h-[200px] xl:h-[210px] xl2:h-[215px] 2xl:h-[220px] 2xl3:h-[225px] 2xl2:h-[230px] 3xl:h-[240px] 4xl:h-[260px] overflow-hidden leading-none -mt-1">
+        <svg viewBox="0 0 1440 200" className="block w-full h-full" preserveAspectRatio="none">
           <path
             fill="#ffffff"
             d="M0,0L0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,0Z"
@@ -566,8 +566,8 @@ const convertHexToRgba = (hex, alpha) => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 -mb-px">
-        <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
+      <div className="absolute bottom-0 left-0 right-0 h-auto md:h-[200px] xl:h-[210px] xl2:h-[215px] 2xl:h-[220px] 2xl3:h-[225px] 2xl2:h-[230px] 3xl:h-[240px] 4xl:h-[260px] -mb-px">
+        <svg viewBox="0 0 1440 200" className="block w-full h-full" preserveAspectRatio="none">
           <path
             fill="#ffffff"
             d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,200L0,200Z"
