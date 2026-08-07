@@ -65,15 +65,15 @@ export const Hero = () => {
 
       {primaryNav('relative z-40 container flex lg:hidden items-center justify-center gap-5 pb-4')}
 
-      <div className="relative z-10 container pt-4 pb-[19rem] lg:pb-[19rem] flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
-        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-10 items-center h-full">
+      <div className="relative z-10 container pt-4 pb-[22rem] lg:pb-[22rem] flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
+        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-10 3xl:gap-14 4xl:gap-20 items-center h-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4 }}
             className="relative block order-last mb-0 lg:mb-0 flex-1 flex items-center justify-center"
           >
-            <div className="relative w-full max-w-[420px] lg:max-w-[700px] mx-auto lg:ml-auto aspect-[16/10]">
+            <div className="relative w-full max-w-[420px] lg:max-w-[700px] 3xl:max-w-[820px] 4xl:max-w-[940px] mx-auto lg:ml-auto aspect-[16/10]">
             <div className="w-full h-full rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 relative z-10">
               <img
                 src={heroImage}
@@ -130,16 +130,16 @@ export const Hero = () => {
                 <span className="sm:hidden">{t('hero.sinceMobile')}</span>
               </motion.div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-2xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl 3xl:text-8xl 4xl:text-9xl font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-2xl">
                 {t('hero.title')}
               </h1>
 
-              <p className="text-lg md:text-xl font-medium mb-6 lg:mb-8 opacity-90 text-balance leading-relaxed">
+              <p className="text-lg md:text-xl 3xl:text-2xl font-medium mb-6 lg:mb-8 opacity-90 text-balance leading-relaxed">
                 {t('hero.subtitle')}
               </p>
             </motion.div>
 
-            <p className="text-base md:text-lg text-white/60 mb-8 leading-relaxed text-left max-w-lg mx-auto lg:mx-0 px-4 md:px-0">
+            <p className="text-base md:text-lg 3xl:text-xl text-white/60 mb-8 leading-relaxed text-left max-w-lg 3xl:max-w-xl mx-auto lg:mx-0 px-4 md:px-0">
               {renderWithStrong(t('hero.description'))}
             </p>
 
@@ -149,7 +149,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="group relative mt-2 px-8 py-4 bg-white text-[#0B132B] border-2 border-[#0B132B] rounded-full font-bold text-lg shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all flex items-center justify-center gap-3 mx-auto lg:mx-0 w-fit"
+              className="group relative mt-2 px-8 py-4 3xl:px-10 3xl:py-5 bg-white text-[#0B132B] border-2 border-[#0B132B] rounded-full font-bold text-lg 3xl:text-xl shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all flex items-center justify-center gap-3 mx-auto lg:mx-0 w-fit"
               onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t('hero.cta')}
