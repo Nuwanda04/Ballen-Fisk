@@ -140,7 +140,7 @@ export const Products = () => {
   };
 
   return (
-    <section id="products" className="relative pt-24 md:pt-48 pb-32 md:pb-52 overflow-hidden" style={{ background: 'linear-gradient(135deg, #164E63 0%, #256B7A 52%, #3A7F8D 100%)' }}>
+    <section id="products" className="relative pt-24 md:pt-48 pb-32 md:pb-52 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0B132B 0%, #1C2541 52%, #3E92CC 100%)' }}>
       {/* Top Shape Divider (White Overlay) */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none -mt-1">
         <svg viewBox="0 0 1440 200" className="block w-full h-auto" preserveAspectRatio="none">
