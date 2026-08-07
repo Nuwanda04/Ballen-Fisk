@@ -65,7 +65,7 @@ export const Hero = () => {
 
       {primaryNav('relative z-40 container flex lg:hidden items-center justify-center gap-5 pb-4')}
 
-      <div className="relative z-10 container pt-4 pb-[28rem] lg:pb-[24rem] xl:pb-[28rem] 3xl:pb-[40rem] 4xl:pb-[44rem] flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
+      <div className="relative z-10 container pt-4 pb-[28rem] lg:pb-[22rem] xl:pb-[25rem] 3xl:pb-[33rem] 4xl:pb-[36rem] flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-10 3xl:gap-14 4xl:gap-20 items-center h-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
