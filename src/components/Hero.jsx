@@ -69,7 +69,7 @@ export const Hero = () => {
             aria-controls="mobile-navigation"
             aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white lg:hidden"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

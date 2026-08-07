@@ -40,7 +40,7 @@ export const LanguageSwitcher = () => {
       <div className="relative md:hidden" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex h-12 items-center gap-2 rounded-full bg-white/10 px-3 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-colors relative z-50"
+          className="flex h-10 items-center gap-2 rounded-full bg-white/10 px-2.5 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-colors relative z-50"
         >
           <img
             src={flags[language]}
