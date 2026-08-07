@@ -14,6 +14,7 @@ const navLinks = [
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const mobileSince = t('hero.sinceMobile').split(' • ');
 
   const primaryNav = (className) => (
     <nav aria-label={t('nav.primary')} className={className}>
@@ -124,10 +125,13 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md mb-4 lg:mb-6 border border-white/30 text-sm font-medium tracking-wider uppercase"
+                className="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md mb-4 lg:mb-6 border border-white/30 text-sm font-medium tracking-wider uppercase sm:whitespace-nowrap"
               >
                 <span className="hidden sm:inline">{renderWithStrong(t('hero.since'))}</span>
-                <span className="sm:hidden">{t('hero.sinceMobile')}</span>
+                <span className="sm:hidden">
+                  {mobileSince[0]}
+                  {mobileSince[1] && <span className="block">• {mobileSince[1]}</span>}
+                </span>
               </motion.div>
 
               <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-2xl">
