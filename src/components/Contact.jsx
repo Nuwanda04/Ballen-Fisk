@@ -111,7 +111,7 @@ export const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="border-t-4 border-[#1C2541] bg-white rounded-2xl p-8 shadow-xl"
+            className="border-t-4 border-[#29466B] bg-white rounded-2xl p-8 shadow-xl"
           >
             <div className="flex items-center gap-3 mb-6">
               <Clock className="w-8 h-8 text-[#3E92CC]" />
@@ -122,7 +122,7 @@ export const Contact = () => {
 
             <div className="mb-8 overflow-hidden rounded-xl border border-[#CBD5E1]">
               <table className="w-full table-fixed border-collapse text-left">
-                <thead className="bg-[#1C2541] text-white">
+                <thead className="bg-[#29466B] text-white">
                   <tr>
                     <th scope="col" className="w-[34%] px-3 py-3 text-xs font-bold uppercase tracking-wide sm:px-4">
                       {t('contact.season')}
