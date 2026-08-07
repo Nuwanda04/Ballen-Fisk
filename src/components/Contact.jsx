@@ -8,7 +8,7 @@ export const Contact = () => {
   const { t } = useLanguage();
 
   const openingHours = t('contact.schedule');
-  const scheduleAccents = Array(6).fill('#FB923C');
+  const scheduleAccents = Array(6).fill('#0B132B');
   const scheduleBackgrounds = ['bg-white', 'bg-[#F4F8FB]', 'bg-white', 'bg-[#F4F8FB]', 'bg-white', 'bg-[#F4F8FB]'];
 
   return (
@@ -68,7 +68,7 @@ export const Contact = () => {
 
             <div className="border-t-4 border-[#FDBA74] bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#FDBA74] to-[#E376D4] rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -107,7 +107,7 @@ export const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="border-t-4 border-[#9153CE] bg-white rounded-2xl p-8 shadow-xl"
+            className="border-t-4 border-[#0B132B] bg-white rounded-2xl p-8 shadow-xl"
           >
             <div className="flex items-center gap-3 mb-6">
               <Clock className="w-8 h-8 text-[#3E92CC]" />
