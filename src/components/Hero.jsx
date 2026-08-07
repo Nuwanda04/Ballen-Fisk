@@ -149,7 +149,7 @@ export const Hero = () => {
                 {t('hero.title')}
               </h1>
 
-              <p className="text-lg md:text-xl 3xl:text-2xl font-medium mb-6 lg:mb-8 opacity-90 text-balance leading-relaxed">
+              <p className="text-[1.05rem] sm:text-lg md:text-xl 3xl:text-2xl font-medium mb-6 lg:mb-8 opacity-90 leading-relaxed">
                 {t('hero.subtitle')}
               </p>
             </motion.div>
