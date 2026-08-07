@@ -41,7 +41,7 @@ export const History = () => {
   ];
 
   return (
-    <section id="history" className="relative z-20 -mt-24 pt-0 pb-20 bg-white overflow-hidden">
+    <section id="history" className="relative z-20 -mt-8 bg-white pt-0 pb-20 overflow-hidden sm:-mt-12 lg:-mt-24">
       <SectionAtmosphere />
       <div className="container relative z-10">
         <motion.div

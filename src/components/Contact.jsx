@@ -121,7 +121,7 @@ export const Contact = () => {
             </div>
 
             <div className="mb-8 overflow-hidden rounded-xl border border-[#CBD5E1]">
-              <table className="w-full table-fixed border-collapse text-left">
+              <table className="hidden w-full table-fixed border-collapse text-left sm:table">
                 <thead className="bg-[#29466B] text-white">
                   <tr>
                     <th scope="col" className="w-[34%] px-3 py-3 text-xs font-bold uppercase tracking-wide sm:px-4">
@@ -162,6 +162,29 @@ export const Contact = () => {
                   })}
                 </tbody>
               </table>
+              <div className="divide-y divide-[#E2E8F0] sm:hidden">
+                {openingHours.map((schedule, index) => {
+                  const hours = parseScheduleHours(schedule.hours);
+                  const mobileHours = hours.length === 1 ? [
+                    { label: scheduleColumns[0]?.label, time: hours[0].time },
+                    { label: scheduleColumns[1]?.label, time: hours[0].time }
+                  ] : hours;
+
+                  return (
+                    <div key={schedule.period} className={`${index % 2 === 1 ? 'bg-[#F4F8FB]' : 'bg-white'} p-4`}>
+                      <h4 className="text-sm font-bold text-[#0B132B]">{schedule.period}</h4>
+                      <div className="mt-3 grid grid-cols-2 gap-2">
+                        {mobileHours.map((hour) => (
+                          <div key={hour.label} className="rounded-lg bg-[#EEF4F8] px-3 py-2">
+                            <div className="text-[10px] font-bold uppercase tracking-wide text-[#0B132B]/55">{hour.label}</div>
+                            <div className="mt-1 text-sm font-semibold text-[#0B132B]">{hour.time}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
 

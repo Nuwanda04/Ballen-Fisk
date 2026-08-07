@@ -16,7 +16,9 @@ export const translations = {
       history: 'Historie',
       contact: 'Kontakt',
       primary: 'Hovednavigation',
-      skip: 'Spring til hovedindhold'
+      skip: 'Spring til hovedindhold',
+      openMenu: 'Åbn menu',
+      closeMenu: 'Luk menu'
     },
     hero: {
       title: 'Ballen Fisk',
@@ -138,7 +140,9 @@ export const translations = {
       history: 'History',
       contact: 'Contact',
       primary: 'Primary navigation',
-      skip: 'Skip to main content'
+      skip: 'Skip to main content',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu'
     },
     hero: {
       title: 'Ballen Fisk',
@@ -260,7 +264,9 @@ export const translations = {
       history: 'Geschichte',
       contact: 'Kontakt',
       primary: 'Hauptnavigation',
-      skip: 'Zum Hauptinhalt springen'
+      skip: 'Zum Hauptinhalt springen',
+      openMenu: 'Menü öffnen',
+      closeMenu: 'Menü schließen'
     },
     hero: {
       title: 'Ballen Fisk',

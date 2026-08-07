@@ -487,11 +487,11 @@ const convertHexToRgba = (hex, alpha) => {
 
             {/* Condensed Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center flex-wrap gap-2">
+              <div className="flex flex-nowrap items-center justify-center gap-1 sm:gap-2">
                 <button
                   onClick={() => paginate(Math.max(1, currentPage - 1))}
                   disabled={currentPage === 1}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-white disabled:opacity-30 hover:bg-white/20 transition-colors font-medium text-sm"
+                  className="rounded-lg bg-white/10 px-2 py-2 text-xs font-medium text-white transition-colors hover:bg-white/20 disabled:opacity-30 sm:px-4 sm:text-sm"
                 >
                   {t('products.prev')}
                 </button>
@@ -503,26 +503,11 @@ const convertHexToRgba = (hex, alpha) => {
                   // Always show last page
                   // Show current page and neighbours
 
-                  const showEllipsisStart = currentPage > 3;
-                  const showEllipsisEnd = currentPage < totalPages - 2;
-
                   if (totalPages <= 7) {
                     for (let i = 1; i <= totalPages; i++) pages.push(i);
                   } else {
                     pages.push(1);
-                    if (showEllipsisStart) pages.push('...');
-
-                    let start = Math.max(2, currentPage - 1);
-                    let end = Math.min(totalPages - 1, currentPage + 1);
-
-                    if (!showEllipsisStart) start = 2;
-                    if (!showEllipsisEnd) end = totalPages - 1;
-
-                    for (let i = start; i <= end; i++) {
-                      pages.push(i);
-                    }
-
-                    if (showEllipsisEnd) pages.push('...');
+                    pages.push('...');
                     pages.push(totalPages);
                   }
 
@@ -531,7 +516,7 @@ const convertHexToRgba = (hex, alpha) => {
                       key={index}
                       onClick={() => typeof page === 'number' && paginate(page)}
                       disabled={page === '...'}
-                      className={`min-w-[40px] h-10 px-2 rounded-lg font-bold transition-all text-sm ${
+                      className={`h-10 min-w-[32px] rounded-lg px-1 text-xs font-bold transition-all sm:min-w-[40px] sm:px-2 sm:text-sm ${
                         page === currentPage
                           ? 'bg-white text-[#3E92CC] shadow-lg scale-105'
                           : page === '...'
@@ -547,7 +532,7 @@ const convertHexToRgba = (hex, alpha) => {
                 <button
                   onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-white disabled:opacity-30 hover:bg-white/20 transition-colors font-medium text-sm"
+                  className="rounded-lg bg-white/10 px-2 py-2 text-xs font-medium text-white transition-colors hover:bg-white/20 disabled:opacity-30 sm:px-4 sm:text-sm"
                 >
                   {t('products.next')}
                 </button>

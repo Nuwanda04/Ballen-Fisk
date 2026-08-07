@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Flame } from 'lucide-react';
+import { ArrowDown, Flame, Menu, X } from 'lucide-react';
+import { useState } from 'react';
 import heroImage from '../assets/harbourHero.png';
 import { useLanguage } from '../i18n/useLanguage';
 import { renderWithStrong } from '../utils/textUtils';
@@ -14,7 +15,7 @@ const navLinks = [
 
 export const Hero = () => {
   const { t } = useLanguage();
-  const mobileSince = t('hero.sinceMobile').split(' • ');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const primaryNav = (className) => (
     <nav aria-label={t('nav.primary')} className={className}>
@@ -22,6 +23,7 @@ export const Hero = () => {
         <a
           key={section}
           href={`#${section}`}
+          onClick={() => setIsMenuOpen(false)}
           className="text-xs lg:text-sm font-semibold text-white/75 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm transition-colors"
         >
           {t(label)}
@@ -41,14 +43,14 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-3"
+          className="flex shrink-0 items-center gap-2 sm:gap-3"
         >
           <img
             src="/faviconFish.png"
             alt="Ballen Fisk Logo"
-            className="w-10 h-10 object-contain drop-shadow-md"
+            className="h-8 w-8 object-contain drop-shadow-md sm:h-10 sm:w-10"
           />
-          <a href="#top" className="text-2xl font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm">
+          <a href="#top" className="whitespace-nowrap text-xl font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white rounded-sm sm:text-2xl">
             Ballen Fisk
           </a>
         </motion.div>
@@ -56,17 +58,29 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-4"
+          className="flex items-center gap-1 sm:gap-4"
         >
           {primaryNav('hidden lg:flex items-center gap-5 mr-2')}
           <OpenStatus />
           <LanguageSwitcher />
+          <button
+            type="button"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+            onClick={() => setIsMenuOpen((open) => !open)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white lg:hidden"
+          >
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </motion.div>
       </nav>
 
-      {primaryNav('relative z-40 container flex lg:hidden items-center justify-center gap-5 pb-4')}
+      <div id="mobile-navigation" className={`${isMenuOpen ? 'block' : 'hidden'} relative z-40 container pb-4 lg:hidden`}>
+        {primaryNav('flex flex-col items-center gap-4 rounded-2xl border border-white/10 bg-[#0B132B]/70 px-4 py-4 backdrop-blur-md')}
+      </div>
 
-      <div className="relative z-10 container pt-4 pb-[28rem] lg:pb-[15rem] xl:pb-[16rem] xl2:pb-[17rem] 2xl:pb-[18rem] 2xl3:pb-[24rem] 2xl2:pb-[26rem] 3xl:pb-[30rem] 4xl:pb-[33rem] flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
+      <div className="relative z-10 container min-h-0 flex flex-col justify-center pt-4 pb-[10rem] sm:pb-[12rem] lg:block lg:min-h-0 lg:justify-start lg:pb-[15rem] xl:pb-[16rem] xl2:pb-[17rem] 2xl:pb-[18rem] 2xl3:pb-[24rem] 2xl2:pb-[26rem] 3xl:pb-[30rem] 4xl:pb-[33rem]">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-10 3xl:gap-14 4xl:gap-20 items-center h-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -128,13 +142,10 @@ export const Hero = () => {
                 className="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md mb-4 lg:mb-6 border border-white/30 text-sm font-medium tracking-wider uppercase sm:whitespace-nowrap"
               >
                 <span className="hidden sm:inline">{renderWithStrong(t('hero.since'))}</span>
-                <span className="sm:hidden">
-                  {mobileSince[0]}
-                  {mobileSince[1] && <span className="block">• {mobileSince[1]}</span>}
-                </span>
+                <span className="whitespace-nowrap text-[clamp(0.62rem,3.5vw,0.875rem)] sm:hidden">{t('hero.sinceMobile')}</span>
               </motion.div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-black mb-4 lg:mb-6 tracking-tighter drop-shadow-2xl">
+              <h1 className="whitespace-nowrap text-3xl font-black tracking-tighter drop-shadow-2xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl 4xl:text-9xl mb-4 lg:mb-6">
                 {t('hero.title')}
               </h1>
 
