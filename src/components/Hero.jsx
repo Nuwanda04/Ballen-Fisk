@@ -39,7 +39,7 @@ export const Hero = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5FA8D3] rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <nav className="relative z-50 container py-6 flex justify-between items-center">
+      <nav className="relative z-50 container flex items-center justify-between py-7 sm:py-6">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -58,7 +58,7 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-1 sm:gap-4"
+          className="flex items-center gap-2 sm:gap-4"
         >
           {primaryNav('hidden lg:flex items-center gap-5 mr-2')}
           <OpenStatus />

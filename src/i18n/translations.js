@@ -31,7 +31,7 @@ export const translations = {
       smokehouseSubtitle: 'Røget på gammeldags manér'
     },
     status: {
-      open: 'Åben Nu',
+      open: 'Åben',
       closed: 'Lukket',
       openingHours: 'Åbningstider',
       seasonShort: 'Sæsonåbningstider',
@@ -155,7 +155,7 @@ export const translations = {
       smokehouseSubtitle: 'Smoked the Traditional Way'
     },
     status: {
-      open: 'Open Now',
+      open: 'Open',
       closed: 'Closed',
       openingHours: 'Opening Hours',
       seasonShort: 'Seasonal hours',
@@ -279,7 +279,7 @@ export const translations = {
       smokehouseSubtitle: 'Traditionell geräuchert'
     },
     status: {
-      open: 'Jetzt Geöffnet',
+      open: 'Offen',
       closed: 'Geschlossen',
       openingHours: 'Öffnungszeiten',
       seasonShort: 'Saisonale Öffnungszeiten',
