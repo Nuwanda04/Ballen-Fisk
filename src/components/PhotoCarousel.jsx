@@ -33,6 +33,7 @@ export const PhotoCarousel = () => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const touchStartX = useRef(null);
 
   useEffect(() => {
@@ -41,6 +42,14 @@ export const PhotoCarousel = () => {
       image.decoding = 'async';
       image.src = source;
     });
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+    const updateViewport = () => setIsMobile(mediaQuery.matches);
+    updateViewport();
+    mediaQuery.addEventListener('change', updateViewport);
+    return () => mediaQuery.removeEventListener('change', updateViewport);
   }, []);
 
   useEffect(() => {
@@ -94,7 +103,7 @@ export const PhotoCarousel = () => {
   const getCardPosition = (position) => {
     if (position === -1) return { left: '-3%', scale: 0.94, opacity: 1, zIndex: 30 };
     if (position === 1) return { left: '55%', scale: 0.94, opacity: 1, zIndex: 30 };
-    return { left: '14%', scale: 1, opacity: 1, zIndex: 40 };
+    return { left: isMobile ? '8%' : '14%', scale: 1, opacity: 1, zIndex: 40 };
   };
 
   return (
@@ -169,18 +178,18 @@ export const PhotoCarousel = () => {
             <button
               type="button"
               onClick={() => goToSlide(currentSlide - 1)}
-              className="absolute left-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-left-20"
+              className="absolute left-1 top-1/2 z-50 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-left-20 md:h-11 md:w-11"
               aria-label={t('gallery.previous')}
             >
-              <ChevronLeft className="h-6 w-6" aria-hidden="true" />
+              <ChevronLeft className="h-4 w-4 md:h-6 md:w-6" aria-hidden="true" />
             </button>
             <button
               type="button"
               onClick={() => goToSlide(currentSlide + 1)}
-              className="absolute right-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-right-20"
+              className="absolute right-1 top-1/2 z-50 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-right-20 md:h-11 md:w-11"
               aria-label={t('gallery.next')}
             >
-              <ChevronRight className="h-6 w-6" aria-hidden="true" />
+              <ChevronRight className="h-4 w-4 md:h-6 md:w-6" aria-hidden="true" />
             </button>
 
           </div>
