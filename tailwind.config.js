@@ -10,9 +10,8 @@ export default {
         xl: '1280px',
         xl2: '1440px',
         '2xl': '1536px',
-        // The browser setup used for the intermediate wide view is roughly 1600px
-        // including chrome, so the usable CSS viewport is slightly narrower.
-        '2xl3': '1580px',
+        // Intermediate wide view: roughly 80% of the 2048px desktop reference.
+        '2xl3': '1640px',
         '2xl2': '1680px',
       },
       '3xl': '1920px',
