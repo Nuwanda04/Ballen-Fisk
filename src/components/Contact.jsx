@@ -55,7 +55,7 @@ export const Contact = () => {
                     {t('contact.country')}
                   </p>
                   <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=Strandvejen%2083%2C%208305%20Ballen%2C%20Denmark"
+                    href="https://www.google.com/maps/dir/?api=1&destination=Havnevej%203%2C%208305%20Sams%C3%B8%2C%20Denmark"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-3 text-sm font-semibold text-[#3E92CC] hover:underline"
@@ -148,7 +148,7 @@ export const Contact = () => {
           </div>
           <div className="aspect-[16/7] overflow-hidden rounded-xl shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2232.8!2d10.6387!3d55.8164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ4JzU5LjAiTiAxMMKwMzgnMTkuMyJF!5e0!3m2!1sda!2sdk!4v1234567890"
+              src="https://www.google.com/maps?q=Havnevej+3,+8305+Sams%C3%B8,+Denmark&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
