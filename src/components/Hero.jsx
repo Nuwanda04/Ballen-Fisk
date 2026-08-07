@@ -154,7 +154,7 @@ export const Hero = () => {
             >
               {t('hero.cta')}
               <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-              <div className="absolute inset-0 rounded-full ring-2 ring-white/50 animate-ping opacity-20" />
+              <div className="absolute inset-0 rounded-full ring-2 ring-orange-400 opacity-0 group-hover:animate-ping group-hover:opacity-30" />
             </motion.button>
           </motion.div>
         </div>

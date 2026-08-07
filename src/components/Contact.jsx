@@ -8,15 +8,8 @@ export const Contact = () => {
   const { t } = useLanguage();
 
   const openingHours = t('contact.schedule');
-  const scheduleAccents = ['#FF7EB9', '#FDBA74', '#FDE047', '#86EFAC', '#5EEAD4', '#E376D4'];
-  const scheduleBackgrounds = [
-    'bg-[#FF7EB9]/[0.07]',
-    'bg-[#FDBA74]/[0.08]',
-    'bg-[#FDE047]/[0.10]',
-    'bg-[#86EFAC]/[0.09]',
-    'bg-[#5EEAD4]/[0.09]',
-    'bg-[#E376D4]/[0.08]'
-  ];
+  const scheduleAccents = ['transparent', '#FB923C', 'transparent', '#FB923C', 'transparent', '#FB923C'];
+  const scheduleBackgrounds = ['bg-white', 'bg-[#FB923C]/[0.14]', 'bg-white', 'bg-[#FB923C]/[0.14]', 'bg-white', 'bg-[#FB923C]/[0.14]'];
 
   return (
     <section id="contact" className="relative py-12 md:py-24 bg-white overflow-hidden">
@@ -47,9 +40,9 @@ export const Contact = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="border-t-4 border-[#FF7EB9] bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
+            <div className="border-t-4 border-[#EF4444] bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#FF7EB9] to-[#B82568] rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#EF4444] to-[#B91C1C] rounded-xl flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>

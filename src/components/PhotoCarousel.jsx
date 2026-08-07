@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../i18n/useLanguage';
@@ -91,9 +92,9 @@ export const PhotoCarousel = () => {
   };
 
   const getCardPosition = (position) => {
-    if (position === -1) return { left: '-3%', scale: 0.94, opacity: 0.42, zIndex: 10 };
-    if (position === 1) return { left: '55%', scale: 0.94, opacity: 0.42, zIndex: 10 };
-    return { left: '14%', scale: 1, opacity: 1, zIndex: 20 };
+    if (position === -1) return { left: '-3%', scale: 0.94, opacity: 0.68, zIndex: 30 };
+    if (position === 1) return { left: '55%', scale: 0.94, opacity: 0.68, zIndex: 30 };
+    return { left: '14%', scale: 1, opacity: 1, zIndex: 40 };
   };
 
   return (
@@ -116,8 +117,6 @@ export const PhotoCarousel = () => {
           aria-label={t('gallery.label')}
           tabIndex="0"
           onKeyDown={handleKeyDown}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
           onFocus={() => setIsPaused(true)}
           onBlur={(event) => {
             if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
@@ -166,6 +165,23 @@ export const PhotoCarousel = () => {
                 </motion.div>
               );
             })}
+
+            <button
+              type="button"
+              onClick={() => goToSlide(currentSlide - 1)}
+              className="absolute left-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-left-14"
+              aria-label={t('gallery.previous')}
+            >
+              <ChevronLeft className="h-6 w-6" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              onClick={() => goToSlide(currentSlide + 1)}
+              className="absolute right-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-right-14"
+              aria-label={t('gallery.next')}
+            >
+              <ChevronRight className="h-6 w-6" aria-hidden="true" />
+            </button>
 
           </div>
 
