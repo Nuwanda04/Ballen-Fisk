@@ -92,8 +92,8 @@ export const PhotoCarousel = () => {
   };
 
   const getCardPosition = (position) => {
-    if (position === -1) return { left: '-3%', scale: 0.94, opacity: 0.68, zIndex: 30 };
-    if (position === 1) return { left: '55%', scale: 0.94, opacity: 0.68, zIndex: 30 };
+    if (position === -1) return { left: '-3%', scale: 0.94, opacity: 1, zIndex: 30 };
+    if (position === 1) return { left: '55%', scale: 0.94, opacity: 1, zIndex: 30 };
     return { left: '14%', scale: 1, opacity: 1, zIndex: 40 };
   };
 
@@ -136,7 +136,7 @@ export const PhotoCarousel = () => {
               return (
                 <motion.div
                   key={slideKey}
-                  className={`absolute top-0 h-full overflow-hidden rounded-3xl shadow-2xl ${position === 0 ? 'w-[84%] bg-[#0B132B] md:w-[72%]' : 'w-[52%] md:w-[48%]'}`}
+                  className={`absolute top-0 h-full overflow-hidden rounded-3xl shadow-2xl ${position === 0 ? 'w-[84%] bg-[#0B132B] md:w-[72%]' : 'w-[52%] bg-[#E8F2F8] md:w-[48%]'}`}
                   animate={cardPosition}
                   transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                   aria-hidden={position !== 0}
@@ -144,7 +144,7 @@ export const PhotoCarousel = () => {
                   <img
                     src={image}
                     alt={position === 0 ? t(`gallery.images.${slideKey}`) : ''}
-                    className="h-full w-full object-cover"
+                    className={`h-full w-full object-cover ${position === 0 ? '' : 'opacity-70'}`}
                     style={{ objectPosition: imagePosition }}
                     loading="eager"
                     decoding="async"
@@ -169,7 +169,7 @@ export const PhotoCarousel = () => {
             <button
               type="button"
               onClick={() => goToSlide(currentSlide - 1)}
-              className="absolute left-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-left-14"
+              className="absolute left-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-left-20"
               aria-label={t('gallery.previous')}
             >
               <ChevronLeft className="h-6 w-6" aria-hidden="true" />
@@ -177,7 +177,7 @@ export const PhotoCarousel = () => {
             <button
               type="button"
               onClick={() => goToSlide(currentSlide + 1)}
-              className="absolute right-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-right-14"
+              className="absolute right-2 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#0B132B]/85 text-white shadow-lg backdrop-blur-sm transition hover:bg-[#0B132B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 md:-right-20"
               aria-label={t('gallery.next')}
             >
               <ChevronRight className="h-6 w-6" aria-hidden="true" />
