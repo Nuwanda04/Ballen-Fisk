@@ -48,18 +48,19 @@ const subcategoryIcons = {
   'Wine': Wine
 };
 
-// Vibrant Pastel Colors Palette (Distinct from White, One Blue Rule)
+// Strong category palette: saturated accents keep the transparent cards lively
+// without changing their existing outline, opacity, or interaction styling.
 const gradientColors = [
-  '#FFFFFF', // White (0: All)
-  '#FF7EB9', // Deep Pink (1: Diverse)
-  '#FDBA74', // Deep Orange (2: Drikkevarer)
-  '#FDE047', // Deep Yellow (3: Fersk Fisk)
-  '#86EFAC', // Deep Green (4: Fiskefrikadeller & Fileter)
-  '#5EEAD4', // Deep Teal (5: Friture rejer)
-  '#7DD3FC', // Deep Sky Blue (6: Frostvarer)
-  '#E376D4', // Orchid/Pink (7: Færdigretter - User requested #e376d4)
-  '#9153CE', // Røget Fisk (User requested #9153ce)
-  '#B82568', // Salater & Delikatesser (User requested #b82568)
+  '#3E92CC', // All
+  '#38BDF8', // Fresh fish
+  '#F97316', // Ready meals
+  '#EF4444', // Smoked fish
+  '#E11D48', // Shellfish
+  '#0EA5E9', // Frozen goods
+  '#14B8A6', // Salads & delicatessen
+  '#F59E0B', // Friture
+  '#8B5CF6', // Beverages
+  '#EC4899', // Miscellaneous
 ];
 
 export const Products = () => {
