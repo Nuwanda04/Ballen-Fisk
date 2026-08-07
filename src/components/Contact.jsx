@@ -4,12 +4,16 @@ import { useLanguage } from '../i18n/useLanguage';
 import { SectionAtmosphere } from './SectionAtmosphere';
 import { renderWithStrongDark } from '../utils/textUtils';
 
+const parseScheduleHours = (hours) => hours.split(' · ').map((part) => {
+  const match = part.match(/^(.*?)\s+(\d{2}:\d{2}–\d{2}:\d{2})$/);
+  return match ? { label: match[1], time: match[2] } : { label: '', time: part };
+});
+
 export const Contact = () => {
   const { t } = useLanguage();
 
   const openingHours = t('contact.schedule');
-  const scheduleAccents = Array(6).fill('#0B132B');
-  const scheduleBackgrounds = ['bg-white', 'bg-[#F4F8FB]', 'bg-white', 'bg-[#F4F8FB]', 'bg-white', 'bg-[#F4F8FB]'];
+  const scheduleColumns = openingHours[0] ? parseScheduleHours(openingHours[0].hours) : [];
 
   return (
     <section id="contact" className="relative py-12 md:py-24 bg-white overflow-hidden">
@@ -116,17 +120,47 @@ export const Contact = () => {
               </h3>
             </div>
 
-            <div className="space-y-3 mb-8">
-              {openingHours.map((schedule, index) => (
-                <div
-                  key={index}
-                  className={`rounded-xl border border-[#E2E8F0] border-l-2 px-4 py-3 shadow-sm ${scheduleBackgrounds[index]}`}
-                  style={{ borderLeftColor: scheduleAccents[index] }}
-                >
-                  <div className="font-semibold text-[#0B132B] mb-1">{schedule.period}</div>
-                  <div className="text-[#0B132B]/75">{schedule.hours}</div>
-                </div>
-              ))}
+            <div className="mb-8 overflow-hidden rounded-xl border border-[#CBD5E1]">
+              <table className="w-full table-fixed border-collapse text-left">
+                <thead className="bg-[#0B132B] text-white">
+                  <tr>
+                    <th scope="col" className="w-[34%] px-3 py-3 text-xs font-bold uppercase tracking-wide sm:px-4">
+                      {t('contact.season')}
+                    </th>
+                    {scheduleColumns.map((column) => (
+                      <th key={column.label} scope="col" className="px-3 py-3 text-xs font-bold uppercase tracking-wide sm:px-4">
+                        {column.label}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {openingHours.map((schedule, index) => {
+                    const hours = parseScheduleHours(schedule.hours);
+                    const isAlternate = index % 2 === 1;
+
+                    return (
+                      <tr key={schedule.period} className={isAlternate ? 'bg-[#F4F8FB]' : 'bg-white'}>
+                        <th scope="row" className="border-t border-[#E2E8F0] px-3 py-4 text-sm font-bold text-[#0B132B] sm:px-4">
+                          {schedule.period}
+                        </th>
+                        {hours.length === 1 ? (
+                          <td colSpan={2} className="border-t border-[#E2E8F0] px-3 py-4 text-sm text-[#0B132B]/75 sm:px-4">
+                            <span className="block text-xs font-semibold text-[#0B132B]/55 sm:inline">{hours[0].label}</span>
+                            <span className="block font-semibold text-[#0B132B] sm:ml-2 sm:inline">{hours[0].time}</span>
+                          </td>
+                        ) : (
+                          hours.map((hour) => (
+                            <td key={hour.label} className="border-t border-[#E2E8F0] px-3 py-4 text-sm text-[#0B132B]/75 sm:px-4">
+                              <span className="block font-semibold text-[#0B132B]">{hour.time}</span>
+                            </td>
+                          ))
+                        )}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
 
 
