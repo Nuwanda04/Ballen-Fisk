@@ -65,7 +65,7 @@ export const Hero = () => {
 
       {primaryNav('relative z-40 container flex lg:hidden items-center justify-center gap-5 pb-4')}
 
-      <div className="relative z-10 container pt-4 pb-[28rem] lg:pb-[22rem] xl:pb-[25rem] 3xl:pb-[33rem] 4xl:pb-[36rem] flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
+      <div className="relative z-10 container pt-4 pb-[28rem] lg:pb-[21rem] xl:pb-[22rem] xl2:pb-[23rem] 2xl:pb-[24rem] 2xl2:pb-[27rem] 3xl:pb-[30rem] 4xl:pb-[33rem] flex flex-col lg:block min-h-[calc(100vh-80px)] lg:min-h-0 lg:h-auto justify-center lg:justify-start">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-10 3xl:gap-14 4xl:gap-20 items-center h-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -73,7 +73,7 @@ export const Hero = () => {
             transition={{ delay: 0.4 }}
             className="relative block order-last mb-0 lg:mb-0 flex-1 flex items-center justify-center"
           >
-            <div className="relative w-full max-w-[420px] lg:max-w-[600px] xl:max-w-[680px] 3xl:max-w-[820px] 4xl:max-w-[940px] mx-auto lg:ml-auto aspect-[16/10]">
+            <div className="relative w-full max-w-[420px] lg:max-w-[600px] xl:max-w-[640px] xl2:max-w-[680px] 2xl:max-w-[720px] 2xl2:max-w-[760px] 3xl:max-w-[820px] 4xl:max-w-[940px] mx-auto lg:ml-auto aspect-[16/10]">
             <div className="w-full h-full rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 relative z-10">
               <img
                 src={heroImage}
