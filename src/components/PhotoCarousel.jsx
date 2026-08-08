@@ -37,12 +37,30 @@ export const PhotoCarousel = () => {
   const touchStartX = useRef(null);
 
   useEffect(() => {
-    slides.forEach(([, source]) => {
+    const preload = (source) => {
       const image = new Image();
       image.decoding = 'async';
       image.src = source;
-    });
-  }, []);
+    };
+
+    // Load the visible slide and its immediate neighbors first. Defer the
+    // remaining images so Safari does not compete with the initial page render.
+    [currentSlide, (currentSlide + 1) % slides.length, (currentSlide - 1 + slides.length) % slides.length]
+      .forEach((index) => preload(slides[index][1]));
+
+    const loadRemaining = () => slides.forEach(([, source]) => preload(source));
+    const idleHandle = window.requestIdleCallback
+      ? window.requestIdleCallback(loadRemaining, { timeout: 2500 })
+      : window.setTimeout(loadRemaining, 1200);
+
+    return () => {
+      if (window.cancelIdleCallback && typeof idleHandle === 'number') {
+        window.cancelIdleCallback(idleHandle);
+      } else {
+        window.clearTimeout(idleHandle);
+      }
+    };
+  }, [currentSlide]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 767px)');

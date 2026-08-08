@@ -153,7 +153,7 @@ export const Products = () => {
       </div>
 
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
+        <div className="absolute top-1/3 right-1/4 hidden w-96 h-96 bg-white rounded-full blur-3xl sm:block" />
       </div>
 
       <div className="container relative z-10 px-6">

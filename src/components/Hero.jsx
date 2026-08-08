@@ -35,8 +35,8 @@ export const Hero = () => {
   return (
     <header id="top" className="relative overflow-hidden bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#3E92CC]">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-[#3E92CC] rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5FA8D3] rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-20 left-10 w-64 h-64 bg-[#3E92CC] rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5FA8D3] rounded-full blur-3xl" />
       </div>
 
       <nav className="relative z-50 container flex items-center justify-between py-7 sm:py-6">
@@ -93,6 +93,7 @@ export const Hero = () => {
               <img
                 src={heroImage}
                 alt="Ballen Fisk at Ballen Havn"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -106,7 +107,7 @@ export const Hero = () => {
               >
                 <div className="flex items-center gap-3 lg:gap-5">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-orange-400 rounded-full blur-md opacity-40 animate-pulse" />
+                    <div className="absolute inset-0 bg-orange-400 rounded-full blur-md opacity-40" />
                     <div className="relative w-8 h-8 lg:w-14 lg:h-14 bg-gradient-to-br from-orange-400 to-red-600 rounded-xl lg:rounded-2xl flex items-center justify-center shadow-inner">
                       <Flame className="w-4 h-4 lg:w-7 lg:h-7 text-white" />
                     </div>
