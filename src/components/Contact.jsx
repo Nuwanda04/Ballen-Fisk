@@ -24,7 +24,7 @@ export const Contact = () => {
       <div className="pointer-events-none absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-[#E376D4]/[0.09] blur-[110px]" />
       <div className="container relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-left mb-12 max-w-2xl w-fit mx-auto px-4 md:px-0"
@@ -39,7 +39,7 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="space-y-6"
@@ -108,7 +108,7 @@ export const Contact = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="border-t-4 border-[#29466B] bg-white rounded-2xl p-8 shadow-xl"
@@ -193,7 +193,7 @@ export const Contact = () => {
           </motion.div>
         </div>
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mx-auto mt-8 max-w-6xl rounded-2xl bg-white p-4 shadow-xl md:mt-10 md:p-6"

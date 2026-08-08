@@ -48,8 +48,13 @@ export const PhotoCarousel = () => {
     const mediaQuery = window.matchMedia('(max-width: 767px)');
     const updateViewport = () => setIsMobile(mediaQuery.matches);
     updateViewport();
-    mediaQuery.addEventListener('change', updateViewport);
-    return () => mediaQuery.removeEventListener('change', updateViewport);
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', updateViewport);
+      return () => mediaQuery.removeEventListener('change', updateViewport);
+    }
+
+    mediaQuery.addListener(updateViewport);
+    return () => mediaQuery.removeListener(updateViewport);
   }, []);
 
   useEffect(() => {

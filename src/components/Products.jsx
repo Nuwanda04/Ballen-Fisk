@@ -158,7 +158,7 @@ export const Products = () => {
 
       <div className="container relative z-10 px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-8"
@@ -263,7 +263,7 @@ const convertHexToRgba = (hex, alpha) => {
             <AnimatePresence>
               {isDropdownOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: -10 }}
+                  initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   className="absolute top-full left-0 right-0 mt-2 bg-[#0B132B] border border-white/10 rounded-xl shadow-xl overflow-hidden max-h-80 overflow-y-auto"
@@ -540,7 +540,7 @@ const convertHexToRgba = (hex, alpha) => {
             )}
 
             <motion.p
-              initial={{ opacity: 0 }}
+              initial={false}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="mt-8 text-center text-sm text-white/80 italic font-light max-w-2xl mx-auto bg-white/10 rounded-xl px-4 py-3"

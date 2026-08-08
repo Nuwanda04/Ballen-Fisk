@@ -45,7 +45,7 @@ export const History = () => {
       <SectionAtmosphere />
       <div className="container relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
@@ -71,7 +71,7 @@ export const History = () => {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                initial={false}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
